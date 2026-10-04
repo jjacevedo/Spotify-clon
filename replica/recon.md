@@ -29,7 +29,7 @@ To add when the network allows: support.spotify.com (Your Library, Queue, Downlo
 
 ## Core loop
 
-**Put a song in, find it fast, press play, keep listening.** For tunebox, "put in" means upload. Spotify's paying users pay for on-demand, ad-free, offline listening, and tunebox sells the same thing for the user's own files.
+**Put a song in, find it fast, press play, keep listening.** For tunebox, "put in" means upload. Spotify's paying users pay for on-demand, ad-free, offline listening. tunebox gives every plan the playback controls and downloads for the user's own files, and sells storage instead (see `fixes.md` F1, F5 and F7).
 
 ## Screens
 
@@ -52,15 +52,15 @@ To add when the network allows: support.spotify.com (Your Library, Queue, Downlo
 | S15 | Lyrics | from S13 | Synced lyrics | Scrolling highlighted lines | synced, unsynced, none |
 | S16 | Track context menu / sheet | "…" on any row | Actions on a track | Menu: add to playlist (with search + "new playlist"), add to queue, go to album/artist, like, share, download, remove | default |
 | S17 | Create / edit playlist dialog | "+" in library / "Edit details" | Name, description, cover | Modal, image picker, inputs | empty, saving, error |
-| S18 | Upload (tunebox) | `/upload`, drag-drop anywhere on web, "+" on mobile | Add audio files | Drop zone, file list with per-file progress, tag preview, quota meter | idle, uploading, partial failure, quota exceeded, unsupported file |
+| S18 | Upload (tunebox) | `/upload`, drag-drop anywhere on web, "+" on mobile | Add audio files | Drop zone, file list with per-file progress, tag preview, quota meter | idle, uploading, partial failure, quota exceeded (upgrade prompt follows the store billing route, `fixes.md` section 7), unsupported file |
 | S19 | Edit track metadata (tunebox) | context menu → Edit | Fix tags/cover | Form, cover picker | default, saving |
-| S20 | Profile | `/user/:id` | Public face | Avatar, name, public playlists, followers/following | own, other user, private |
+| S20 | Profile | `/user/:id` | Public face (public profile and public playlists deferred past v1; shared playlists are text-only tracklists, `fixes.md` section 7) | Avatar, name, public playlists, followers/following | own, other user, private |
 | S21 | Settings | `/settings` | Preferences | Toggles and selects: audio quality, crossfade, gapless, normalize, offline storage, language, notifications | default |
 | S22 | Account / plan | `/account` | Plan, billing, quota, delete account | Plan card, compare plans, manage billing, storage meter | free, paid, payment failed, cancelled |
-| S23 | Plans / checkout | `/premium` → checkout | Upgrade | Plan cards, checkout (hosted) | default, success, failure |
+| S23 | Plans / checkout | `/premium` → checkout | Upgrade | Plan cards, checkout: hosted Stripe on the web; in the apps, store in-app purchase or no purchase UI, per the billing route in `fixes.md` section 7 | default, success, failure |
 | S24 | Downloads (mobile) | Library filter "Downloaded" | Offline content | Download status per item, storage used | offline mode banner, downloading, done |
-| S25 | Shared playlist (public link) | `/s/:token` | Recipient view of a shared playlist | Header, track list, "open in app" / sign up CTA | public, revoked, taken down |
-| S26 | Report content (tunebox) | context menu / public page | Copyright report | Form (claimant, work, URL, statement) | sent |
+| S25 | Shared tracklist (link) | `/s/:token` | Recipient view of a shared playlist's tracklist, text only (titles, artists, albums, durations; no owner cover art, custom cover or lyrics). The recipient plays only matching tracks from their own library, never the owner's audio | Header (name, owner, count), text track list with matched and greyed-out rows, "open in app" / sign up CTA | shared, revoked, taken down, no matching tracks |
+| S26 | Report content (tunebox) | context menu / shared page | Copyright report, plus other illegal-content reports where the launch country requires it (`fixes.md` section 7) | Form (report type, claimant, work, URL, statement) | sent |
 | S27 | Keyboard shortcuts | `?` / menu (web) | Help | Modal list | default |
 
 ## Flows
@@ -97,25 +97,25 @@ F06 Search my library
     happy path clicks: 2
     edge: no results, accents/case, partial words
 
-F07 Download for offline (mobile, paid)
+F07 Download for offline (mobile, every plan; the plan sets how many devices hold downloads)
     S09 -> download toggle -> S24 shows progress -> airplane mode -> play
-    edge: free user (upsell to S23), low storage, download interrupted, file deleted on server
+    edge: device cap reached (plan prompt follows the store billing route, fixes.md section 7), low storage, download interrupted, file deleted on server or taken down (copy removed at next connection)
 
-F08 Share a playlist
-    S09 "Share" -> copy link -> recipient opens S25 -> plays (if public) or signs up
-    edge: owner revokes link, track taken down by report, recipient on free plan
+F08 Share a playlist (tracklist only)
+    S09 "Share" -> copy link -> recipient opens S25 (text-only tracklist) -> plays the matching tracks they uploaded to their own library (never the owner's audio) or signs up
+    edge: owner revokes link, track taken down by report, recipient has no matching tracks (rows greyed out), recipient on free plan
 
 F09 Upgrade plan
-    quota meter / offline toggle upsell -> S23 -> checkout -> back to S22 paid
-    edge: card declined, cancel, downgrade with storage over free quota (read-only until under)
+    quota meter / device-cap prompt -> S23 -> checkout per the store billing route (web: Stripe; apps: store in-app purchase, or no purchase UI; fixes.md section 7) -> back to S22 paid
+    edge: card declined, cancel (store-billed plans cancel in the store), downgrade or cancel with storage over the free quota (F7 over-quota rule: uploads paused; playback, downloads and export for N days; the user picks what to keep; the rest deleted after notice)
 
 F10 Recover password
     S03 -> S04 -> email -> new password -> S05
     edge: expired link, unknown email (same response, no account leak)
 
 F11 Report copyrighted content (tunebox)
-    S25 or S16 -> S26 -> admin review -> takedown (public link disabled, track hidden from public)
-    edge: counter-notice, repeat infringer policy
+    S25 or S16 -> S26 -> admin review -> takedown disables access (Track.status = taken_down; stored copy kept for a counter-notice; device copies removed at next connection; shared rows greyed out)
+    edge: counter-notice (access restored), repeat infringer policy (termination under the terms), non-copyright report where the launch country requires it
 
 F12 Settings & quality
     S21 -> audio quality / crossfade / gapless / sleep timer from S13
@@ -158,7 +158,8 @@ User        id, email, display_name, avatar_url, plan (free|premium|family...), 
 
 Track       id, owner_id (User), file_key, mime, bitrate, duration_ms, size_bytes,
             title, artist_name, album_title, album_artist, track_no, disc_no, year, genre,
-            cover_key, lyrics_lrc (nullable), checksum (dedupe), status (processing|ready|failed|taken_down),
+            cover_key, lyrics_lrc (nullable), checksum (duplicate detection within one user's library; no deduplication across users),
+            status (processing|ready|failed|taken_down),
             play_count, last_played_at, created_at
             evidence: Local Files reads ID3 tags (sources 4–5); S09–S11 track columns   confidence: high (tunebox-specific fields: design decision)
 
@@ -190,15 +191,16 @@ SearchHistory  user_id, query or item ref, created_at                evidence: S
 
 Subscription  user_id, provider_customer_id, plan, status, current_period_end, storage_quota_bytes
             evidence: S22, S23, pricing                              confidence: high
+            if the apps sell plans: one entitlement per user fed by Stripe, Apple and Google (fixes.md section 7)
 Report      id, reporter_email, target_type, target_id, work_description, statement, status, created_at
-            evidence: tunebox legal requirement (DMCA)               confidence: design decision
+            evidence: tunebox legal requirement (notice-and-takedown for the launch countries, fixes.md section 7)   confidence: design decision
 ```
 
 Relationships: User 1-n Track; User 1-n Playlist; Playlist n-n Track via PlaylistItem; User n-n Track via Like; Album/Artist derived per User from Track tags; User 1-1 Subscription; User 1-n PlayEvent; Report → Track | Playlist.
 
 ## Feature matrix
 
-See `features.csv`. 73 rows at recon time: must 34, should 17, could 22 (counting skip rows), and 9 of them are skip. `parity.py` counted 60 features, of which 30 were must-haves. `/replica-entrepreneur` added 9 rows (see `fixes.md`).
+See `features.csv`. 73 rows at recon time: must 34, should 17, could 22 (counting skip rows), and 9 of them are skip. `parity.py` counted 60 features, of which 30 were must-haves. `/replica-entrepreneur` added 9 rows and changed notes on existing rows (see `fixes.md`).
 Features tunebox adds that Spotify does not have (`original = no`, not counted in parity): metadata editing, storage quota, deleting files, copyright reports.
 
 ## Out of scope (cannot or should not be cloned)
@@ -211,7 +213,7 @@ Features tunebox adds that Spotify does not have (`original = no`, not counted i
 
 ## Legal note specific to tunebox
 
-User uploads + public sharing = copyright exposure. Before selling it needs: terms of use where users certify their rights, a designated DMCA agent, a report/takedown flow (F11, S26), a repeat-infringer policy, and sharing limits (public links stream only, no downloads for recipients, rate limits). It's not legal advice. Check with a lawyer before launching.
+User uploads = copyright exposure, and streaming them to other people would add more, so v1 does not stream or download one user's audio to another. Before selling it needs: terms of use where users certify their rights; a notice-and-takedown process for each launch country (US: a DMCA agent registered in the US Copyright Office directory, a counter-notice process and a published repeat-infringer policy; EU: Digital Services Act duties; others as counsel advises); a report/takedown flow (F11, S26) where a takedown disables access and keeps the stored copy; no deduplication across users; and tracklist-only sharing (text-only view, recipients play only their own matching copies, rate limits). Details in `fixes.md` section 7. It's not legal advice. Check with a lawyer before launching.
 
 ## Size
 
@@ -220,4 +222,4 @@ Screens 27, flows 12, entities 15. Hard parts:
 2. **Playback engine on 3 platforms**: persistent player, queue/shuffle/repeat semantics, gapless/crossfade, background + lock-screen controls on iOS/Android, resume across devices.
 3. **Offline downloads on mobile** (encrypted local cache, sync, entitlement checks) and **payments** across web (Stripe) and app stores (in-app purchase rules for digital subscriptions).
 
-Size: **L** (about a quarter for web + mobile to a sellable v1). Recommended: ship web first with the full core loop, then mobile with offline as the paid hook.
+Size: **L** (about a quarter for web + mobile to a sellable v1). Recommended: build nothing beyond a landing page until the gate result is recorded (`fixes.md` section 6); then ship web first with the full core loop, then mobile. Storage is the paid lever: downloads are on every plan and the plan sets the device cap (`fixes.md` F5 and F7). /replica-architect decides on a Subsonic-compatible API before sizing native mobile (`fixes.md` section 5).
