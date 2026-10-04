@@ -1,0 +1,30 @@
+[
+ {
+  "url": "https://support.spotify.com/us/article/autoplay/",
+  "status": 200,
+  "final": "https://support.spotify.com/us/article/autoplay/",
+  "file": "083e06d86591.html",
+  "bytes": 768372
+ },
+ {
+  "url": "https://support.spotify.com/us/article/understanding-my-data/",
+  "status": 200,
+  "final": "https://support.spotify.com/us/article/understanding-your-data/",
+  "file": "5c4471b5bf25.html",
+  "bytes": 779566
+ },
+ {
+  "url": "https://support.spotify.com/us/article/data-rights-and-privacy-settings/",
+  "status": 200,
+  "final": "https://support.spotify.com/us/article/data-rights-and-privacy-settings/",
+  "file": "5acf4dcb4c96.html",
+  "bytes": 969410
+ },
+ {
+  "url": "https://support.spotify.com/us/article/recent-activity/",
+  "status": 200,
+  "final": "https://support.spotify.com/us/article/recent-activity/",
+  "file": "52c556f803d6.html",
+  "bytes": 771119
+ }
+]

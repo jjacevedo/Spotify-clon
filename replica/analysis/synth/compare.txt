@@ -1,0 +1,33 @@
+theme | E_core | E_high | E_all | F | M | F&E_all | M&E_all | F-only(not E_all) | M-only(not E_all) | E_all not in F | E_all not in M
+ads | 131 | 77 | 208 | None | 207 | - | 197 | 0 | 10 | 0 | 11
+ads_while_paying | 30 | 3 | 33 | None | 33 | - | 32 | 0 | 1 | 0 | 1
+free_tier_control | 88 | 26 | 114 | 117 | 154 | 108 | 111 | 9 | 43 | 6 | 3
+shuffle_not_random | 17 | 8 | 25 | 52 | 31 | 25 | 24 | 27 | 7 | 0 | 1
+playlist_injection | 25 | 6 | 31 | 34 | 47 | 26 | 29 | 8 | 18 | 5 | 2
+offline_broken | 26 | 1 | 27 | 41 | 26 | 26 | 26 | 15 | 0 | 1 | 1
+playback_reliability | 28 | 0(not scanned) | 28 | 41 | None | 23 | - | 18 | 0 | 5 | 0
+clutter_promos | 46 | 3 | 49 | 39 | 43 | 37 | 39 | 2 | 4 | 12 | 10
+nag_group | 39 | 4 | 43 | 28 | 13 | 18 | 6 | 10 | 7 | 25 | 37
+review_prompts | 11 | 1 | 12 | 28 | None | 12 | - | 16 | 0 | 0 | 0
+catalogue_removals | 23 | 4 | 27 | 32 | 28 | 26 | 27 | 6 | 1 | 1 | 0
+queue_ux | 13 | 3 | 16 | 22 | None | 15 | - | 7 | 0 | 1 | 0
+library_tools | 8 | 10 | 18 | 31 | 6 | 17 | 5 | 14 | 1 | 1 | 13
+listening_history | 7 | 2 | 9 | None | 6 | - | 6 | 0 | 0 | 0 | 3
+own_music_upload | 30 | 4 | 34 | 21 | 22 | 21 | 22 | 0 | 0 | 13 | 12
+local_files_clunky | 11 | 0(not scanned) | 11 | 13 | 11 | 11 | 11 | 2 | 0 | 0 | 0
+ownership_export | 30 | 0(not scanned) | 30 | 59 | 26 | 29 | 21 | 30 | 5 | 1 | 9
+own_files_group | 60 | 4 | 64 | 70 | 60 | 52 | 47 | 18 | 13 | 12 | 17
+ownership_hostage | 30 | 0(not scanned) | 30 | 49 | 19 | 22 | 15 | 27 | 4 | 8 | 15
+export_transfer | 7 | 0(not scanned) | 7 | 13 | 8 | 7 | 6 | 6 | 2 | 0 | 1
+price | 62 | 20 | 82 | None | 101 | - | 79 | 0 | 22 | 0 | 3
+price_increase | 28 | 3 | 31 | None | 29 | - | 28 | 0 | 1 | 0 | 3
+artist_pay_politics | 23 | 0(not scanned) | 23 | None | 31 | - | 23 | 0 | 8 | 0 | 0
+ai_music | 13 | 0(not scanned) | 13 | None | 15 | - | 10 | 0 | 5 | 0 | 3
+lockscreen_car | 11 | 1 | 12 | 9 | None | 8 | - | 1 | 0 | 4 | 0
+library_data_loss | 7 | 0(not scanned) | 7 | 6 | None | 4 | - | 2 | 0 | 3 | 0
+devices_paywall | 4 | 0(not scanned) | 4 | 5 | None | 4 | - | 1 | 0 | 0 | 0
+audio_quality | 9 | 2 | 11 | None | 16 | - | 9 | 0 | 7 | 0 | 2
+discovery_missed | 16 | 0(not scanned) | 16 | None | 11 | - | 10 | 0 | 1 | 0 | 6
+selfhost_effort | 17 | 0(not scanned) | 17 | None | 11 | - | 11 | 0 | 0 | 0 | 6
+selfhost_movers | 17 | 0(not scanned) | 17 | None | 23 | - | 17 | 0 | 6 | 0 | 0
+kids_content | 6 | 0(not scanned) | 6 | None | 8 | - | 6 | 0 | 2 | 0 | 0

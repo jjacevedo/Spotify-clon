@@ -1,0 +1,305 @@
+{
+ "issues": [
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 70 (section 2, item 5, clutter/home feed): “I quit Spotify because I can’t customise the home page which pushes podcasts and music I’m not interested in.” — https://news.ycombinator.com/item?id=39428119",
+   "problem": "FAIL, context reversed. The words are an exact substring, but they are not the commenter's own view. The row opens 'Long article for a single comment: I quit Spotify because...', a one-line summary of the article author's view. The commenter then says 'The fact there is a home page which shows options similar to what I like is fine, sometimes useful. Yes I’d prefer to customise it. ... Not a reason to quit, I love Spotify and haven’t found a better alternative.' The draft presents an HN user who quit over the home page, which reverses the commenter's stance.",
+   "fix": "Replace the quote. Option 1 (verified exact substring): “The breaking point for me was when I had to scroll past 3-4 rows of podcast suggestions (onto an entire other screen) to find any music on my homepage.” ([hacker-news, no rating, 2024-02-19](https://news.ycombinator.com/item?id=39431191)); this commenter did quit over podcast pushing. Option 2: “There’s still no way to remove playlists from the home screen.” ([hacker-news, no rating, 2023-01-05](https://news.ycombinator.com/item?id=34259883)). If the original row is kept, the only honest span is “Yes I’d prefer to customise it.”, with a note that the commenter says it is 'Not a reason to quit'."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 172 (section 3, item 1, lead quote for 'Upload my own files'): “The one major gripe is not being able to upload my own songs” — https://news.ycombinator.com/item?id=39428119",
+   "problem": "FAIL, context materially shifted. In the full row, 'my own songs' means 'remixes and covers, youtube, spotify or tiktok has plenty of songs I’d love in my library'. These are not files the commenter owns. The commenter also admits the legal problem ('a nightmare for a business model that respects artists ... + be legal') and says 'I love Spotify'. The draft uses it as the headline evidence for tunebox's legitimate core use, while warning in the same paragraph that YouTube rips and remixes are a copyright risk tunebox must not court.",
+   "fix": "Replace the quote. Option 1 (verified exact substring): “I have a fair number of sentimental tracks that I've carried with me in my collection for decades which aren't on streaming sites. Spotify doesn't have an answer for this.” ([hacker-news, no rating, 2024-04-08](https://news.ycombinator.com/item?id=39968033)). Option 2: “I'm \"stuck\" with YT Music because they let me upload my own MP3s (Spotify does not).” ([hacker-news, no rating, 2023-12-05](https://news.ycombinator.com/item?id=38536011)). Alternatively, move the original quote under the copyright-risk sentence and state its remix context."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 213 (section 4, U2 'A library that doesn't change under you'): “A music service that hides their catalog changes by subtly modifying my playlists is a no-go.” — https://news.ycombinator.com/item?id=39967357",
+   "problem": "FAIL, context reversed. The commenter quotes someone else saying removed songs show 'greyed out', then writes 'As infuriating as this is, it's the reason I still use Spotify. A music service that hides their catalog changes ... is a no-go. Having the songs still appear lets me know'. The 'no-go' is aimed at other services; the commenter praises the original's greyed-out display as their reason for staying. Placed next to complaints about the original, it reads as a complaint against the original. The same row is also counted as a complaint in synth/recount.json themes/catalogue_removals (27 total, 23 core).",
+   "fix": "Remove it from U2's complaint quotes. If kept, reframe it honestly as a tunebox design requirement (show removed or unavailable tracks visibly rather than dropping them; one commenter stays with the original because it does this), using “Having the songs still appear lets me know, as it gives me the opportunity to find those songs elsewhere.” ([hacker-news, no rating, 2024-04-08](https://news.ycombinator.com/item?id=39967357)). If a removal-complaint quote is needed, use “Sometimes music I have in playlists disappears, for licensing reasons. I understand the reasoning but it makes me irrationally angry” ([hacker-news, no rating, 2023-01-05](https://news.ycombinator.com/item?id=34259883)). Have the synthesizer re-check whether row 39967357 belongs in the catalogue_removals count."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 216 (U3): “Tracks I'd ripped from original CDs were replaced with different recordings.” — https://news.ycombinator.com/item?id=41311984",
+   "problem": "WARN, missing attribution. The row is about Apple Music / iTunes Match ('I encountered this with Apple Music / Musicmatch'), not the original. Line 221 labels its YouTube Music quote; this one has no label, so a reader may take it as the original's behaviour. The quote is otherwise accurate.",
+   "fix": "Keep the quote and append '(about Apple Music / iTunes Match)' after the link."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 217 (U3): “spotify used whatever it had in its database with the same name/artist, which wasn't always the same recording or even the same song” — https://news.ycombinator.com/item?id=42113467",
+   "problem": "WARN, stale context. The commenter is describing the original about 10 years earlier ('Perhaps things have changed, but 10 or so years ago I \"uploaded\" my music to Spotify'). Without that caveat, the draft implies the original matches uploads to its catalogue today, which conflicts with the draft's own description of Local Files.",
+   "fix": "Keep the quote and append '(describing the original about 10 years earlier)' after the link."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 268 (F7 evidence): “every song is blacked out and wont let me listen to it” — https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618139577",
+   "problem": "WARN, loose framing. After cancelling Premium, the reviewer could not play anything and suspected their offline downloads ('bc I think I have it downloaded “offline”'). The draft's lead-in 'locked out of their own library after a cancel or lapse' overstates it: the 'library' was the original's licensed downloads, and the cause may be a bug rather than a policy. The quote itself is accurate.",
+   "fix": "Keep the quote and reword the lead-in to 'could not play anything after cancelling Premium (the reviewer suspects the offline downloads)'."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 307 (market fact, not a review quote): 'Self-hosted Navidrome on a VPS at about €4/month (one user: https://news.ycombinator.com/item?id=45136980)'",
+   "problem": "Minor. The backing quote in upload-market.verified.json (finding 40) says 'my own server, for the low low price of 4€ a month'. It does not say VPS.",
+   "fix": "Change 'on a VPS' to 'on a rented server' (or 'on their own server')."
+  },
+  {
+   "check": "quotes",
+   "location": "fixes.draft.md line 21: \"love it, but…\"",
+   "problem": "Cosmetic. A straight-quoted span with an ellipsis looks like a reviewer quote, but it is a description of a review pattern with no link.",
+   "fix": "Use italics instead of quotation marks."
+  },
+  {
+   "check": "counts",
+   "location": "§2 item 13 (playlist injection), F2 evidence, Angle B",
+   "problem": "The draft gives n=33 (25 core) with hacker-news 8. Four HN rows are outside the theme's definition: 1136 is about personalised editorial playlists, 1189 about shuffle-button UX, 1209 about autoplay and radio drift, and 1215 about being pushed into algorithmic playlists. That makes the HN count wrong by half, puts core 16% too high, and the ranking by core count changes.",
+   "fix": "Corrected: 30 (21 core + 9 rated 4–5★), from app-store 18, google-play 8, hacker-news 4. Method: full-read labels, plus 244, 819 and 847 accepted from the evidence list on re-read. On core count the theme falls below politics (24), removals (22) and billing (21–22). The date split becomes 13 of 21 after 2026-05-13."
+  },
+  {
+   "check": "counts",
+   "location": "§4 U6 (discovery missed)",
+   "problem": "The draft says '16 HN comments miss catalogue discovery after moving to owned files'. Only 6 of the 16 say that (precision 6/16). The other 10 (732, 1073, 1078, 1080, 1089, 1166, 1193, 1199, 1220, 1226) are general remarks about streaming discovery, several of them praising Spotify's recommendations.",
+   "fix": "Rewrite as: 6 HN comments (1037, 1092, 1108, 1137, 1171, 1208) miss recommendations after moving to owned files, and 10 more value streaming discovery in general. Keep it marked thin. The risk conclusion is unchanged."
+  },
+  {
+   "check": "counts",
+   "location": "§3 item 3 (library tools) and F8 evidence",
+   "problem": "The draft gives 18 (8 core + 10 rated 4–5★), app-store 12. Four of the 4–5★ rows (151, 625, 726, 910) ask for add-to-playlist or playlist-editing changes, not the tools the theme names (smart playlists, search in playlist, duplicates, tags, scroll bar, pins). Precision 14/18; the count is 22% too high.",
+   "fix": "Corrected: 14 (8 core + 6 rated 4–5★), from app-store 9, google-play 1, hacker-news 4. Either drop the add-to-playlist requests or rename the theme to include them."
+  },
+  {
+   "check": "counts",
+   "location": "§2 item 18 (app icon)",
+   "problem": "The draft marks the theme 'not thin' with 2 sources (app-store 17, hacker-news 1). The only HN row (1102) is a 2025 remark about a change in the logo's hue, made inside a UI-churn complaint; it is not about the 2026 icon. The icon complaint is therefore single-source, and the draft's own rule (one source = thin) applies. It is also a one-event spike: 12 of 14 core reviews fall in 2026-05/06.",
+   "fix": "Mark the theme thin (one source, one-event spike), as the draft does for login. n = 17, all app-store."
+  },
+  {
+   "check": "counts",
+   "location": "§2 item 5 (clutter/promos) and F3 evidence",
+   "problem": "The draft gives 49 (app-store 21, google-play 4, hacker-news 24). Four rows are free-tier 'get Premium' reminders (159, 713, 891, 1107), and 713, 891 and 1107 are one duplicated text. Row 203 is about the Jam invite feature, and in 397 'bloat' means slowness. Precision is 43/49 (88%) and google-play support drops from 4 to 1.",
+   "fix": "Corrected: 43 (41 core + 2 rated 4–5★), from app-store 18, google-play 1, hacker-news 24. Alternatively, state explicitly that Premium-upsell pop-ups are counted."
+  },
+  {
+   "check": "counts",
+   "location": "§2 ranking, items 2 and 3",
+   "problem": "The draft ranks free-tier control (88 core) above bugs (86 core). The evidence lens's bugs list is about 100% precise but misses about 10% of bug reports: its 12 extra rows are real malfunctions and so are 6 of my 9 extra rows. Corrected bugs core is about 92–95, so the order of #2 and #3 flips.",
+   "fix": "Report bugs at about 92–95 core (app-store 78, google-play 13, hacker-news 4 on the full union) and say that #2 and #3 are a statistical tie. Totals including 4–5★ are free-tier control 117 and bugs 112."
+  },
+  {
+   "check": "counts",
+   "location": "§1 Sample/Caveats; google-play splits throughout",
+   "problem": "Rows 713, 891 and 1107 (google-play IN listing, dated 2025-08-29, 2026-07-09 and 2026-09-15) are near-identical texts (word Jaccard 0.85–0.87). Each is counted separately in free-tier control, ads and clutter, and in the switching-intent list, which inflates the google-play counts.",
+   "fix": "Add a caveat that one google-play text appears three times, or deduplicate. Deduplicating reduces google-play by 2 in free-tier control (26→24), ads and clutter."
+  },
+  {
+   "check": "counts",
+   "location": "§4 U1 (self-hosting effort and stacks)",
+   "problem": "The draft gives effort 17, stacks 17, overlap 4, 30 distinct. The effort definition is loose: 1091 is about the cost of buying music and 1206 about a company's storage cost. The stack count is too low: it misses 728, 1068, 1087 and 1104.",
+   "fix": "Corrected: effort 9 (strict) or 15 (broad: friction of hosting, collecting or syncing your own library); stacks 21; overlap 8; 28 distinct. All HN and already marked thin; use as context only."
+  },
+  {
+   "check": "counts",
+   "location": "§3 item 7 (lossless)",
+   "problem": "The draft gives 11 (app-store 3) and says 8 of the 9 core complaints predate 2025-09-10. Rows 365 and 1162 are equaliser (EQ) requests, not lossless requests.",
+   "fix": "Corrected: 10 (9 core + 1 rated 4–5★), from app-store 2 and hacker-news 8 (1199 accepted). 7 of the 9 core complaints predate 2025-09-10."
+  },
+  {
+   "check": "counts",
+   "location": "§2 item 26 (car)",
+   "problem": "The draft gives 8 core from 3 sources. Row 1010 says playback fails 'with CarPlay or not', and 1146 is a playlist switch that happened while driving; neither is a car-integration problem. 1146 is also the only google-play row.",
+   "fix": "Corrected: 6 core (plus one 4★ row, 709) from 2 sources (app-store 4, hacker-news 2). Still small."
+  },
+  {
+   "check": "counts",
+   "location": "§2 item 2 (free-tier control): sources and sub-split",
+   "problem": "The draft cites 'hacker-news 1', but that row (1084) does not name any lost control, so the theme has 2 sources, not 3. The pick-cap sub-split (53) misses explicit pick-cap rows: 121, 957, 183, 518, and 713/891/1107.",
+   "fix": "State hacker-news 0 (app-store 91, google-play 26, 117 total). Pick cap is about 60–62 core and order 25–31; the ordering of the sub-splits is unchanged."
+  },
+  {
+   "check": "counts",
+   "location": "§3 item 1 (upload own files), 4–5★ part",
+   "problem": "The draft gives 34 (30 core + 4 rated 4–5★), app-store 5. Core matches exactly, but 3 of the 4 high-rated rows are catalogue wishes (983 'songs that r on youtube', 1053 'merge with Soundcloud') or ambiguous (1027). Store-side evidence for uploading is only 3 rows, and 2 of them are about YouTube music.",
+   "fix": "Corrected: 31 (30 core + 1 rated 4–5★), from app-store 2, google-play 1, hacker-news 28. Say that store-review support for upload is essentially absent; the theme rests on HN."
+  },
+  {
+   "check": "fit",
+   "location": "fixes.draft.md section 6, Angle A evidence line, and the Recommendation",
+   "problem": "'67 reviews across 3 sources' overstates A. The 67 are 59 HN comments plus 8 store rows. I hand-read all 12 store rows in the draft's own-files themes: only 1 is about owned files (a Google Play Local Files glitch). The other 11 are 4 requests for YouTube or SoundCloud content, 3 people moving catalogue playlists to another service, 3 ownership statements and 1 ambiguous row. Across all 1088 store reviews, an owner-keyword net found 13 hits; on reading, none clearly asks to upload files the reviewer legally holds. Under the thin rule (a single source counts as thin), the upload demand itself is thin.",
+   "fix": "Restate A's evidence as '67 core reviews, 59 of them HN; of the 12 store rows in the own-files themes, 1 is about owned files; thin outside HN, size unknown'. Make the landing-page and waitlist test a hard gate before any L-sized storage, transcode or offline work."
+  },
+  {
+   "check": "fit",
+   "location": "Section 6, Recommendation ('use B and C as the proof points') and Angle B",
+   "problem": "B's volume comes from people tunebox can't serve. 0 of the 116 free-tier-control reviewers own files: the only 2 owner-keyword hits both use 'my own song' to mean a chosen catalogue song. Aimed at mass-market listeners, B reads as free on-demand music, which is an implied catalogue promise. Nothing in either verified file shows a locker that mixes in songs, caps skips or gates controls. So against the alternatives owners actually weigh, the B proof points are parity.",
+   "fix": "Keep B as voice only. Replace the proof points with ones measured against lockers and self-hosting: zero setup with no server, whole-folder upload with originals kept (F6), always exportable but time-boxed (F7), and shuffle and history built for large collections (F4, F8). Treat F1 to F3 as hygiene."
+  },
+  {
+   "check": "fit",
+   "location": "Section 6, Angle C",
+   "problem": "26 of the 27 offline complaints concern the original's catalogue downloads; only 1 is about Local Files. For owners, the original's Local Files already play offline, YouTube Music uploads play offline without Premium (an HN user quoting Google's help page), and Plexamp has offline downloads (official listing). C is also L-sized, and 'never lets you down' is an absolute claim.",
+   "fix": "Use F5 as a feature line under A, not as an angle. Remove the absolute wording."
+  },
+  {
+   "check": "fit",
+   "location": "F2 (Playlists play only what's in them) and its proposed features.csv row",
+   "problem": "The original already ships this, and the draft missed it. Premium can switch Smart Shuffle off (support article, 2026-05-13). Autoplay has an on/off switch on mobile and desktop, and its support article (updated 2025-09-25) shows no Premium label. The 2025-05-07 newsroom post says users can switch both off. Of 33 injection reviews I coded 16 free, 5 paying, 12 unknown. Of the 13 core reviews dated after 2026-05-13: 10 free, 3 unknown, 0 paying. So the draft's '13 of 25 after the article' reflects free users, for whom Smart Shuffle is always on by design; it does not show the fix failing.",
+   "fix": "Set the row to original = yes, with the note 'difference = default off'. Reword the date split to say 10 of those 13 are free-tier users. Label F2 hygiene, not a differentiator."
+  },
+  {
+   "check": "fit",
+   "location": "F7 (Your library leaves with you) and its features.csv rows",
+   "problem": "'The verified changelog shows no export' is true of that file but false of the product. The original's Download your data tool gives a ZIP of JSON with playlists (including local track names), Your Library, and lifetime streaming history (support articles, updated 2025-09-18 and 2026-07-07). The cited quote 14618139577 is a cancelled-Premium user whose downloaded catalogue greyed out, a catalogue and offline bug rather than owner lock-in. 'Playback stays on after cancel', original = no, is not like for like: the original's library stays playable on its free tier. Keeping playback and download open for people who stopped paying means storing 96 to 300 GB per 10,000-track library with no upper limit. A one-click export of the original files at that scale is M to L, not M.",
+   "fix": "Cite the original's data export and state what is left: on demand, M3U8/CSV, plus the audio files. Time-box post-cancel access (read-only plus export for N days, then deletion with notice). Drop the misfit quote and the 'original = no' post-cancel comparison. Replace 'never held hostage' with 'always exportable, with N days' notice before any deletion or shutdown'."
+  },
+  {
+   "check": "fit",
+   "location": "F8 (Collector tools), proposed row 'Listening history page with play counts' (original = no)",
+   "problem": "The original already ships part of this: Recents (the last 50 songs on desktop, support 2025-06-30), a weekly listening snapshot (2025 recap), the lifetime-history export, Smart Filters, and playlists made from filtered Liked Songs (select markets). Navidrome shows play counts per user (official docs). Per-track play counts in the app were not found in the pages checked.",
+   "fix": "Mark history as original = partial. Claim only in-app per-track play counts and live-updating rule-based playlists as the difference, and note parity with Navidrome."
+  },
+  {
+   "check": "fit",
+   "location": "F5 (Offline-first downloads) and the proposed row 'Single-track download and no expiry for own uploads'",
+   "problem": "The comparison is apples to oranges: for owned files, the original's Local Files sit on the device and work offline already, while the 30-day check-in applies to catalogue downloads. 'No expiry' also contradicts paid offline with plan re-checks. Making offline the paywall conflicts with YouTube Music's free offline uploads (user-quoting-official). The two official download-cap articles disagree ('on each of up to 5 devices' vs 'across up to 5 devices'), and the draft cites only one. 'Offline-first cuts egress' is only partly true, because whole-library downloads to several devices front-load egress.",
+   "fix": "Pick one model: (i) plain, non-expiring copies of the user's own files, with the paid part being sync convenience, or (ii) expiry after a lapse plus a grace period, without the word 'no expiry'. Compare against Local Files, YouTube Music uploads and Plexamp. Cite both cap wordings. Add /replica-launch for the in-app purchase rules and the pricing conflict, and cap the number of devices."
+  },
+  {
+   "check": "fit",
+   "location": "F4 (A shuffle you can check), size S",
+   "problem": "Under-sized. A permutation on one device is S, but keeping the cycle across devices, surviving library edits mid-cycle, working with the user queue and shuffling a whole library of tens of thousands of tracks is M. PlaybackState is marked 'confidence: guess' in recon. The claim that the differentiators beat lockers is unsupported: the market file says nothing about how lockers shuffle.",
+   "fix": "Resize to M. Have /replica-architect specify PlaybackState before /replica-build and /replica-backend. Drop the comparison with lockers. Consider a 'spread artists' option and never market 'truly random'."
+  },
+  {
+   "check": "fit",
+   "location": "F6 (The locker done right)",
+   "problem": "It is presented with differentiator framing, but it is table stakes. YouTube Music advertises uploads (official listing) and supports up to 100k (user-quoting-official). VOX keeps FLAC as FLAC with unlimited storage at $4.99/month, and iBroadcast uploads are free (official listings). 'Plexamp users complain of no M3U import' rests on one App Store review. The desktop watch-folder is a fourth client outside the web + iOS + Android scope. Of the 6 store upload rows, 4 want YouTube or SoundCloud content.",
+   "fix": "Label F6 'must, table stakes'. Write 'a Plexamp reviewer (thin)'. Move the desktop watch-folder out of v1 as a separate L. Have /replica-architect own the storage cost model for originals plus streaming copies."
+  },
+  {
+   "check": "fit",
+   "location": "F1 (Every control on every plan)",
+   "problem": "The cited reviewers are free catalogue listeners, 0 of whom own files. Premium already has every one of these controls and markets them in its own words. Lockers don't gate controls. Mass-market copy like 'unlimited skips on every plan' implies free on-demand music. Making plans differ by offline downloads conflicts with YouTube Music's free offline uploads.",
+   "fix": "Keep it as an internal pricing and entitlement policy (S; /replica-launch plus /replica-backend), never as a headline or proof point. Avoid echoing the original's Premium wording. Settle the offline gate in /replica-launch."
+  },
+  {
+   "check": "fit",
+   "location": "F3 (A quiet, music-only app)",
+   "problem": "It fits, since 'paying and still getting ads' (33) comes from payers and HN owners left over promo pop-ups. But it is table stakes against lockers: iBroadcast and Substreamer state 'no ads' in their official listings. 'Ad-free music' wording would imply ad-free commercial tracks. Rating prompts are thin (12, app-store only).",
+   "fix": "Keep it, framed as retention rather than acquisition. Use 'no ads in your library, on any plan', never 'ad-free music'."
+  },
+  {
+   "check": "fit",
+   "location": "Legal notes (section 7) and features.csv sharing rows (Share a playlist by link, Public profile, Collaborative playlist)",
+   "problem": "Public streaming of uploaded audio to people who didn't upload it is the largest copyright exposure, and the evidence shows no demand for it: 0 owner requests to share their uploads, and 0 hits across all 1227 rows. 'Only among users who each own the tracks they add' can't be enforced. Background, not verified in this session: the EU DSM Directive Art. 2(6) excludes cloud services where users upload content for their own use from Art. 17, so public access may bring tunebox into scope; US §512(c) safe-harbour conditions apply; lockers that streamed uploads to others (MP3tunes, Grooveshark) were sued.",
+   "fix": "In v1, a share sends the tracklist only, and recipients play only tracks they uploaded themselves. Defer public profiles and collaborative audio. Review with counsel before launch."
+  },
+  {
+   "check": "fit",
+   "location": "Quotes in sections 4 to 7 (all 24 are exact; the problem is fit)",
+   "problem": "U2 quote 39967357: the commenter likes that removed songs stay visible ('it's the reason I still use Spotify'). U3 quote 42113467 describes behaviour from about 2014 ('10 or so years ago'). The F1 and F2 quotes come from free-tier catalogue listeners. The F6 quote says Apple Music and YouTube Music already allow uploads, which is parity evidence.",
+   "fix": "Use 39967357 only for 'tell me what changed'. Mark 42113467 as historical. Say whose problem the F1 and F2 quotes show. Read the F6 quote as parity."
+  },
+  {
+   "check": "fit",
+   "location": "Section 1, 'All three lenses reached A independently'",
+   "problem": "True: fit.md, market.md and evidence.md each recommend A. But all three coded the same HN-heavy, ownership-searched sample, so their agreement is not independent market evidence. The draft also rejects the Subsonic API as 'HN-only, thin' while accepting A, whose upload demand is equally HN-only (59 of 67).",
+   "fix": "Say the lenses agree on the same data. Apply the thin rule consistently. List a Subsonic-compatible API (about M; lets existing clients such as Substreamer and Symfonium provide offline before native F5 ships) as a /replica-architect option rather than dismissing it."
+  },
+  {
+   "check": "fit",
+   "location": "Section 7, pricing notes for /replica-launch",
+   "problem": "Missing two signals. 4 owners are subscription-averse (HN 3, app-store 1; thin). 6 HN owners are gap-fillers who want uploads alongside a catalogue, which Apple Music and YouTube Music already provide and tunebox can't. Free competitors (YouTube Music uploads, iBroadcast) cap the price near zero.",
+   "fix": "Add both signals. Test storage-based or one-time pricing next to the subscription."
+  },
+  {
+   "check": "fit",
+   "location": "Absolute claims across F5, F7 and Angles A and C",
+   "problem": "'Never disappear', 'never held hostage', 'never lets you down', 'no expiry' and 'plays untouched' are absolute. Streams are transcoded on lower plans (F6), so 'untouched' holds only for the stored copy. Lockers have a history of shutting down.",
+   "fix": "Use bounded, policy-backed wording: 'stored copy kept bit for bit', 'always exportable, with N days' notice', and the DMCA caveat."
+  }
+ ],
+ "new_features_rows": [
+  {
+   "feature": "No playback limits on any plan (pick skip order repeat seek queue reorder)",
+   "area": "payments",
+   "priority": "must",
+   "notes": "original=no. F1, /replica-launch + /replica-build. Plans differ only by storage, offline, quality and seats. Evidence: free-tier control 116 across 3 sources; queue 16; price increases 31. Original sells repeat, any order and unlimited skips as Premium; mobile drag-reorder is Premium only (support 2026-02-26)."
+  },
+  {
+   "feature": "Playlists play only their own tracks; autoplay off by default",
+   "area": "player",
+   "priority": "must",
+   "notes": "original=no. F2, /replica-build. Evidence: songs injected 33 across 3 sources. Original: Smart Shuffle always on for free mobile users (support 2026-05-13)."
+  },
+  {
+   "feature": "No promotional pop-ups or custom rating prompts (policy)",
+   "area": "design",
+   "priority": "must",
+   "notes": "original=no. F3, /replica-design + /replica-build; voice rule to /replica-brand. Evidence: clutter 49, paying and still getting ads 33, redesigns 40 (3 sources each); rating prompts 12 (thin, app-store only)."
+  },
+  {
+   "feature": "Shuffle whole library and shuffle the queue",
+   "area": "player",
+   "priority": "should",
+   "notes": "original=no (not in the verified changelog; check the current app). F4, /replica-build; also add a once-per-cycle shuffle spec to the existing Shuffle row. Evidence: shuffle not random 25 across 3 sources; shuffle requests 9 across 2 (fit lens)."
+  },
+  {
+   "feature": "Single-track download and no expiry for own uploads",
+   "area": "offline",
+   "priority": "must",
+   "notes": "original=no. F5, /replica-build + /replica-backend. Original: 30-day online check-in, no individual-song downloads, 10,000 tracks x 5 devices (support 2025-11-13). Evidence: offline fails 27 across 3 sources, 11 of 26 core after the 2026-05-28 iOS background-downloads update."
+  },
+  {
+   "feature": "Bulk folder upload with resume",
+   "area": "library",
+   "priority": "must",
+   "notes": "original=no. F6, /replica-backend + /replica-build (S18). Evidence: upload my own files 34 across 3 sources (28 HN); Local Files per-device and unreliable 11."
+  },
+  {
+   "feature": "Keep original file untouched (no matching or re-encoding of the stored copy)",
+   "area": "library",
+   "priority": "must",
+   "notes": "original=no. F6, /replica-backend. Evidence: files replaced or converted elsewhere 4 (HN only, thin); VOX advertises that FLAC stays FLAC, so this is table stakes against lockers."
+  },
+  {
+   "feature": "Duplicate detection on upload",
+   "area": "library",
+   "priority": "should",
+   "notes": "original=no. F6, /replica-backend; Track.checksum already in the recon model. Evidence: part of library tools 18 across 3 sources."
+  },
+  {
+   "feature": "M3U/M3U8 playlist import",
+   "area": "library",
+   "priority": "should",
+   "notes": "original=no (the original imports from streaming services only, via TuneMyMusic 2025-11-20). F6, /replica-backend. Evidence: own/export 30 + 7; Plexamp users complain of no M3U import (market file)."
+  },
+  {
+   "feature": "Export library (original files playlists play history)",
+   "area": "settings",
+   "priority": "must",
+   "notes": "original=no (no export in the verified changelog). F7, /replica-backend. Evidence: own rather than rent 30 across 3 sources (24 HN); export or transfer 7 across 3 sources. Google Play Music deleted uploads on 2021-02-24."
+  },
+  {
+   "feature": "Playback and export stay on after downgrade or cancel",
+   "area": "payments",
+   "priority": "must",
+   "notes": "original=no. F7, /replica-backend + /replica-launch. Changes the recon F09 edge from 'read-only until under' to 'uploads paused; playback and export on'. Evidence: locked out after a cancel or lapse, 3 reviews across 2 sources (market lens, small)."
+  },
+  {
+   "feature": "Listening history page with play counts",
+   "area": "library",
+   "priority": "should",
+   "notes": "original=no (original has Recently played and names 'listening stats' in its 2025 recap; check before claiming a gap). F8, /replica-build from PlayEvent. Evidence: history and play counts 9 across 2 sources."
+  },
+  {
+   "feature": "Smart playlists (rule-based)",
+   "area": "playlists",
+   "priority": "should",
+   "notes": "original=no. F8, /replica-build + /replica-backend. Evidence: library tools 18 across 3 sources (10 from 4-5 star reviews). Folders, bulk actions and filters already ship in the original, so they are parity only."
+  }
+ ],
+ "notes": {
+  "quotes": "The draft does not pass: 3 quotes fail on context and 3 more need a short note added.\n\n**Mechanical check passed for all 88 review quotes.** The draft has 88 curly-quoted spans (88 open and 88 close marks) and every one is followed by a link to a review. All 88 links are in reviews.csv, and all 88 quotes are exact substrings of that row's text with no normalisation needed. Every source, rating and date in the link labels matches the row. There is no ellipsis inside any review quote. The quotes cite 86 unique rows; rows 39428119 and 41859836 are each quoted twice.\n\n**Unreachable sources.** No quoted link points at Reddit, Trustpilot or the Spotify community board, and reviews.csv contains no rows from them. Two quoted HN rows contain links to those sites: 49523937 (line 117) links to community.spotify.com and 46777110 (line 177) links to reddit.com. In both cases the quoted words are the HN commenter's own, so the draft's 'nothing from them is quoted' claim holds.\n\n**Testimonials.** No quote is used as praise of tunebox or the original. Several come from 3–5★ reviews (lines 81, 137, 138, 188, 212, 238, 253, 309), but each quotes only the complaint, which the full row confirms.\n\n**Context reading.** I read the full row behind all 88 quotes. 82 are fine, 3 fail and 3 get a warning. The three failures:\n- **Line 70:** the HN commenter is summarising an article and says it is 'Not a reason to quit'. The draft presents them as someone who quit.\n- **Line 172:** 'upload my own songs' means YouTube/TikTok remixes and covers, not files the commenter owns.\n- **Line 213:** the commenter praises the original for showing removed songs greyed out. The same row is counted as a complaint in recount.json catalogue_removals.\n\nEach failure has replacement quotes; the script re-checked every one as an exact substring of its row.\n\n**The 67 straight-quoted spans** carry no review link. They are labels, keywords, feature-matrix names, changelog terms or proposed tunebox copy, and none is reviewer wording without a link. The ones that cite a source all trace to their stated input file (changelog, features.csv, recon.md, feedback.md). The 4 bare HN links on line 307 come from upload-market.verified.json (findings 17, 18, 22 and 40), not reviews.csv.\n\n**Rerun:** `python3 verify-quotes.manual.build.py && python3 verify-quotes.py`. The script is independent of synth/quotes.py. If a quote moves or changes, it shows up as 'manual_not_yet_read' until someone reads it again.\n\nFiles are in /tmp/claude-0/-home-user-Spotify-clon/8bfae393-793e-5eab-927d-977fb44c775d/scratchpad/entrepreneur/analysis/:\n- verify-quotes.py — extractor and checker\n- verify-quotes.manual.build.py — builds my verdicts for all 88 rows\n- verify-quotes.manual.json — the verdicts\n- verify-quotes.json — every span with its full row and check results\n- verify-quotes.txt — human-readable results: failures with fixes, every quote next to its full row, and the trace of unlinked spans",
+  "counts": "Method: I read all 1227 rows in full with vdump.py and hand-coded them in verify/labels.txt, without reusing any analyst script or keyword list. Core rows (rating ≤3 plus all HN, 594) were coded for every theme. Rows rated 4–5★ (633) were coded for complaint themes and two praise codes. vcount.py tallies the labels and compares them like with like against the draft (core-only where the draft did not scan 4–5★). vdiff.py and vcorrect.py list every row where my labels and the evidence lens's URL lists (synth/recount.json) disagree; I re-read each one and recorded an explicit accept/reject with the reason. Precision of the evidence lists on top themes: ads 99%, free-tier control 97%, bugs 100%, price 94%, clutter 88%, injection 88%, upload 91%, library tools 78%, lossless 82%, discovery-missed 38%.\n\nWhat holds:\n- The Sample section is exact on every figure: 1028/60/139 rows; storefronts nz/us/ca/gb/ie/au 266/233/185/178/106/60; 709 App Store rows in Sep–Oct 2026; all ratings and dates; 34 RSS pages (8/8/6/6/4/2); core 594 and 4–5★ 633.\n- Ads 208 vs 213 corrected; free-tier control 116 vs 117; price 82 vs 83; UI, slow, paid-ads, playback, recs, offline, login, politics, removals, billing, shuffle, queue and audiobook all within a row or two.\n- The U1 own-files group: 67 vs 69 (app-store 6, google-play 3, hacker-news 60).\n- Switching away: 107 who left or intend to (112 with conditional threats; only 78 actually left), consistent with the fit and market lenses' 105/112.\n- Shares and date splits: 185/455 vs 179/455; 81/88 vs 79/86; 17/131 vs 18/124; 13/17; 11/26; 12/14 icon; 4/4 iPad.\n\nLimits: one coder, no second rater. My own recall was imperfect: the evidence lens was right on 3 background-play rows and 12 bugs rows that I had missed, and I accepted theirs.\n\nFiles:\n- /tmp/claude-0/-home-user-Spotify-clon/8bfae393-793e-5eab-927d-977fb44c775d/scratchpad/entrepreneur/analysis/verify-counts.md (report with the full theme table)\n- /tmp/claude-0/-home-user-Spotify-clon/8bfae393-793e-5eab-927d-977fb44c775d/scratchpad/entrepreneur/analysis/verify-counts.json (independent and corrected counts with URL lists per theme, accept/reject ids, splits, switching buckets)\n- /tmp/claude-0/-home-user-Spotify-clon/8bfae393-793e-5eab-927d-977fb44c775d/scratchpad/entrepreneur/analysis/verify/ (labels.txt and the scripts vdump, vcount, vdiff, vcorrect, vextra, vdupes, vswitch; rerun with `python3 vcount.py && python3 vcorrect.py && python3 vextra.py`)",
+  "fit": "The draft fails this check as written. None of the fixes promises catalogue access, ad-free commercial music or artist payouts, and the plan is mostly buildable. But four things need fixing:\n\n1. **Angle A is overstated.** In substance its evidence is HN-only. On my reading, 1 of the 12 store rows in the own-files themes is about owned files, and none of the 1088 store reviews clearly asks to upload files the reviewer owns.\n2. **The B and C proof points come from catalogue listeners.** 0 of 116 free-tier reviewers own files, and 26 of 27 offline complaints are about the original's catalogue downloads. Against the alternatives owners actually name (Apple Music 15, Plex 12, YouTube Music 11, Navidrome 8, Jellyfin 6, iBroadcast 0, VOX 1) they are parity.\n3. **The original already ships things the draft missed.** For F2: Smart Shuffle off for Premium, and an Autoplay switch with no Premium label. For F7: a Download your data export with playlists and lifetime history. For F8: Recents and the weekly snapshot. I fetched 4 new official support pages on 2026-10-04 to confirm these.\n4. **Size and claim errors.** F4 is M, not S. F5's \"no expiry\" contradicts paid offline. F6's desktop watch-folder is a fourth client. F7's post-cancel access has no storage cap.\n\n**Strongest counter-case:** keep A as the category, because it is the only angle where buyer and product match. Aim it at would-be self-hosters and former Google Play Music users, with proof points measured against lockers and self-hosting. Make the waitlist test a gate. Keep a Subsonic-compatible API in view as a feasibility hedge for mobile offline.\n\n**Method:** keyword nets only found candidates; I read every one in full and coded it by hand (one coder, no second rater). That covers injection (33), offline (27) and shuffle (25), the owner-signal hits, and all 12 store rows in the own-files themes. All 37 quotes in verify-fit.md pass the machine check. Reddit, Trustpilot and the community board were not reached.\n\n**Unverified items:** a few legal and platform points are background knowledge, marked as unverified in the report: EU DSM Art. 2(6)/Art. 17, US §512(c), the MP3tunes and Grooveshark cases, App Store metadata rules, and OS cache purging.\n\nFiles are in /tmp/claude-0/-home-user-Spotify-clon/8bfae393-793e-5eab-927d-977fb44c775d/scratchpad/entrepreneur/analysis/:\n- verify-fit.md (the report)\n- verify-fit.py and verify-fit.json (manual codes and counts, with URL lists per theme)\n- verify-fit.quotes_context.py and verify-fit.quotes_context.json (the full review behind each of the draft's 24 quotes)\n- verify-fit.check_quotes.py (quote checker)\n- verify-fit.alternatives.json\n- verify-fit-raw/ (fetch.py, extract.py, texts.json, the raw HTML)"
+ }
+}

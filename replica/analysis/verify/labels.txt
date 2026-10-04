@@ -1,0 +1,826 @@
+# verify-counts manual labels. Format: <row index 0-based>: code code ...   ("-" = read, no theme)
+# Coder: adversarial verifier, full read of every row. Codes defined in vcount.py CODEBOOK.
+1: ads
+2: login billing
+5: podcast
+8: ui
+14: ftc_order
+16: bugs offline
+17: rate
+21: ftc_pick
+25: ftc_pick
+26: playback bugs
+27: bugs
+29: ads
+31: ftc_pick
+32: ads
+35: ftc_pick
+36: ads ftc_skip price
+37: queue history
+38: ftc_pick
+46: price price_inc
+48: playback
+50: libtools lyrics
+52: politics ai_music
+53: slow
+54: playback bugs
+62: ads ftc_pick
+63: recs
+65: ads
+68: ads
+69: ftc_pick ftc_skip
+72: clutter ui
+76: playback slow
+78: inject
+80: ads
+83: rate podcast paid_ads ads
+86: politics price price_inc shuffle
+88: lockscreen
+90: bugs
+92: ftc_pick ftc_repeat
+95: ftc_repeat
+97: ftc_order ftc_pick
+99: hostage
+103: ads
+104: ads price
+113: ftc_skip
+115: slow bugs
+120: ftc_skip ftc_order price
+121: ads ftc_pick
+122: paywall own
+123: removals
+125: ftc_pick
+128: ui
+129: libtools
+130: billing
+131: shuffle
+132: recs
+133: ui price price_inc
+134: price price_inc shuffle
+145: gift billing
+155: politics ai_music
+161: politics own
+169: rate
+170: inject ftc_pick
+176: devices devices_pay
+178: bugs slow
+179: ftc_pick
+180: lossless
+183: ads ftc_pick
+187: slow bugs
+193: ads
+197: lockscreen playback
+198: ads
+199: ads
+200: playback offline
+201: ftc_order ftc_skip
+203: misc
+204: ftc_pick
+208: ftc_order ftc_seek
+210: ftc_order
+211: audiobook
+219: ftc_pick
+220: ftc_pick
+223: paid_ads ads clutter recs audiobook
+229: devices bugs
+253: playback
+263: ftc_pick price
+264: ads
+265: inject ads
+266: rate
+267: ads
+268: -
+269: ftc_skip
+274: recs
+276: ads billing
+278: ads
+284: recs
+291: price ads paywall ui
+292: ads
+294: ftc_skip ftc_queue ftc_pick ads politics
+295: politics ai_feat
+296: clutter
+305: billing
+310: slow bugs
+311: ui
+312: bugs shuffle
+314: offline
+320: price price_inc
+321: ads price paywall
+325: paid_ads ads price price_inc
+328: paywall
+330: ads
+333: rate
+334: ads
+336: inject ads car ftc_pick ftc_skip bugs
+337: ftc_repeat ftc_seek
+345: ads ftc_skip ftc_pick
+346: ipad bugs
+347: price ftc_pick ftc_order inject
+350: data_loss
+351: ads slow
+353: ads
+355: ui bugs rate
+356: bugs
+358: ads price
+359: paywall
+360: ipad ui
+361: price price_inc
+367: bugs data_loss queue
+369: recs
+371: login bugs
+373: -
+374: ads price
+375: bugs
+377: login
+378: devices devices_pay
+379: login billing
+380: bugs
+381: login
+382: devices devices_pay
+383: slow ui
+385: -
+386: playback
+387: login bugs
+388: login
+389: rate paid_ads ads bugs price
+390: bugs
+395: shuffle price
+397: slow
+398: bugs login
+400: playback bugs
+401: login
+402: bugs price
+403: lyrics
+404: bugs
+406: billing
+407: ads ftc_order ftc_skip ftc_pick
+408: ads ftc_pick
+410: ads
+411: shuffle
+415: politics
+417: offline devices bugs
+419: login
+420: slow
+421: playback slow ui
+422: bugs price price_inc
+423: login
+424: login bugs
+425: libtools price price_inc
+426: bugs
+427: login
+428: billing bugs
+430: billing login
+431: bugs
+432: bugs
+433: offline
+434: playback
+435: login
+436: bugs
+437: podcast
+438: own
+439: offline recs
+440: login
+441: bugs price
+443: bugs politics
+444: bugs podcast login
+447: bugs price
+448: misc
+453: ads removals
+455: paid_ads ads
+456: login
+457: login
+458: login data_loss
+459: bugs
+460: bugs
+461: login bugs
+462: bugs price price_inc
+464: ads inject ftc_pick price
+465: paid_ads ads
+466: ads
+468: bugs
+469: clutter
+473: devices devices_pay
+474: bugs devices slow
+475: bugs
+476: bugs
+477: login
+478: recs
+479: bugs
+480: playback bugs
+481: politics ai_music
+482: slow
+486: -
+489: ads
+492: ads
+494: billing
+499: ads ftc_pick
+500: ads
+501: ads
+502: -
+504: ads
+505: ads ftc_pick ftc_order
+506: ftc_pick
+509: ads
+514: slow
+515: ftc_pick ads
+517: shuffle
+518: ftc_order ftc_pick
+523: recs
+524: bugs export
+527: paid_ads ads
+528: paid_ads clutter ui audiobook
+529: ads
+530: gift billing
+533: ads ftc_skip ftc_order ftc_pick
+544: podcast
+547: audiobook
+549: recs
+553: shuffle
+554: price price_inc
+556: ftc_queue
+560: icon price price_inc family paid_ads ads
+561: ads ftc_pick ftc_skip
+564: slow
+565: ads ftc_pick ftc_skip
+566: paywall
+567: upload notonstreaming
+568: clutter
+570: ftc_pick
+575: slow bugs price price_inc
+579: ai_feat recs
+580: ui clutter
+581: bugs playback
+583: ftc_order
+594: price
+595: slow
+598: paid_ads ads
+599: bugs
+600: ads
+607: rate
+610: -
+614: paywall ads price
+624: price price_inc
+626: ftc_pick
+627: shuffle shuffle_req
+631: ads
+632: price
+638: ads
+640: price price_inc
+643: ftc_skip ftc_pick
+645: playback
+647: paid_ads
+650: clutter price price_inc
+651: playback
+653: playback
+658: ads
+660: price
+663: gift
+664: paywall
+665: ads ftc_skip
+666: devices
+667: podcast
+669: playback
+670: inject
+676: ads price
+678: podcast
+680: inject
+682: data_loss
+683: playback bugs
+686: libtools shuffle_req
+687: icon ai_music clutter ui
+688: ads paywall
+689: paid_ads ads
+693: ftc_seek ads paywall
+695: lyrics
+701: politics
+707: politics
+738: travel ads
+743: bugs
+746: ftc_pick ftc_order
+751: price price_inc audiobook
+752: audiobook
+756: price price_inc devices
+758: ads ftc_seek
+761: price ads inject
+764: ftc_pick
+768: paid_ads ads
+777: ai_music
+783: ads
+787: billing
+793: billing
+798: ads
+804: ipad bugs
+805: paid_ads ads
+806: bugs
+810: offline slow bugs
+812: devices bugs
+813: shuffle
+814: ftc_pick
+824: billing
+825: ftc_skip ftc_pick
+826: ads
+827: login data_loss
+829: ads
+831: bugs
+832: recs
+833: shuffle history
+834: paid_ads ads
+835: paid_ads ads
+837: ads price
+840: clutter
+841: ipad bugs ui queue clutter ai_feat
+843: ftc_pick
+844: politics rate export
+846: ui
+848: misc
+856: bugs slow ui
+858: ads ftc_pick inject price
+866: ads
+869: ads paywall
+877: ai_music politics
+880: slow bugs audiobook
+881: ui bugs
+887: misc
+888: ads price
+895: price billing
+896: ads ftc_skip
+898: slow ai_music
+899: ftc_order ftc_pick ftc_repeat ads
+905: ftc_skip
+907: ads
+908: ads
+909: audiobook
+913: politics ai_music
+914: paywall
+915: politics ai_feat
+923: clutter
+926: slow ai_feat
+927: -
+931: price price_inc family
+932: paid_ads clutter slow
+933: price price_inc
+935: slow offline clutter bugs politics paid_ads recs
+942: login
+943: misc
+945: playback
+947: ftc_pick
+948: ai_music ftc_order
+950: icon
+956: misc
+957: ads ftc_skip ftc_pick ftc_seek
+962: slow
+963: ads
+965: travel
+970: ads
+973: paywall
+975: ads
+977: ftc_seek
+985: ftc_queue
+989: billing
+993: price price_inc
+995: icon
+998: rate price
+999: icon bugs
+1001: slow
+1002: playback devices
+1004: billing playback
+1009: recs
+1010: playback
+1018: removals
+1019: paid_ads ads
+1021: icon
+1022: podcast clutter kids recs billing
+1025: ai_music
+1028: icon inject
+1030: car bugs
+1033: price price_inc
+1034: icon
+1035: icon
+1036: icon ai_feat
+1044: paywall
+1045: icon
+1048: icon
+1050: slow ui
+1052: ads paywall
+1057: ads
+1059: car bugs
+1060: icon ads price
+1063: ui ai_music
+1064: icon car
+1066: slow clutter
+710: paid_ads ads localfiles playback removals
+713: ftc_skip ftc_order ftc_pick ads upsell
+714: ads ftc_skip ftc_pick ftc_order upsell
+717: ads bugs
+718: ads ftc_order
+719: ftc_pick
+721: ftc_pick ftc_order
+722: playback slow bugs
+723: offline bugs
+725: paid_ads ads billing
+727: ftc_skip ads
+733: bugs
+808: inject shuffle recs
+820: ftc_pick ads
+823: ads
+836: ftc_pick ftc_skip ads
+847: ftc_pick ftc_skip ftc_seek ftc_order ads
+891: ftc_skip ftc_order ftc_pick ads upsell
+936: ads ftc_skip ftc_order ftc_pick
+1070: slow bugs price
+1071: playback bugs
+1076: lockscreen price price_inc ads
+1081: ads ftc_pick ftc_skip
+1082: ui paid_ads ads offline bugs politics
+1094: ftc_repeat ftc_skip ftc_order ads price
+1101: ads inject ftc_skip ftc_queue
+1105: ftc_skip ftc_pick ads
+1107: ftc_skip ftc_order ftc_pick ads upsell
+1112: ftc_pick ftc_skip inject
+1113: slow devices bugs ai_feat recs
+1114: ads bugs
+1116: ads ftc_pick paywall
+1121: bugs slow
+1122: ads price
+1125: offline playback queue ui
+1128: queue data_loss
+1129: paid_ads ads billing export
+1130: paid_ads ads audiobook
+1132: ftc_pick ftc_order
+1135: ftc_pick ftc_skip
+1139: queue export
+1146: inject
+1147: bugs price
+1148: audiobook
+1149: inject ftc_pick
+1157: playback bugs
+540: kids clutter
+728: selfhost_effort selfhost_stack
+729: offline_other price offline
+730: offline_other
+731: shuffle
+732: bugs slow ui
+857: travel login
+925: removals own
+959: selfhost_stack own
+967: offline
+1037: ai_music own discovery_missed selfhost_stack
+1067: clutter
+1068: selfhost_effort selfhost_stack
+1069: upload history shuffle_req
+1072: own selfhost_stack removals
+1073: ai_music
+1074: misc
+1077: ui queue bugs
+1078: misc
+1079: paid_ads recs
+1080: lossless praise_discovery
+1084: hostage own
+1085: own hostage price_inc
+1086: export own removals selfhost_stack
+1087: kids clutter selfhost_effort selfhost_stack
+1088: selfhost_stack notonstreaming politics upload
+1089: selfhost_pref
+1090: price price_inc audiobook
+1091: politics
+1092: selfhost_stack discovery_missed
+1093: misc
+1095: removals own
+1096: upload
+1098: paid_ads
+1099: paid_ads
+1100: recs
+1102: ui
+1103: shuffle
+1104: upload notonstreaming selfhost_stack
+1106: selfhost_stack notonstreaming selfhost_effort
+1108: selfhost_stack discovery_missed own
+1109: removals own
+1110: price_inc price selfhost_stack own
+1111: inject
+1117: inject ads selfhost_stack own
+1118: clutter upload notonstreaming
+1119: localfiles upload
+1120: ui
+1123: recs ai_feat politics selfhost_stack
+1124: selfhost_effort
+1127: upload localfiles
+1131: paid_ads
+1133: lossless
+1134: localfiles upload
+1136: recs
+1137: ui politics own selfhost_stack
+1138: offline kids clutter music_only
+1140: ui queue clutter
+1141: ui
+1142: offline
+1143: clutter music_only recs
+1144: upload
+1145: lossless
+1150: removals
+1151: localfiles upload
+1152: localfiles replaced selfhost_stack
+1153: offline own politics
+1154: lossless
+1155: billing
+1156: removals own
+1158: replaced removals
+1159: upload notonstreaming
+1160: kids clutter
+1161: lossless
+1162: ui removals offline clutter export
+1163: paid_ads clutter recs
+1164: price price_inc
+1165: kids clutter music_only ai_feat
+1166: libtools history recs politics
+1167: playback car devices bugs podcast ui history inject
+1168: removals
+1169: shuffle
+1170: ui slow libtools export
+1171: selfhost_effort discovery_missed
+1172: removals
+1173: removals
+1174: upload notonstreaming
+1175: ui clutter
+1176: ui
+1177: offline
+1178: upload libtools
+1179: recs own selfhost_stack
+1180: clutter upload
+1181: misc
+1182: localfiles
+1183: upload notonstreaming clutter
+1184: offline
+1185: own price
+1186: clutter car own selfhost_stack
+1187: upload
+1188: offline
+1189: ui
+1190: ui queue
+1191: localfiles upload
+1192: offline
+1193: offline praise_discovery
+1194: offline
+1195: shuffle
+1196: misc
+1197: shuffle
+1198: shuffle_req
+1199: clutter ui
+1200: upload
+1201: upload
+1202: ui bugs queue
+1203: devices clutter music_only
+1204: lossless clutter
+1205: price
+1206: notonstreaming localfiles upload conversion
+1207: localfiles
+1208: removals own
+1209: price_inc recs ai_music history clutter offline removals own
+1210: kids clutter
+1211: upload notonstreaming
+1212: upload conversion
+1213: ui
+1214: selfhost_effort selfhost_stack own export
+1215: recs politics
+1216: inject price_inc
+1217: removals own
+1218: localfiles
+1219: removals own
+1220: paid_ads clutter selfhost_stack
+1221: offline
+1222: lossless
+1223: offline recs removals
+1224: recs clutter
+1225: upload selfhost_effort
+1226: removals clutter own
+# ---- rating >= 4 (complaint themes + praise_discovery / praise_background only; unlisted high rows = read, nothing coded)
+6: ads
+7: praise_discovery
+9: paywall
+11: inject
+12: audiobook
+19: praise_discovery
+30: paywall
+33: ads
+34: praise_background
+39: praise_discovery
+42: ads
+44: ads
+49: praise_discovery
+59: ads
+66: praise_discovery
+67: libtools
+70: ftc_order
+71: rate
+73: clutter
+82: ads
+87: ads
+89: paid_ads ads price price_inc
+91: ads
+93: paywall
+98: price
+102: ads
+105: ads
+106: shuffle_req
+111: ads
+117: price ads
+119: praise_discovery
+127: price
+136: ads
+138: ads praise_background
+149: paywall
+150: audiobook
+159: upsell
+166: ads
+173: ads politics ai_music
+174: ads
+177: shuffle_req
+181: ads ftc_skip
+185: ads
+190: ads
+194: paywall
+216: ads
+222: praise_background
+227: login
+232: praise_discovery
+234: ads
+235: ftc_queue
+236: ads
+241: praise_discovery
+242: login
+243: price
+244: ftc_queue ftc_order
+246: praise_background
+247: ads
+248: ftc_seek
+250: ads
+251: praise_discovery
+256: ads
+260: bugs slow
+261: queue bugs
+270: ads ftc_pick
+271: praise_background
+272: shuffle ads
+273: praise_discovery
+275: ftc_skip
+281: libtools recs
+283: audiobook
+287: ads billing
+288: ads ftc_pick
+290: shuffle
+301: paywall
+303: ads ftc_order
+304: ads
+313: playback bugs
+315: ftc_pick
+317: ftc_order
+322: shuffle
+323: paywall
+326: ads
+329: shuffle devices praise_discovery
+339: ads
+343: praise_discovery
+354: ads ftc_skip
+362: praise_discovery
+376: ads paywall
+384: slow
+391: bugs
+392: login
+394: ipad slow
+399: login
+413: ads praise_background
+418: login
+429: bugs
+445: ftc_skip ads
+450: ads
+452: ads
+467: recs
+484: ftc_order
+488: praise_discovery
+503: ads
+507: praise_discovery
+508: paywall praise_discovery
+511: removals
+512: ads
+525: praise_discovery
+531: bugs ads
+543: inject ads price
+545: bugs
+550: price ftc_pick ads
+551: paywall
+552: ads ftc_seek
+563: ads
+571: ads
+572: shuffle praise_discovery recs
+576: history recs
+584: shuffle
+585: paid_ads ads
+587: ads
+612: ads
+617: ads
+618: ads
+619: bugs
+621: queue
+622: recs
+623: ftc_pick
+628: ads
+633: price price_inc
+635: travel
+636: ads
+637: ftc_repeat
+639: playback devices
+641: ads
+648: recs
+649: price price_inc
+652: praise_discovery
+655: price
+659: ads
+672: libtools
+673: ads
+675: ads
+690: bugs
+697: recs
+700: paywall
+702: ads
+703: paywall
+709: car devices bugs
+711: ads ftc_repeat ftc_seek
+712: ftc_pick ads praise_background
+715: praise_background
+716: praise_discovery
+720: praise_discovery
+734: inject libtools
+741: ads price
+749: ads praise_discovery
+750: paywall
+754: slow
+759: audiobook
+765: ftc_pick
+766: ads
+769: bugs
+772: removals recs
+773: travel
+776: inject audiobook
+778: ads paywall
+779: ads
+781: ads
+797: ui
+799: praise_discovery
+801: shuffle
+816: ads ftc_pick
+817: ui
+818: ftc_skip
+819: recs
+830: playback
+849: praise_discovery
+851: praise_discovery
+852: ftc_skip
+854: paid_ads ads
+864: removals price
+865: ui
+867: ai_feat
+868: ftc_skip paywall
+871: ads
+874: lossless
+884: ads
+894: praise_discovery
+897: history
+910: slow devices bugs
+917: playback
+919: bugs slow
+921: praise_discovery
+922: inject
+937: praise_background
+941: shuffle
+944: praise_background
+946: audiobook
+953: price
+954: upload notonstreaming
+960: ads icon
+966: inject
+971: ftc_repeat
+978: shuffle
+979: libtools
+981: bugs
+984: offline ui praise_discovery
+986: ads upsell
+991: clutter
+992: ftc_pick
+1003: icon
+1006: ads
+1007: ads price
+1008: libtools
+1013: praise_discovery
+1020: ads
+1027: bugs slow
+1038: ads politics
+1041: price
+1046: praise_discovery upsell
+1061: icon
+1065: ads
+1075: removals inject
+1083: bugs podcast
+1097: ads ftc_skip
+1115: playback bugs
+1126: paywall praise_discovery slow ai_feat

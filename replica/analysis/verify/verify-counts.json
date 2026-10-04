@@ -1,0 +1,3172 @@
+{
+ "method": "verify-counts: independent recount of fixes.draft.md from replica/reviews.csv.\n\nMethod: one verifier read EVERY row of reviews.csv in full (vdump.py) and hand-coded it in labels.txt\n(core = rating<=3 or hacker-news: all themes; rating>=4: complaint themes + two praise codes).\nNo analyst script, label file or keyword list was reused for the coding. This script only tallies labels.txt,\nthen compares each theme with the draft's figure and with the evidence lens's URL list (synth/recount.json)\nto report overlap (used only to pick rows for adjudication re-reads).\nRun: python3 vcount.py  -> verify-counts.json + printed table\n",
+ "labelled_rows": 823,
+ "core_rows": 594,
+ "core_rows_unlabelled": [],
+ "themes": {
+  "S2.1 ads": {
+   "code": "ads",
+   "draft_n": 208,
+   "draft_core": 131,
+   "draft_high": 77,
+   "draft_src": {
+    "app-store": 175,
+    "google-play": 26,
+    "hacker-news": 7
+   },
+   "mine_all": 205,
+   "mine_core": 124,
+   "mine_high": 81,
+   "mine_compared": 205,
+   "mine_src_all": {
+    "app-store": 175,
+    "google-play": 29,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 98,
+    "google-play": 25,
+    "hacker-news": 1
+   },
+   "diff_pct": -1.4,
+   "thin_mine": false,
+   "evidence_overlap": 196,
+   "evidence_only_ids": [
+    528,
+    568,
+    708,
+    786,
+    932,
+    935,
+    1079,
+    1098,
+    1099,
+    1131,
+    1152,
+    1163
+   ],
+   "mine_only_ids": [
+    82,
+    354,
+    376,
+    550,
+    587,
+    712,
+    727,
+    888,
+    1094
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620665607",
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620622724",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620301750",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620246503",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620243117",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620193974",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620139302",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620130157",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619960304",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619945630",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619899119",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619859077",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619543943",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619517401",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619512977",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618578892",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618561277",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618525008",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14617874800",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620372897",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620327927",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620243071",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14619502776",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618440200",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620910631",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619057711",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14618720509",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14617488952",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617399765",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617388534",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617286671",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617255505",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617217903",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617166778",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617101463",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617047632",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617041730",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616880885",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616782905",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616696394",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616653576",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616603258",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616595494",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616478486",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616381542",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616380802",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616361419",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616306085",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616289685",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616103626",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616051292",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617821532",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617762667",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617248338",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617024575",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14616636525",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14615594952",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14615508172",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617288982",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616640392",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616564359",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14615484339",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617338049",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616753893",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615385267",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14613856705",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14610029288",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14612364033",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609921629",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608104970",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608030479",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607870441",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606394361",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606357999",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14609370408",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14608873422",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607241696",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14609487925",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14609184648",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14609034003",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14608825207",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606957170",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606739649",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606438009",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14604556492",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14603964066",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14602557461",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14602508113",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14602475984",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14602400909",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14606158451",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605618937",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605196795",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604952840",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604734813",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602959906",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602695582",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602502964",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14605741993",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601162770",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600683480",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600625391",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601979221",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601701727",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601344637",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601217223",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600201916",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14601169745",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14598887959",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595553747",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595503311",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594872997",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594751806",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14595985564",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14595942122",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594382556",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14592992615",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14586026633",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585870899",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585288257",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14582327767",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14582290956",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581787235",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14581162345",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14575716262",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14575584009",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574473476",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574246225",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14573446707",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14570903711",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-5",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-2",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-9",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-18",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-12",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-4",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14462322496",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14452390691",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14449782752",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14445598465",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14440021880",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14436232527",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14437388424",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14432590072",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14430823971",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14428617711",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14429491486",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14406276383",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14400909879",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-17",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-15",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-13",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14369050664",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14361656044",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14355942538",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14355168804",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-19",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14349152291",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-18",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14311040986",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14308360652",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14301486942",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14297674476",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14298321434",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14286436582",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14281693681",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-14",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14273459856",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14272886929",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14265363886",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14263822717",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-16",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14203773414",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14199256780",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14195335510",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14190872080",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14186759610",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14181321394",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14163427584",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14161528543",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14149679767",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14148471853",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14133846296",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14113477756",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14107193112",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14098067563",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14091690219",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-1",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-14",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-8",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-4",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-20",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-15",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-1",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-6",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-3",
+    "https://news.ycombinator.com/item?id=44334326",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-6"
+   ]
+  },
+  "S2.2 free-tier control": {
+   "code": "ftc",
+   "draft_n": 116,
+   "draft_core": 88,
+   "draft_high": 26,
+   "draft_src": {
+    "app-store": 89,
+    "google-play": 26,
+    "hacker-news": 1
+   },
+   "mine_all": 114,
+   "mine_core": 86,
+   "mine_high": 28,
+   "mine_compared": 114,
+   "mine_src_all": {
+    "app-store": 89,
+    "google-play": 25
+   },
+   "mine_src_core": {
+    "app-store": 65,
+    "google-play": 21
+   },
+   "diff_pct": -1.7,
+   "thin_mine": false,
+   "evidence_overlap": 110,
+   "evidence_only_ids": [
+    122,
+    543,
+    680,
+    808,
+    966,
+    1084
+   ],
+   "mine_only_ids": [
+    121,
+    183,
+    303,
+    550
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620470716",
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620423325",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620375347",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620259109",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620194610",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620193974",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620174415",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619945630",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619849274",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619818437",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618519155",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618452571",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618432702",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14619240297",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617914591",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620910631",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620504601",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617426629",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617309379",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617286671",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617255505",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617030464",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616970775",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616951875",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616941343",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616856364",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616810708",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616654926",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616607168",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616600352",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616401372",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616329752",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616306085",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616114016",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617762667",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14616636525",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14615594952",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14613996768",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14613907575",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616858957",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615385267",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615235629",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14612364033",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606394361",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606357999",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607241696",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606957170",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606120222",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14602557461",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605618937",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605436498",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604734813",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604573327",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14605741993",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600683480",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600625391",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600300240",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601701727",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601217223",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600222931",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14602317823",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14597507869",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594408638",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585944746",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585050897",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581787235",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14573446707",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-5",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-2",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-9",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-8",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-11",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-4",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14450123441",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14445598465",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14437845409",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14437813018",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14388117661",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-17",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14381681869",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-15",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14369770759",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-19",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14341621527",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-18",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14314989009",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14308360652",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14299602386",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-14",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14273459856",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14272886929",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14265434506",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-16",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14223564896",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14222769708",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14203773414",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14187833600",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14188218922",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14181380812",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14175615648",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-14",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-8",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-4",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-20",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-15",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-1",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-5",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-18",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-11",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-9"
+   ]
+  },
+  "S2.3 bugs/crashes": {
+   "code": "bugs",
+   "draft_n": 86,
+   "draft_core": 86,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 72,
+    "google-play": 11,
+    "hacker-news": 3
+   },
+   "mine_all": 100,
+   "mine_core": 83,
+   "mine_high": 17,
+   "mine_compared": 83,
+   "mine_src_all": {
+    "app-store": 82,
+    "google-play": 14,
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "app-store": 67,
+    "google-play": 12,
+    "hacker-news": 4
+   },
+   "diff_pct": -3.5,
+   "thin_mine": false,
+   "evidence_overlap": 74,
+   "evidence_only_ids": [
+    5,
+    197,
+    253,
+    350,
+    381,
+    401,
+    421,
+    435,
+    682,
+    1010,
+    1064,
+    1076
+   ],
+   "mine_only_ids": [
+    371,
+    424,
+    468,
+    722,
+    723,
+    743,
+    812,
+    881,
+    1077
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620444910",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620314307",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620305309",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14620022236",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618553108",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618618871",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617330566",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617197588",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616733145",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616425780",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616413620",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614440897",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614383188",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614179996",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615371036",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14610275949",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14612442866",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608526394",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608204616",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608042545",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607953186",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607882042",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607870441",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607865857",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607862073",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607346935",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607285545",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607279310",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607266997",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607822557",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607593296",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607589710",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607586653",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607502185",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607497216",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607467064",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607434834",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607423748",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607357571",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607308646",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607293946",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14606762203",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607651420",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607556273",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607510570",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607444867",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606344065",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607808338",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607786024",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607700889",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607687824",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607641137",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604098603",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602502964",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600986438",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599723424",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14600858941",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595520472",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14595301055",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574881329",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14573982548",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14570360320",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-18",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-10",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-14",
+    "https://news.ycombinator.com/item?id=49526315",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-13",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14450405489",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14437318465",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14401264224",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14394772009",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14389660945",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14389063093",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14360739349",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14312631445",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14291717244",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14292447984",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14261899264",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14260982803",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14183481228",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14169385104",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145695214",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14144467524",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14098298316",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-2",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-1",
+    "https://news.ycombinator.com/item?id=47430204",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-19",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-9",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-6",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-13",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-11",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-16",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-8",
+    "https://news.ycombinator.com/item?id=40472957",
+    "https://news.ycombinator.com/item?id=38514805"
+   ]
+  },
+  "S2.4 price": {
+   "code": "price",
+   "draft_n": 82,
+   "draft_core": 62,
+   "draft_high": 20,
+   "draft_src": {
+    "app-store": 70,
+    "google-play": 4,
+    "hacker-news": 8
+   },
+   "mine_all": 75,
+   "mine_core": 60,
+   "mine_high": 15,
+   "mine_compared": 75,
+   "mine_src_all": {
+    "app-store": 64,
+    "google-play": 5,
+    "hacker-news": 6
+   },
+   "mine_src_core": {
+    "app-store": 49,
+    "google-play": 5,
+    "hacker-news": 6
+   },
+   "diff_pct": -8.5,
+   "thin_mine": false,
+   "evidence_overlap": 70,
+   "evidence_only_ids": [
+    93,
+    211,
+    226,
+    270,
+    533,
+    657,
+    700,
+    708,
+    793,
+    853,
+    1085,
+    1216
+   ],
+   "mine_only_ids": [
+    36,
+    98,
+    441,
+    1007,
+    1094
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620193974",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620111962",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619431877",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618561277",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618331933",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620327927",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618440200",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617914591",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620287418",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619495104",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619338610",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616610410",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616401372",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617248338",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617379647",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617288982",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616640392",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615235629",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609921629",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609040767",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608104970",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607870441",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607829097",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607279310",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607593296",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607587212",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607357571",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14606762203",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607444867",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606957170",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601162770",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600683480",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600464632",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601979221",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599723424",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595667573",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594751806",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14597268749",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14594446850",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14590588758",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585388024",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584559453",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584494054",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14583311006",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14582241758",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14575584009",
+    "https://news.ycombinator.com/item?id=49520659",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14452390691",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14449054062",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14443516299",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14440021880",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14349152291",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14308360652",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14303809431",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14281693681",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14276096423",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243779841",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243416098",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14215553587",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14171658383",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14169626805",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14161528543",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14138379222",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14129082305",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14098067563",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-2",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-1",
+    "https://news.ycombinator.com/item?id=46651080",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-8",
+    "https://news.ycombinator.com/item?id=44914281",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-16",
+    "https://news.ycombinator.com/item?id=40563837",
+    "https://news.ycombinator.com/item?id=39430718",
+    "https://news.ycombinator.com/item?id=38037760"
+   ]
+  },
+  "S2.4b price increases": {
+   "code": "price_inc",
+   "draft_n": 31,
+   "draft_core": 28,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 25,
+    "google-play": 1,
+    "hacker-news": 5
+   },
+   "mine_all": 32,
+   "mine_core": 29,
+   "mine_high": 3,
+   "mine_compared": 32,
+   "mine_src_all": {
+    "app-store": 25,
+    "google-play": 1,
+    "hacker-news": 6
+   },
+   "mine_src_core": {
+    "app-store": 22,
+    "google-play": 1,
+    "hacker-news": 6
+   },
+   "diff_pct": 3.2,
+   "thin_mine": false,
+   "evidence_overlap": 31,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    1209
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620111962",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619431877",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618561277",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619495104",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619338610",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617379647",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616640392",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609040767",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607593296",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607587212",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607444867",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600464632",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601979221",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599723424",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14597268749",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14590588758",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585388024",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584559453",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584494054",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14449054062",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14443516299",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243779841",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243416098",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14171658383",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14138379222",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-1",
+    "https://news.ycombinator.com/item?id=46776986",
+    "https://news.ycombinator.com/item?id=46651080",
+    "https://news.ycombinator.com/item?id=44914281",
+    "https://news.ycombinator.com/item?id=40563837",
+    "https://news.ycombinator.com/item?id=37802590",
+    "https://news.ycombinator.com/item?id=36853525"
+   ]
+  },
+  "S2.5 clutter/promos": {
+   "code": "clutter",
+   "draft_n": 49,
+   "draft_core": 46,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 21,
+    "google-play": 4,
+    "hacker-news": 24
+   },
+   "mine_all": 41,
+   "mine_core": 39,
+   "mine_high": 2,
+   "mine_compared": 41,
+   "mine_src_all": {
+    "app-store": 18,
+    "hacker-news": 23
+   },
+   "mine_src_core": {
+    "app-store": 16,
+    "hacker-news": 23
+   },
+   "diff_pct": -16.3,
+   "thin_mine": false,
+   "evidence_overlap": 41,
+   "evidence_only_ids": [
+    159,
+    203,
+    397,
+    713,
+    891,
+    1082,
+    1107,
+    1131
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619797669",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619744781",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616782905",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14616262503",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606327579",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602917475",
+    "https://news.ycombinator.com/item?id=49880650",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600759786",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14598868839",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584494054",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574614565",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345694543",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14260059536",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243562668",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14176238078",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14148845472",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14091547699",
+    "https://news.ycombinator.com/item?id=48227255",
+    "https://news.ycombinator.com/item?id=46717359",
+    "https://news.ycombinator.com/item?id=44295699",
+    "https://news.ycombinator.com/item?id=42861610",
+    "https://news.ycombinator.com/item?id=42531034",
+    "https://news.ycombinator.com/item?id=42527142",
+    "https://news.ycombinator.com/item?id=41222569",
+    "https://news.ycombinator.com/item?id=41119283",
+    "https://news.ycombinator.com/item?id=40995257",
+    "https://news.ycombinator.com/item?id=40564010",
+    "https://news.ycombinator.com/item?id=39775580",
+    "https://news.ycombinator.com/item?id=39428119",
+    "https://news.ycombinator.com/item?id=39428575",
+    "https://news.ycombinator.com/item?id=39431191",
+    "https://news.ycombinator.com/item?id=38566269",
+    "https://news.ycombinator.com/item?id=38520656",
+    "https://news.ycombinator.com/item?id=38226866",
+    "https://news.ycombinator.com/item?id=37802590",
+    "https://news.ycombinator.com/item?id=37791138",
+    "https://news.ycombinator.com/item?id=35462336",
+    "https://news.ycombinator.com/item?id=34469711",
+    "https://news.ycombinator.com/item?id=34259883"
+   ]
+  },
+  "S2.6 UI/redesign/navigation": {
+   "code": "ui",
+   "draft_n": 40,
+   "draft_core": 38,
+   "draft_high": 2,
+   "draft_src": {
+    "app-store": 21,
+    "google-play": 2,
+    "hacker-news": 17
+   },
+   "mine_all": 42,
+   "mine_core": 38,
+   "mine_high": 4,
+   "mine_compared": 42,
+   "mine_src_all": {
+    "app-store": 23,
+    "google-play": 2,
+    "hacker-news": 17
+   },
+   "mine_src_core": {
+    "app-store": 19,
+    "google-play": 2,
+    "hacker-news": 17
+   },
+   "diff_pct": 5.0,
+   "thin_mine": false,
+   "evidence_overlap": 39,
+   "evidence_only_ids": [
+    619
+   ],
+   "mine_only_ids": [
+    817,
+    865,
+    984
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620618562",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619797669",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620090624",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619495104",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617248338",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614422582",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14610275949",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609566959",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607930847",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607630339",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602917475",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14598868839",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574614565",
+    "https://news.ycombinator.com/item?id=49526315",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14407847637",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14385709403",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14337023521",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14312631445",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14301855742",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14292447984",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14183591232",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14114653458",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14094641064",
+    "https://news.ycombinator.com/item?id=47430204",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7",
+    "https://news.ycombinator.com/item?id=45590991",
+    "https://news.ycombinator.com/item?id=44083095",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-4",
+    "https://news.ycombinator.com/item?id=42861370",
+    "https://news.ycombinator.com/item?id=42531034",
+    "https://news.ycombinator.com/item?id=42531291",
+    "https://news.ycombinator.com/item?id=41119283",
+    "https://news.ycombinator.com/item?id=40472957",
+    "https://news.ycombinator.com/item?id=40216183",
+    "https://news.ycombinator.com/item?id=39775580",
+    "https://news.ycombinator.com/item?id=39776258",
+    "https://news.ycombinator.com/item?id=39354635",
+    "https://news.ycombinator.com/item?id=39348882",
+    "https://news.ycombinator.com/item?id=38566269",
+    "https://news.ycombinator.com/item?id=38514805",
+    "https://news.ycombinator.com/item?id=37363268"
+   ]
+  },
+  "S2.7 slow/battery": {
+   "code": "slow",
+   "draft_n": 32,
+   "draft_core": 32,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 27,
+    "google-play": 3,
+    "hacker-news": 2
+   },
+   "mine_all": 42,
+   "mine_core": 34,
+   "mine_high": 8,
+   "mine_compared": 34,
+   "mine_src_all": {
+    "app-store": 35,
+    "google-play": 5,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "app-store": 28,
+    "google-play": 4,
+    "hacker-news": 2
+   },
+   "diff_pct": 6.2,
+   "thin_mine": false,
+   "evidence_overlap": 32,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    474,
+    722
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620037250",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619681900",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618618871",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617330566",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617197588",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616425780",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614440897",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14613856705",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607930847",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607924584",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607832951",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607378824",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607635666",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607630339",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607808338",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606160548",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604903909",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601219405",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599723424",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595607544",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-10",
+    "https://news.ycombinator.com/item?id=49526315",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14445287848",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14389660945",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14312631445",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14291717244",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14270708647",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14261899264",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14260982803",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14256232663",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243562668",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14196583670",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14165234656",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145695214",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14114653458",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14091547699",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-2",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-9",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-11",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-10",
+    "https://news.ycombinator.com/item?id=40216183"
+   ]
+  },
+  "S2.8 paying and still ads": {
+   "code": "paid_ads",
+   "draft_n": 33,
+   "draft_core": 30,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 22,
+    "google-play": 5,
+    "hacker-news": 6
+   },
+   "mine_all": 33,
+   "mine_core": 30,
+   "mine_high": 3,
+   "mine_compared": 33,
+   "mine_src_all": {
+    "app-store": 22,
+    "google-play": 5,
+    "hacker-news": 6
+   },
+   "mine_src_core": {
+    "app-store": 19,
+    "google-play": 5,
+    "hacker-news": 6
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 32,
+   "evidence_only_ids": [
+    650
+   ],
+   "mine_only_ids": [
+    647
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619512977",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618561277",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616782905",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616640392",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607870441",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14608825207",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606739649",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602959906",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602917475",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601979221",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14601169745",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595553747",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584831577",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574246225",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-12",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14437388424",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14400909879",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14355942538",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14355168804",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14311040986",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243562668",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14149679767",
+    "https://news.ycombinator.com/item?id=47430443",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7",
+    "https://news.ycombinator.com/item?id=45974965",
+    "https://news.ycombinator.com/item?id=45972340",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-6",
+    "https://news.ycombinator.com/item?id=43400578",
+    "https://news.ycombinator.com/item?id=40995257",
+    "https://news.ycombinator.com/item?id=35462336"
+   ]
+  },
+  "S2.9 playback stops": {
+   "code": "playback",
+   "draft_n": 28,
+   "draft_core": 28,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 22,
+    "google-play": 5,
+    "hacker-news": 1
+   },
+   "mine_all": 33,
+   "mine_core": 28,
+   "mine_high": 5,
+   "mine_compared": 28,
+   "mine_src_all": {
+    "app-store": 26,
+    "google-play": 6,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 22,
+    "google-play": 5,
+    "hacker-news": 1
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 27,
+   "evidence_only_ids": [
+    1076
+   ],
+   "mine_only_ids": [
+    1157
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620314307",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620082301",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14620022236",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619681900",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617048479",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617041160",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616538225",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614179996",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607893511",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607285545",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607630339",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607431678",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607641137",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14600858941",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585392536",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584988348",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14583987607",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14583851300",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581376452",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574881329",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-10",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14361087805",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14258365038",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14223803904",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14167366371",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14165507760",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14161155359",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-1",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-13",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-4",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-8",
+    "https://news.ycombinator.com/item?id=40472957"
+   ]
+  },
+  "S2.10 recs poor": {
+   "code": "recs",
+   "draft_n": 27,
+   "draft_core": 27,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 15,
+    "google-play": 2,
+    "hacker-news": 10
+   },
+   "mine_all": 38,
+   "mine_core": 29,
+   "mine_high": 9,
+   "mine_compared": 29,
+   "mine_src_all": {
+    "app-store": 24,
+    "google-play": 2,
+    "hacker-news": 12
+   },
+   "mine_src_core": {
+    "app-store": 15,
+    "google-play": 2,
+    "hacker-news": 12
+   },
+   "diff_pct": 7.4,
+   "thin_mine": false,
+   "evidence_overlap": 26,
+   "evidence_only_ids": [
+    1137
+   ],
+   "mine_only_ids": [
+    1079,
+    1136,
+    1215
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619941017",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619760927",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616782905",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616179782",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14615924375",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14615871258",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608352089",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607403572",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606387201",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14608934942",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604123144",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600694942",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600173116",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599534039",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599174166",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14597969091",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14584821073",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14572543331",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14432353996",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-20",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14379440421",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14360268231",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14159571938",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14148845472",
+    "https://news.ycombinator.com/item?id=47430443",
+    "https://news.ycombinator.com/item?id=45875535",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-9",
+    "https://news.ycombinator.com/item?id=43713314",
+    "https://news.ycombinator.com/item?id=42860611",
+    "https://news.ycombinator.com/item?id=42527142",
+    "https://news.ycombinator.com/item?id=40995257",
+    "https://news.ycombinator.com/item?id=40472070",
+    "https://news.ycombinator.com/item?id=39437699",
+    "https://news.ycombinator.com/item?id=37802590",
+    "https://news.ycombinator.com/item?id=36916187",
+    "https://news.ycombinator.com/item?id=34603708",
+    "https://news.ycombinator.com/item?id=34469711"
+   ]
+  },
+  "S2.11 offline fails": {
+   "code": "offline",
+   "draft_n": 27,
+   "draft_core": 26,
+   "draft_high": 1,
+   "draft_src": {
+    "app-store": 9,
+    "google-play": 4,
+    "hacker-news": 14
+   },
+   "mine_all": 27,
+   "mine_core": 26,
+   "mine_high": 1,
+   "mine_compared": 27,
+   "mine_src_all": {
+    "app-store": 9,
+    "google-play": 3,
+    "hacker-news": 15
+   },
+   "mine_src_core": {
+    "app-store": 8,
+    "google-play": 3,
+    "hacker-news": 15
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 26,
+   "evidence_only_ids": [
+    710
+   ],
+   "mine_only_ids": [
+    729
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620444910",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617041160",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614101383",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607822557",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607434628",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607403572",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-14",
+    "https://news.ycombinator.com/item?id=49520659",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14389660945",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://news.ycombinator.com/item?id=48567156",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14183591232",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-4",
+    "https://news.ycombinator.com/item?id=42861610",
+    "https://news.ycombinator.com/item?id=42532727",
+    "https://news.ycombinator.com/item?id=42111135",
+    "https://news.ycombinator.com/item?id=41119283",
+    "https://news.ycombinator.com/item?id=39776396",
+    "https://news.ycombinator.com/item?id=39428784",
+    "https://news.ycombinator.com/item?id=39432095",
+    "https://news.ycombinator.com/item?id=39272401",
+    "https://news.ycombinator.com/item?id=39261935",
+    "https://news.ycombinator.com/item?id=39105740",
+    "https://news.ycombinator.com/item?id=37802590",
+    "https://news.ycombinator.com/item?id=34695080",
+    "https://news.ycombinator.com/item?id=34603708"
+   ]
+  },
+  "S2.12 login": {
+   "code": "login",
+   "draft_n": 25,
+   "draft_core": 25,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 25
+   },
+   "mine_all": 30,
+   "mine_core": 25,
+   "mine_high": 5,
+   "mine_compared": 25,
+   "mine_src_all": {
+    "app-store": 29,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 24,
+    "hacker-news": 1
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 24,
+   "evidence_only_ids": [
+    404
+   ],
+   "mine_only_ids": [
+    857
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620665579",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616741399",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616626533",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608204616",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607974073",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607959550",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607945665",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607882042",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607880057",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607841060",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607346935",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607299230",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607280129",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607639265",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607637291",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607590199",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607589710",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607544676",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607481460",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607424094",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607403389",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607293946",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607713083",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607678026",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607676730",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607510570",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607298683",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14365567590",
+    "https://news.ycombinator.com/item?id=48932752",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14228022197"
+   ]
+  },
+  "S2.13 playlist injection": {
+   "code": "inject",
+   "draft_n": 33,
+   "draft_core": 25,
+   "draft_high": 6,
+   "draft_src": {
+    "app-store": 17,
+    "google-play": 8,
+    "hacker-news": 8
+   },
+   "mine_all": 27,
+   "mine_core": 20,
+   "mine_high": 7,
+   "mine_compared": 27,
+   "mine_src_all": {
+    "app-store": 16,
+    "google-play": 7,
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "app-store": 11,
+    "google-play": 5,
+    "hacker-news": 4
+   },
+   "diff_pct": -18.2,
+   "thin_mine": false,
+   "evidence_overlap": 26,
+   "evidence_only_ids": [
+    244,
+    819,
+    847,
+    1136,
+    1189,
+    1209,
+    1215
+   ],
+   "mine_only_ids": [
+    966
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620553678",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619602976",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617426629",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616380802",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615235629",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606957170",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601162770",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14580557011",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14575535291",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-20",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14440021880",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14429893822",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-20",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14308360652",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14260109375",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14192601232",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145322479",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-2",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-20",
+    "https://news.ycombinator.com/item?id=44906845",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-5",
+    "https://news.ycombinator.com/item?id=44334326",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-12",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-9",
+    "https://news.ycombinator.com/item?id=40472957",
+    "https://news.ycombinator.com/item?id=36853525"
+   ]
+  },
+  "S2.14 artist pay/politics": {
+   "code": "politics",
+   "draft_n": 23,
+   "draft_core": 23,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 16,
+    "google-play": 1,
+    "hacker-news": 6
+   },
+   "mine_all": 26,
+   "mine_core": 24,
+   "mine_high": 2,
+   "mine_compared": 24,
+   "mine_src_all": {
+    "app-store": 18,
+    "google-play": 1,
+    "hacker-news": 7
+   },
+   "mine_src_core": {
+    "app-store": 16,
+    "google-play": 1,
+    "hacker-news": 7
+   },
+   "diff_pct": 4.3,
+   "thin_mine": false,
+   "evidence_overlap": 23,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    1137
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620056401",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619431877",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14619940576",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14617552745",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617399765",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14616636525",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14616319763",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14608558108",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607308646",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14606480023",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14571341068",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14570376253",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14341084816",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14296779377",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14263660522",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14259905328",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14133846296",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7",
+    "https://news.ycombinator.com/item?id=46712608",
+    "https://news.ycombinator.com/item?id=46518642",
+    "https://news.ycombinator.com/item?id=43713314",
+    "https://news.ycombinator.com/item?id=42861370",
+    "https://news.ycombinator.com/item?id=42111135",
+    "https://news.ycombinator.com/item?id=40472070",
+    "https://news.ycombinator.com/item?id=36916187"
+   ]
+  },
+  "S2.15 catalogue removals": {
+   "code": "removals",
+   "draft_n": 27,
+   "draft_core": 23,
+   "draft_high": 4,
+   "draft_src": {
+    "app-store": 6,
+    "google-play": 2,
+    "hacker-news": 19
+   },
+   "mine_all": 26,
+   "mine_core": 22,
+   "mine_high": 4,
+   "mine_compared": 26,
+   "mine_src_all": {
+    "app-store": 6,
+    "google-play": 2,
+    "hacker-news": 18
+   },
+   "mine_src_core": {
+    "app-store": 3,
+    "google-play": 1,
+    "hacker-news": 18
+   },
+   "diff_pct": -3.7,
+   "thin_mine": false,
+   "evidence_overlap": 26,
+   "evidence_only_ids": [
+    1144
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620611771",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14609034003",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604956465",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14432353996",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14303809431",
+    "https://news.ycombinator.com/item?id=48776659",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14150211686",
+    "https://news.ycombinator.com/item?id=47984813",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-2",
+    "https://news.ycombinator.com/item?id=46777110",
+    "https://news.ycombinator.com/item?id=46339177",
+    "https://news.ycombinator.com/item?id=44973044",
+    "https://news.ycombinator.com/item?id=42113327",
+    "https://news.ycombinator.com/item?id=41705083",
+    "https://news.ycombinator.com/item?id=41311984",
+    "https://news.ycombinator.com/item?id=41119283",
+    "https://news.ycombinator.com/item?id=40430351",
+    "https://news.ycombinator.com/item?id=39967176",
+    "https://news.ycombinator.com/item?id=39967357",
+    "https://news.ycombinator.com/item?id=37901068",
+    "https://news.ycombinator.com/item?id=37802590",
+    "https://news.ycombinator.com/item?id=36693154",
+    "https://news.ycombinator.com/item?id=35636121",
+    "https://news.ycombinator.com/item?id=34603708",
+    "https://news.ycombinator.com/item?id=34259883"
+   ]
+  },
+  "S2.16 billing/support": {
+   "code": "billing",
+   "draft_n": 22,
+   "draft_core": 22,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 19,
+    "google-play": 2,
+    "hacker-news": 1
+   },
+   "mine_all": 22,
+   "mine_core": 21,
+   "mine_high": 1,
+   "mine_compared": 21,
+   "mine_src_all": {
+    "app-store": 19,
+    "google-play": 2,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 18,
+    "google-play": 2,
+    "hacker-news": 1
+   },
+   "diff_pct": -4.5,
+   "thin_mine": false,
+   "evidence_overlap": 20,
+   "evidence_only_ids": [
+    468,
+    663
+   ],
+   "mine_only_ids": [
+    895
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620665579",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619992498",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620948500",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616103626",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617821532",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14615468316",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607959550",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606973381",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607502185",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607481460",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14603746577",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602655166",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-12",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14420223126",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14415523521",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14369871083",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14276096423",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14178691226",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14165507760",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14148845472",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-3",
+    "https://news.ycombinator.com/item?id=41859836"
+   ]
+  },
+  "S2.17 shuffle not random": {
+   "code": "shuffle",
+   "draft_n": 25,
+   "draft_core": 17,
+   "draft_high": 8,
+   "draft_src": {
+    "app-store": 19,
+    "google-play": 1,
+    "hacker-news": 5
+   },
+   "mine_all": 26,
+   "mine_core": 17,
+   "mine_high": 9,
+   "mine_compared": 26,
+   "mine_src_all": {
+    "app-store": 20,
+    "google-play": 1,
+    "hacker-news": 5
+   },
+   "mine_src_core": {
+    "app-store": 11,
+    "google-play": 1,
+    "hacker-news": 5
+   },
+   "diff_pct": 4.0,
+   "thin_mine": false,
+   "evidence_overlap": 25,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    272
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619431877",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619842729",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14619338610",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616289685",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617581579",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614383188",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617171320",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14615644426",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607829097",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14609010835",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604575702",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600507830",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600173116",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14602292419",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594404521",
+    "https://news.ycombinator.com/item?id=49523937",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14403960774",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-20",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14388226533",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14359879282",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14228449118",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14187263499",
+    "https://news.ycombinator.com/item?id=45357007",
+    "https://news.ycombinator.com/item?id=40216094",
+    "https://news.ycombinator.com/item?id=39068954",
+    "https://news.ycombinator.com/item?id=38794032"
+   ]
+  },
+  "S2.18 app icon": {
+   "code": "icon",
+   "draft_n": 18,
+   "draft_core": 15,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 17,
+    "hacker-news": 1
+   },
+   "mine_all": 17,
+   "mine_core": 14,
+   "mine_high": 3,
+   "mine_compared": 17,
+   "mine_src_all": {
+    "app-store": 17
+   },
+   "mine_src_core": {
+    "app-store": 14
+   },
+   "diff_pct": -5.6,
+   "thin_mine": true,
+   "evidence_overlap": 17,
+   "evidence_only_ids": [
+    1102
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601979221",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574614565",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14221668571",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14199256780",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14169316594",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14169385104",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14166102330",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14147326832",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145322479",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14138031207",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14134595663",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14134314833",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14125687511",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14117968288",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14098067563",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14095946111",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14092118927"
+   ]
+  },
+  "S2.19 generic paywall": {
+   "code": "paywall",
+   "draft_n": 15,
+   "draft_core": 15,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 15
+   },
+   "mine_all": 32,
+   "mine_core": 16,
+   "mine_high": 16,
+   "mine_compared": 16,
+   "mine_src_all": {
+    "app-store": 30,
+    "google-play": 2
+   },
+   "mine_src_core": {
+    "app-store": 15,
+    "google-play": 1
+   },
+   "diff_pct": 6.7,
+   "thin_mine": false,
+   "evidence_overlap": 13,
+   "evidence_only_ids": [
+    99,
+    501
+   ],
+   "mine_only_ids": [
+    122,
+    693,
+    1116
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620579502",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620271414",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618492312",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620615454",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618604965",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617091022",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617248338",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14615836336",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617288982",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616926173",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14616065137",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609799525",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608030479",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605322772",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600655075",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601018157",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594751806",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581806561",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574473476",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14573446707",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14571462077",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14570867952",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14448689648",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14432590072",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14299602386",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14297674476",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14261145918",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14187062018",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14125926306",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14113477756",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-10"
+   ]
+  },
+  "S2.20 devices/connect": {
+   "code": "devices",
+   "draft_n": 17,
+   "draft_core": 14,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 14,
+    "google-play": 1,
+    "hacker-news": 2
+   },
+   "mine_all": 18,
+   "mine_core": 14,
+   "mine_high": 4,
+   "mine_compared": 18,
+   "mine_src_all": {
+    "app-store": 15,
+    "google-play": 1,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "app-store": 11,
+    "google-play": 1,
+    "hacker-news": 2
+   },
+   "diff_pct": 5.9,
+   "thin_mine": false,
+   "evidence_overlap": 16,
+   "evidence_only_ids": [
+    1027
+   ],
+   "mine_only_ids": [
+    329,
+    910
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617357189",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616733145",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14615644426",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607960419",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607939330",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607822557",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607828148",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607808338",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585392536",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581687395",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14570360320",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14443516299",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14389063093",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14261899264",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14167366371",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-9",
+    "https://news.ycombinator.com/item?id=40472957",
+    "https://news.ycombinator.com/item?id=38520656"
+   ]
+  },
+  "S2.20b devices paywall": {
+   "code": "devices_pay",
+   "draft_n": 4,
+   "draft_core": 4,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 4
+   },
+   "mine_all": 4,
+   "mine_core": 4,
+   "mine_high": 0,
+   "mine_compared": 4,
+   "mine_src_all": {
+    "app-store": 4
+   },
+   "mine_src_core": {
+    "app-store": 4
+   },
+   "diff_pct": 0.0,
+   "thin_mine": true,
+   "evidence_overlap": 4,
+   "evidence_only_ids": [],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617357189",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607960419",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607939330",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607828148"
+   ]
+  },
+  "S2.21 AI music": {
+   "code": "ai_music",
+   "draft_n": 13,
+   "draft_core": 13,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 10,
+    "hacker-news": 3
+   },
+   "mine_all": 15,
+   "mine_core": 14,
+   "mine_high": 1,
+   "mine_compared": 14,
+   "mine_src_all": {
+    "app-store": 12,
+    "hacker-news": 3
+   },
+   "mine_src_core": {
+    "app-store": 11,
+    "hacker-news": 3
+   },
+   "diff_pct": 7.7,
+   "thin_mine": false,
+   "evidence_overlap": 13,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    1063
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620056401",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14619940576",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617399765",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14606480023",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574614565",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14432688196",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14296779377",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14270708647",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14263660522",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14222769708",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14143385412",
+    "https://news.ycombinator.com/item?id=48374133",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14094641064",
+    "https://news.ycombinator.com/item?id=47843055",
+    "https://news.ycombinator.com/item?id=37802590"
+   ]
+  },
+  "S2.22 queue UX": {
+   "code": "queue",
+   "draft_n": 16,
+   "draft_core": 13,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 7,
+    "google-play": 5,
+    "hacker-news": 4
+   },
+   "mine_all": 12,
+   "mine_core": 10,
+   "mine_high": 2,
+   "mine_compared": 12,
+   "mine_src_all": {
+    "app-store": 5,
+    "google-play": 3,
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "app-store": 3,
+    "google-play": 3,
+    "hacker-news": 4
+   },
+   "diff_pct": -25.0,
+   "thin_mine": false,
+   "evidence_overlap": 12,
+   "evidence_only_ids": [
+    177,
+    718,
+    833,
+    1101
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620191605",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616413620",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608526394",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14598119894",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152",
+    "https://news.ycombinator.com/item?id=47430204",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-4",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-5",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-17",
+    "https://news.ycombinator.com/item?id=42531034",
+    "https://news.ycombinator.com/item?id=39348882",
+    "https://news.ycombinator.com/item?id=38514805"
+   ]
+  },
+  "S2.23 rate prompts": {
+   "code": "rate",
+   "draft_n": 12,
+   "draft_core": 11,
+   "draft_high": 1,
+   "draft_src": {
+    "app-store": 12
+   },
+   "mine_all": 11,
+   "mine_core": 10,
+   "mine_high": 1,
+   "mine_compared": 11,
+   "mine_src_all": {
+    "app-store": 11
+   },
+   "mine_src_core": {
+    "app-store": 10
+   },
+   "diff_pct": -8.3,
+   "thin_mine": true,
+   "evidence_overlap": 11,
+   "evidence_only_ids": [
+    956
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620440672",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619798302",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619512977",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617447630",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616377763",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617439236",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14610275949",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607870441",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595122095",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14341084816",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14169626805"
+   ]
+  },
+  "S2.24 audiobook hours": {
+   "code": "audiobook",
+   "draft_n": 17,
+   "draft_core": 11,
+   "draft_high": 6,
+   "draft_src": {
+    "app-store": 14,
+    "google-play": 2,
+    "hacker-news": 1
+   },
+   "mine_all": 17,
+   "mine_core": 11,
+   "mine_high": 6,
+   "mine_compared": 17,
+   "mine_src_all": {
+    "app-store": 14,
+    "google-play": 2,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 8,
+    "google-play": 2,
+    "hacker-news": 1
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 17,
+   "evidence_only_ids": [],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620501109",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618501438",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616938889",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616782905",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14615897784",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602917475",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600885705",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14449054062",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14448351686",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14442009827",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14429893822",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14291717244",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14262936125",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14223779946",
+    "https://news.ycombinator.com/item?id=46651080",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-6",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-10"
+   ]
+  },
+  "S2.25 AI features": {
+   "code": "ai_feat",
+   "draft_n": 9,
+   "draft_core": 9,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 6,
+    "google-play": 1,
+    "hacker-news": 2
+   },
+   "mine_all": 11,
+   "mine_core": 9,
+   "mine_high": 2,
+   "mine_compared": 9,
+   "mine_src_all": {
+    "app-store": 7,
+    "google-play": 2,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "app-store": 6,
+    "google-play": 1,
+    "hacker-news": 2
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 9,
+   "evidence_only_ids": [],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14616319763",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599174166",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14301134188",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14259905328",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14256232663",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14134314833",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-9",
+    "https://news.ycombinator.com/item?id=43713314",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-10",
+    "https://news.ycombinator.com/item?id=40564010"
+   ]
+  },
+  "S2.26 car": {
+   "code": "car",
+   "draft_n": 8,
+   "draft_core": 8,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 5,
+    "google-play": 1,
+    "hacker-news": 2
+   },
+   "mine_all": 7,
+   "mine_core": 6,
+   "mine_high": 1,
+   "mine_compared": 6,
+   "mine_src_all": {
+    "app-store": 5,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "app-store": 4,
+    "hacker-news": 2
+   },
+   "diff_pct": -25.0,
+   "thin_mine": false,
+   "evidence_overlap": 6,
+   "evidence_only_ids": [
+    1010,
+    1146
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14570360320",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14144467524",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14098298316",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14092118927",
+    "https://news.ycombinator.com/item?id=40472957",
+    "https://news.ycombinator.com/item?id=39431191"
+   ]
+  },
+  "S2.27 podcast mgmt": {
+   "code": "podcast",
+   "draft_n": 8,
+   "draft_core": 8,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 8
+   },
+   "mine_all": 10,
+   "mine_core": 9,
+   "mine_high": 1,
+   "mine_compared": 9,
+   "mine_src_all": {
+    "app-store": 8,
+    "google-play": 1,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 8,
+    "hacker-news": 1
+   },
+   "diff_pct": 12.5,
+   "thin_mine": false,
+   "evidence_overlap": 8,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    1167
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620623077",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619512977",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607412369",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607293946",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601013313",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581598395",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14578973962",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14148845472",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-19",
+    "https://news.ycombinator.com/item?id=40472957"
+   ]
+  },
+  "S2.28 library data loss": {
+   "code": "data_loss",
+   "draft_n": 7,
+   "draft_core": 7,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 5,
+    "google-play": 2
+   },
+   "mine_all": 6,
+   "mine_core": 6,
+   "mine_high": 0,
+   "mine_compared": 6,
+   "mine_src_all": {
+    "app-store": 5,
+    "google-play": 1
+   },
+   "mine_src_core": {
+    "app-store": 5,
+    "google-play": 1
+   },
+   "diff_pct": -14.3,
+   "thin_mine": false,
+   "evidence_overlap": 6,
+   "evidence_only_ids": [
+    1157
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14614433626",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608526394",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14607676730",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574906102",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14365567590",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-5"
+   ]
+  },
+  "S2.29 kids": {
+   "code": "kids",
+   "draft_n": 6,
+   "draft_core": 6,
+   "draft_high": null,
+   "draft_src": {
+    "hacker-news": 6
+   },
+   "mine_all": 7,
+   "mine_core": 7,
+   "mine_high": 0,
+   "mine_compared": 7,
+   "mine_src_all": {
+    "app-store": 1,
+    "hacker-news": 6
+   },
+   "mine_src_core": {
+    "app-store": 1,
+    "hacker-news": 6
+   },
+   "diff_pct": 16.7,
+   "thin_mine": false,
+   "evidence_overlap": 6,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    1022
+   ],
+   "urls": [
+    "https://news.ycombinator.com/item?id=49880650",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14148845472",
+    "https://news.ycombinator.com/item?id=46717359",
+    "https://news.ycombinator.com/item?id=42861610",
+    "https://news.ycombinator.com/item?id=41222569",
+    "https://news.ycombinator.com/item?id=40564010",
+    "https://news.ycombinator.com/item?id=37791138"
+   ]
+  },
+  "S2.30 iPad": {
+   "code": "ipad",
+   "draft_n": 4,
+   "draft_core": 4,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 4
+   },
+   "mine_all": 5,
+   "mine_core": 4,
+   "mine_high": 1,
+   "mine_compared": 4,
+   "mine_src_all": {
+    "app-store": 5
+   },
+   "mine_src_core": {
+    "app-store": 4
+   },
+   "diff_pct": 0.0,
+   "thin_mine": true,
+   "evidence_overlap": 4,
+   "evidence_only_ids": [],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615371036",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14609566959",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607832951",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14401264224",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152"
+   ]
+  },
+  "S2.31 lock screen": {
+   "code": "lockscreen",
+   "draft_n": 4,
+   "draft_core": 3,
+   "draft_high": 1,
+   "draft_src": {
+    "app-store": 3,
+    "google-play": 1
+   },
+   "mine_all": 3,
+   "mine_core": 3,
+   "mine_high": 0,
+   "mine_compared": 3,
+   "mine_src_all": {
+    "app-store": 2,
+    "google-play": 1
+   },
+   "mine_src_core": {
+    "app-store": 2,
+    "google-play": 1
+   },
+   "diff_pct": -25.0,
+   "thin_mine": false,
+   "evidence_overlap": 3,
+   "evidence_only_ids": [
+    577
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618566405",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617048479",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-1"
+   ]
+  },
+  "S2.32 travel/location": {
+   "code": "travel",
+   "draft_n": 6,
+   "draft_core": 3,
+   "draft_high": 3,
+   "draft_src": {
+    "app-store": 5,
+    "hacker-news": 1
+   },
+   "mine_all": 5,
+   "mine_core": 3,
+   "mine_high": 2,
+   "mine_compared": 5,
+   "mine_src_all": {
+    "app-store": 4,
+    "hacker-news": 1
+   },
+   "mine_src_core": {
+    "app-store": 2,
+    "hacker-news": 1
+   },
+   "diff_pct": -16.7,
+   "thin_mine": false,
+   "evidence_overlap": 5,
+   "evidence_only_ids": [
+    218
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14586850388",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14462322496",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14430731483",
+    "https://news.ycombinator.com/item?id=48932752",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14192650370"
+   ]
+  },
+  "S3.1 upload own files": {
+   "code": "upload",
+   "draft_n": 34,
+   "draft_core": 30,
+   "draft_high": 4,
+   "draft_src": {
+    "app-store": 5,
+    "google-play": 1,
+    "hacker-news": 28
+   },
+   "mine_all": 25,
+   "mine_core": 24,
+   "mine_high": 1,
+   "mine_compared": 25,
+   "mine_src_all": {
+    "app-store": 2,
+    "hacker-news": 23
+   },
+   "mine_src_core": {
+    "app-store": 1,
+    "hacker-news": 23
+   },
+   "diff_pct": -26.5,
+   "thin_mine": false,
+   "evidence_overlap": 25,
+   "evidence_only_ids": [
+    710,
+    983,
+    1027,
+    1053,
+    1106,
+    1152,
+    1182,
+    1207,
+    1218
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601011908",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14212416420",
+    "https://news.ycombinator.com/item?id=48228365",
+    "https://news.ycombinator.com/item?id=46712608",
+    "https://news.ycombinator.com/item?id=46058654",
+    "https://news.ycombinator.com/item?id=45246661",
+    "https://news.ycombinator.com/item?id=44295699",
+    "https://news.ycombinator.com/item?id=44302357",
+    "https://news.ycombinator.com/item?id=43658039",
+    "https://news.ycombinator.com/item?id=43204178",
+    "https://news.ycombinator.com/item?id=42513052",
+    "https://news.ycombinator.com/item?id=42113400",
+    "https://news.ycombinator.com/item?id=41221819",
+    "https://news.ycombinator.com/item?id=39968033",
+    "https://news.ycombinator.com/item?id=39484314",
+    "https://news.ycombinator.com/item?id=39428119",
+    "https://news.ycombinator.com/item?id=39428575",
+    "https://news.ycombinator.com/item?id=39431927",
+    "https://news.ycombinator.com/item?id=39315400",
+    "https://news.ycombinator.com/item?id=38542901",
+    "https://news.ycombinator.com/item?id=38536011",
+    "https://news.ycombinator.com/item?id=38008000",
+    "https://news.ycombinator.com/item?id=37792608",
+    "https://news.ycombinator.com/item?id=37528611",
+    "https://news.ycombinator.com/item?id=34372685"
+   ]
+  },
+  "S3.1b Local Files clunky": {
+   "code": "localfiles",
+   "draft_n": 11,
+   "draft_core": 11,
+   "draft_high": null,
+   "draft_src": {
+    "google-play": 1,
+    "hacker-news": 10
+   },
+   "mine_all": 11,
+   "mine_core": 11,
+   "mine_high": 0,
+   "mine_compared": 11,
+   "mine_src_all": {
+    "google-play": 1,
+    "hacker-news": 10
+   },
+   "mine_src_core": {
+    "google-play": 1,
+    "hacker-news": 10
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": 11,
+   "evidence_only_ids": [],
+   "mine_only_ids": [],
+   "urls": [
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17",
+    "https://news.ycombinator.com/item?id=44302357",
+    "https://news.ycombinator.com/item?id=43658039",
+    "https://news.ycombinator.com/item?id=43204178",
+    "https://news.ycombinator.com/item?id=42113400",
+    "https://news.ycombinator.com/item?id=42113467",
+    "https://news.ycombinator.com/item?id=39428365",
+    "https://news.ycombinator.com/item?id=39315400",
+    "https://news.ycombinator.com/item?id=38008000",
+    "https://news.ycombinator.com/item?id=37924110",
+    "https://news.ycombinator.com/item?id=36131193"
+   ]
+  },
+  "S3.1c not on streaming (market)": {
+   "code": "notonstreaming",
+   "draft_n": 18,
+   "draft_core": null,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 6,
+    "hacker-news": 12
+   },
+   "mine_all": 11,
+   "mine_core": 10,
+   "mine_high": 1,
+   "mine_compared": 11,
+   "mine_src_all": {
+    "app-store": 2,
+    "hacker-news": 9
+   },
+   "mine_src_core": {
+    "app-store": 1,
+    "hacker-news": 9
+   },
+   "diff_pct": -38.9,
+   "thin_mine": false,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601011908",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14212416420",
+    "https://news.ycombinator.com/item?id=46712608",
+    "https://news.ycombinator.com/item?id=45246661",
+    "https://news.ycombinator.com/item?id=45134042",
+    "https://news.ycombinator.com/item?id=44295699",
+    "https://news.ycombinator.com/item?id=41221819",
+    "https://news.ycombinator.com/item?id=39968033",
+    "https://news.ycombinator.com/item?id=39428575",
+    "https://news.ycombinator.com/item?id=38008000",
+    "https://news.ycombinator.com/item?id=37792608"
+   ]
+  },
+  "S3.2 own not rent": {
+   "code": "own",
+   "draft_n": 30,
+   "draft_core": 30,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 4,
+    "google-play": 2,
+    "hacker-news": 24
+   },
+   "mine_all": 27,
+   "mine_core": 27,
+   "mine_high": 0,
+   "mine_compared": 27,
+   "mine_src_all": {
+    "app-store": 3,
+    "hacker-news": 24
+   },
+   "mine_src_core": {
+    "app-store": 3,
+    "hacker-news": 24
+   },
+   "diff_pct": -10.0,
+   "thin_mine": false,
+   "evidence_overlap": 24,
+   "evidence_only_ids": [
+    524,
+    1129,
+    1139,
+    1162,
+    1170,
+    1195
+   ],
+   "mine_only_ids": [
+    1108,
+    1109,
+    1117
+   ],
+   "urls": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620615454",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14617552745",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607408439",
+    "https://news.ycombinator.com/item?id=48776659",
+    "https://news.ycombinator.com/item?id=48601078",
+    "https://news.ycombinator.com/item?id=48374133",
+    "https://news.ycombinator.com/item?id=47984813",
+    "https://news.ycombinator.com/item?id=47021054",
+    "https://news.ycombinator.com/item?id=46776986",
+    "https://news.ycombinator.com/item?id=46777110",
+    "https://news.ycombinator.com/item?id=46339177",
+    "https://news.ycombinator.com/item?id=45018756",
+    "https://news.ycombinator.com/item?id=44973044",
+    "https://news.ycombinator.com/item?id=44914281",
+    "https://news.ycombinator.com/item?id=44334326",
+    "https://news.ycombinator.com/item?id=42861370",
+    "https://news.ycombinator.com/item?id=42111135",
+    "https://news.ycombinator.com/item?id=41705083",
+    "https://news.ycombinator.com/item?id=39437699",
+    "https://news.ycombinator.com/item?id=39430718",
+    "https://news.ycombinator.com/item?id=39431191",
+    "https://news.ycombinator.com/item?id=37901068",
+    "https://news.ycombinator.com/item?id=37802590",
+    "https://news.ycombinator.com/item?id=37193102",
+    "https://news.ycombinator.com/item?id=36693154",
+    "https://news.ycombinator.com/item?id=35636121",
+    "https://news.ycombinator.com/item?id=34259883"
+   ]
+  },
+  "S3.2b export/transfer": {
+   "code": "export",
+   "draft_n": 7,
+   "draft_core": 7,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 1,
+    "google-play": 2,
+    "hacker-news": 4
+   },
+   "mine_all": 8,
+   "mine_core": 8,
+   "mine_high": 0,
+   "mine_compared": 8,
+   "mine_src_all": {
+    "app-store": 2,
+    "google-play": 2,
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "app-store": 2,
+    "google-play": 2,
+    "hacker-news": 4
+   },
+   "diff_pct": 14.3,
+   "thin_mine": false,
+   "evidence_overlap": 6,
+   "evidence_only_ids": [
+    1195
+   ],
+   "mine_only_ids": [
+    844,
+    1214
+   ],
+   "urls": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604098603",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14341084816",
+    "https://news.ycombinator.com/item?id=46777110",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-3",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-17",
+    "https://news.ycombinator.com/item?id=41119283",
+    "https://news.ycombinator.com/item?id=40216183",
+    "https://news.ycombinator.com/item?id=37193102"
+   ]
+  },
+  "S3.3 library tools": {
+   "code": "libtools",
+   "draft_n": 18,
+   "draft_core": 8,
+   "draft_high": 10,
+   "draft_src": {
+    "app-store": 12,
+    "google-play": 2,
+    "hacker-news": 4
+   },
+   "mine_all": 13,
+   "mine_core": 7,
+   "mine_high": 6,
+   "mine_compared": 13,
+   "mine_src_all": {
+    "app-store": 9,
+    "google-play": 1,
+    "hacker-news": 3
+   },
+   "mine_src_core": {
+    "app-store": 4,
+    "hacker-news": 3
+   },
+   "diff_pct": -27.8,
+   "thin_mine": false,
+   "evidence_overlap": 13,
+   "evidence_only_ids": [
+    151,
+    625,
+    726,
+    910,
+    1144
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620065931",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619890522",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620004065",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14615924375",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607587212",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14582782335",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574653538",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-20",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14186911603",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14161321657",
+    "https://news.ycombinator.com/item?id=40472070",
+    "https://news.ycombinator.com/item?id=40216183",
+    "https://news.ycombinator.com/item?id=39484314"
+   ]
+  },
+  "S3.4 history/play counts": {
+   "code": "history",
+   "draft_n": 9,
+   "draft_core": 7,
+   "draft_high": 2,
+   "draft_src": {
+    "app-store": 4,
+    "hacker-news": 5
+   },
+   "mine_all": 8,
+   "mine_core": 6,
+   "mine_high": 2,
+   "mine_compared": 8,
+   "mine_src_all": {
+    "app-store": 4,
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "app-store": 2,
+    "hacker-news": 4
+   },
+   "diff_pct": -11.1,
+   "thin_mine": false,
+   "evidence_overlap": 8,
+   "evidence_only_ids": [
+    1086
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620191605",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14599534039",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14359879282",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14273263904",
+    "https://news.ycombinator.com/item?id=48228365",
+    "https://news.ycombinator.com/item?id=40472070",
+    "https://news.ycombinator.com/item?id=40472957",
+    "https://news.ycombinator.com/item?id=37802590"
+   ]
+  },
+  "S3.5 shuffle-control requests": {
+   "code": "shuffle_req",
+   "draft_n": 9,
+   "draft_core": null,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 6,
+    "hacker-news": 3
+   },
+   "mine_all": 6,
+   "mine_core": 4,
+   "mine_high": 2,
+   "mine_compared": 6,
+   "mine_src_all": {
+    "app-store": 4,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "app-store": 2,
+    "hacker-news": 2
+   },
+   "diff_pct": -33.3,
+   "thin_mine": false,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14619811598",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617332175",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594404521",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574653538",
+    "https://news.ycombinator.com/item?id=48228365",
+    "https://news.ycombinator.com/item?id=38583421"
+   ]
+  },
+  "S3.6 music-only mode": {
+   "code": "music_only",
+   "draft_n": 10,
+   "draft_core": null,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 5,
+    "hacker-news": 5
+   },
+   "mine_all": 4,
+   "mine_core": 4,
+   "mine_high": 0,
+   "mine_compared": 4,
+   "mine_src_all": {
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "hacker-news": 4
+   },
+   "diff_pct": -60.0,
+   "thin_mine": true,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://news.ycombinator.com/item?id=42861610",
+    "https://news.ycombinator.com/item?id=42527142",
+    "https://news.ycombinator.com/item?id=40564010",
+    "https://news.ycombinator.com/item?id=38520656"
+   ]
+  },
+  "S3.7 lossless": {
+   "code": "lossless",
+   "draft_n": 11,
+   "draft_core": 9,
+   "draft_high": 2,
+   "draft_src": {
+    "app-store": 3,
+    "hacker-news": 8
+   },
+   "mine_all": 9,
+   "mine_core": 8,
+   "mine_high": 1,
+   "mine_compared": 9,
+   "mine_src_all": {
+    "app-store": 2,
+    "hacker-news": 7
+   },
+   "mine_src_core": {
+    "app-store": 1,
+    "hacker-news": 7
+   },
+   "diff_pct": -18.2,
+   "thin_mine": false,
+   "evidence_overlap": 8,
+   "evidence_only_ids": [
+    365,
+    1162,
+    1199
+   ],
+   "mine_only_ids": [
+    1080
+   ],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617292590",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14295285325",
+    "https://news.ycombinator.com/item?id=47432011",
+    "https://news.ycombinator.com/item?id=43299536",
+    "https://news.ycombinator.com/item?id=42478970",
+    "https://news.ycombinator.com/item?id=41921002",
+    "https://news.ycombinator.com/item?id=41223060",
+    "https://news.ycombinator.com/item?id=38226866",
+    "https://news.ycombinator.com/item?id=34596537"
+   ]
+  },
+  "S3.8 lyrics": {
+   "code": "lyrics",
+   "draft_n": 3,
+   "draft_core": 3,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 3
+   },
+   "mine_all": 3,
+   "mine_core": 3,
+   "mine_high": 0,
+   "mine_compared": 3,
+   "mine_src_all": {
+    "app-store": 3
+   },
+   "mine_src_core": {
+    "app-store": 3
+   },
+   "diff_pct": 0.0,
+   "thin_mine": true,
+   "evidence_overlap": 3,
+   "evidence_only_ids": [],
+   "mine_only_ids": [],
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620065931",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607276368",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14573249596"
+   ]
+  },
+  "S4 self-hosting effort": {
+   "code": "selfhost_effort",
+   "draft_n": 17,
+   "draft_core": 17,
+   "draft_high": null,
+   "draft_src": {
+    "hacker-news": 17
+   },
+   "mine_all": 8,
+   "mine_core": 8,
+   "mine_high": 0,
+   "mine_compared": 8,
+   "mine_src_all": {
+    "hacker-news": 8
+   },
+   "mine_src_core": {
+    "hacker-news": 8
+   },
+   "diff_pct": -52.9,
+   "thin_mine": true,
+   "evidence_overlap": 8,
+   "evidence_only_ids": [
+    1086,
+    1089,
+    1091,
+    1104,
+    1144,
+    1170,
+    1183,
+    1186,
+    1206
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://news.ycombinator.com/item?id=49518972",
+    "https://news.ycombinator.com/item?id=48228323",
+    "https://news.ycombinator.com/item?id=46717359",
+    "https://news.ycombinator.com/item?id=45134042",
+    "https://news.ycombinator.com/item?id=43713614",
+    "https://news.ycombinator.com/item?id=39995587",
+    "https://news.ycombinator.com/item?id=37193102",
+    "https://news.ycombinator.com/item?id=34372685"
+   ]
+  },
+  "S4 self-host stacks": {
+   "code": "selfhost_stack",
+   "draft_n": 17,
+   "draft_core": 17,
+   "draft_high": null,
+   "draft_src": {
+    "hacker-news": 17
+   },
+   "mine_all": 21,
+   "mine_core": 21,
+   "mine_high": 0,
+   "mine_compared": 21,
+   "mine_src_all": {
+    "hacker-news": 21
+   },
+   "mine_src_core": {
+    "hacker-news": 21
+   },
+   "diff_pct": 23.5,
+   "thin_mine": true,
+   "evidence_overlap": 17,
+   "evidence_only_ids": [],
+   "mine_only_ids": [
+    728,
+    1068,
+    1087,
+    1104
+   ],
+   "urls": [
+    "https://news.ycombinator.com/item?id=49518972",
+    "https://news.ycombinator.com/item?id=48601078",
+    "https://news.ycombinator.com/item?id=48374133",
+    "https://news.ycombinator.com/item?id=48228323",
+    "https://news.ycombinator.com/item?id=47984813",
+    "https://news.ycombinator.com/item?id=46777110",
+    "https://news.ycombinator.com/item?id=46717359",
+    "https://news.ycombinator.com/item?id=46712608",
+    "https://news.ycombinator.com/item?id=46518747",
+    "https://news.ycombinator.com/item?id=45246661",
+    "https://news.ycombinator.com/item?id=45134042",
+    "https://news.ycombinator.com/item?id=45018756",
+    "https://news.ycombinator.com/item?id=44914281",
+    "https://news.ycombinator.com/item?id=44334326",
+    "https://news.ycombinator.com/item?id=43713314",
+    "https://news.ycombinator.com/item?id=42861370",
+    "https://news.ycombinator.com/item?id=42113467",
+    "https://news.ycombinator.com/item?id=39437699",
+    "https://news.ycombinator.com/item?id=39431191",
+    "https://news.ycombinator.com/item?id=37193102",
+    "https://news.ycombinator.com/item?id=35462336"
+   ]
+  },
+  "S4 U3 replaced/converted": {
+   "code": "replaced",
+   "draft_n": 4,
+   "draft_core": 4,
+   "draft_high": null,
+   "draft_src": {
+    "hacker-news": 4
+   },
+   "mine_all": 2,
+   "mine_core": 2,
+   "mine_high": 0,
+   "mine_compared": 2,
+   "mine_src_all": {
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "hacker-news": 2
+   },
+   "diff_pct": -50.0,
+   "thin_mine": true,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://news.ycombinator.com/item?id=42113467",
+    "https://news.ycombinator.com/item?id=41311984"
+   ]
+  },
+  "S4 U4 offline other apps": {
+   "code": "offline_other",
+   "draft_n": 3,
+   "draft_core": 3,
+   "draft_high": null,
+   "draft_src": {
+    "hacker-news": 3
+   },
+   "mine_all": 2,
+   "mine_core": 2,
+   "mine_high": 0,
+   "mine_compared": 2,
+   "mine_src_all": {
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "hacker-news": 2
+   },
+   "diff_pct": -33.3,
+   "thin_mine": true,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://news.ycombinator.com/item?id=49520659",
+    "https://news.ycombinator.com/item?id=49523451"
+   ]
+  },
+  "S4 U6 discovery missed": {
+   "code": "discovery_missed",
+   "draft_n": 16,
+   "draft_core": 16,
+   "draft_high": null,
+   "draft_src": {
+    "hacker-news": 16
+   },
+   "mine_all": 4,
+   "mine_core": 4,
+   "mine_high": 0,
+   "mine_compared": 4,
+   "mine_src_all": {
+    "hacker-news": 4
+   },
+   "mine_src_core": {
+    "hacker-news": 4
+   },
+   "diff_pct": -75.0,
+   "thin_mine": true,
+   "evidence_overlap": 4,
+   "evidence_only_ids": [
+    732,
+    1073,
+    1078,
+    1080,
+    1089,
+    1137,
+    1166,
+    1193,
+    1199,
+    1208,
+    1220,
+    1226
+   ],
+   "mine_only_ids": [],
+   "urls": [
+    "https://news.ycombinator.com/item?id=48374133",
+    "https://news.ycombinator.com/item?id=46518747",
+    "https://news.ycombinator.com/item?id=45018756",
+    "https://news.ycombinator.com/item?id=39995587"
+   ]
+  },
+  "S5 F7 locked out after cancel": {
+   "code": "hostage",
+   "draft_n": 3,
+   "draft_core": null,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 2,
+    "hacker-news": 1
+   },
+   "mine_all": 3,
+   "mine_core": 3,
+   "mine_high": 0,
+   "mine_compared": 3,
+   "mine_src_all": {
+    "app-store": 1,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "app-store": 1,
+    "hacker-news": 2
+   },
+   "diff_pct": 0.0,
+   "thin_mine": false,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618139577",
+    "https://news.ycombinator.com/item?id=47021054",
+    "https://news.ycombinator.com/item?id=46776986"
+   ]
+  },
+  "S7 gift cards": {
+   "code": "gift",
+   "draft_n": 3,
+   "draft_core": null,
+   "draft_high": null,
+   "draft_src": {
+    "app-store": 3
+   },
+   "mine_all": 3,
+   "mine_core": 3,
+   "mine_high": 0,
+   "mine_compared": 3,
+   "mine_src_all": {
+    "app-store": 3
+   },
+   "mine_src_core": {
+    "app-store": 3
+   },
+   "diff_pct": 0.0,
+   "thin_mine": true,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620948500",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14602655166",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581908240"
+   ]
+  },
+  "praise discovery (4-5*)": {
+   "code": "praise_discovery",
+   "draft_n": 34,
+   "draft_core": null,
+   "draft_high": 34,
+   "draft_src": {
+    "app-store": 31,
+    "google-play": 3
+   },
+   "mine_all": 33,
+   "mine_core": 2,
+   "mine_high": 31,
+   "mine_compared": 33,
+   "mine_src_all": {
+    "app-store": 28,
+    "google-play": 3,
+    "hacker-news": 2
+   },
+   "mine_src_core": {
+    "hacker-news": 2
+   },
+   "diff_pct": -2.9,
+   "thin_mine": false,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620621004",
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620434344",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620166831",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620066716",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619893636",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14618196319",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616726152",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616629204",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616563674",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616204873",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14615644426",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615728475",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14608879208",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14604584202",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605407666",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605322772",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14603783822",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600173116",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14583921674",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-6",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-12",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14449782752",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14404604319",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14320942102",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14318133142",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14275453624",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14260564765",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14183591232",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14157142317",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14123980185",
+    "https://news.ycombinator.com/item?id=47432011",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-10",
+    "https://news.ycombinator.com/item?id=39261935"
+   ]
+  },
+  "praise background play (4-5*)": {
+   "code": "praise_background",
+   "draft_n": 13,
+   "draft_core": null,
+   "draft_high": 13,
+   "draft_src": {},
+   "mine_all": 10,
+   "mine_core": 0,
+   "mine_high": 10,
+   "mine_compared": 10,
+   "mine_src_all": {
+    "app-store": 8,
+    "google-play": 2
+   },
+   "mine_src_core": {},
+   "diff_pct": -23.1,
+   "thin_mine": false,
+   "evidence_overlap": null,
+   "evidence_only_ids": null,
+   "mine_only_ids": null,
+   "urls": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620217052",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14618720509",
+    "https://itunes.apple.com/us/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14616785073",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616604784",
+    "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616301547",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14608873422",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-7",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-15",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14232623982",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14224210718"
+   ]
+  }
+ }
+}

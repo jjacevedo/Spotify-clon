@@ -1,0 +1,982 @@
+{
+ "source": "upload-your-own-music market (cloud music lockers, self-hosted servers, mainstream streamers' upload features)",
+ "generated": "2026-10-04",
+ "method": "WebSearch to discover; each reachable page fetched once (>=3.5 s apart) with python urllib/curl through the configured proxy; official APIs (iTunes Lookup, App Store reviews RSS, HN Algolia) and shallow git clones of official docs/README repos where the website was blocked. Quotes were extracted programmatically from raw responses and machine-checked as exact substrings of the tag-stripped, whitespace-collapsed text.",
+ "caveat": "Most vendor sites (Google support, YouTube blog, Apple support, plex.tv, navidrome.org, deezer, ibroadcast, vox.rocks) are blocked by this session's egress policy, so several official facts come from HN users quoting the official text (source_kind=user-quoting-official) or from HN submission titles (source_kind=news-index). The 'leads_unverified' block is from search summaries only and must not be quoted.",
+ "findings": [
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "Spotify's own help article frames Local Files as playing audio files already stored on the user's device; the article describes no cloud upload.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Along with the millions of tracks Spotify offers, you can also use the app to play any of the audio files legally stored on your device.",
+   "date": "2025-06-30",
+   "source": "https://support.spotify.com/us/article/local-files/",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET, HTML tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "On desktop, Local Files works by pointing Spotify at folders on that computer.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "turn on the folders you want Local Files to have access to. Or, click Add a source to select another folder.",
+   "date": "2025-06-30",
+   "source": "https://support.spotify.com/us/article/local-files/",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET, HTML tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "On iPhone, files must be copied into a 'Spotify' folder via the Files app, Finder or iTunes, and the help page documents that this folder can disappear.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "The Spotify folder may disappear from On My iPhone if the Help file within it is deleted. To display the folder again, restart the Spotify app.",
+   "date": "2025-06-30",
+   "source": "https://support.spotify.com/us/article/local-files/",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET, HTML tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "Spotify routes getting music onto Spotify through the artist side (Spotify for Artists), not through listener uploads.",
+   "url": "https://support.spotify.com/us/article/spotify-for-artists/",
+   "quote": "For information about how to get your music on Spotify, fix content errors, and more, check out the Spotify for Artists help center",
+   "date": "2025-06-30",
+   "source": "https://support.spotify.com/us/article/spotify-for-artists/",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET, HTML tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "Spotify's offline downloads are capped per device and need a check-in every 30 days (a benchmark tunebox can beat for owned files).",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "You can download as many as 10,000 tracks on each of up to 5 different devices. You need to go online at least once every 30 days to keep your downloads.",
+   "date": "2025-11-13",
+   "source": "https://support.spotify.com/us/article/listen-offline/",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET, HTML tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "Free Spotify users cannot download music for offline listening.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "On the free version, you can only download podcasts.",
+   "date": "2025-11-13",
+   "source": "https://support.spotify.com/us/article/listen-offline/",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET, HTML tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "Users point out Spotify has no cloud upload, only device-local playback.",
+   "url": "https://news.ycombinator.com/item?id=44302357",
+   "quote": "You can't upload your music to Spotify, only use it to access media that's stored locally on your device.",
+   "date": "2025-06-17",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "A user asks Spotify for Google Play Music's upload-to-cloud feature, calling it 'impossible' on Spotify.",
+   "url": "https://news.ycombinator.com/item?id=48228365",
+   "quote": "Expand to all Google Play Music features pls Spotify (play counts & the impossible upload-your-own-music to Spotify’s cloud)",
+   "date": "2026-05-21",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "A user left Spotify's family plan because Spotify lacks a music locker.",
+   "url": "https://news.ycombinator.com/item?id=41221819",
+   "quote": "I moved my family plan from Spotify because they still don’t have an easy to use music locker solution.",
+   "date": "2024-08-12",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "A user describes the Spotify workaround (local folder + offline playlist) as less seamless than Google Play Music's cloud upload.",
+   "url": "https://news.ycombinator.com/item?id=43204178",
+   "quote": "That's still possible, although not as seamless as it was on Google Play music where you could upload music to Google's servers and stream just like their official library. In Spotify, you have to point the desktop client to a local folder with your music.",
+   "date": "2025-02-28",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "spotify-upload-stance",
+   "product": "Spotify",
+   "claim": "A user stays on Apple Music because Spotify has no answer for tracks that are not on streaming services.",
+   "url": "https://news.ycombinator.com/item?id=39968033",
+   "quote": "Spotify doesn't have an answer for this. Just don't listen to things outside the Spotify library. Apple Music (and GPM before it) lets me upload my own tracks and sync them between my devices.",
+   "date": "2024-04-08",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "google-play-music-shutdown",
+   "product": "Google Play Music",
+   "claim": "Google announced in August 2020 that YouTube Music would replace Google Play Music by the end of 2020 (HN submission of the official YouTube blog post, which is itself unreachable from here).",
+   "url": "https://news.ycombinator.com/item?id=24057360",
+   "quote": "YouTube Music will replace Google Play Music by end of 2020",
+   "date": "2020-08-05",
+   "source": "Hacker News",
+   "source_kind": "news-index",
+   "retrieved_via": "HN Algolia API (official), story title/text",
+   "linked_url": "https://blog.youtube/news-and-events/youtube-music-will-replace-google-play-music-end-2020/"
+  },
+  {
+   "topic": "google-play-music-shutdown",
+   "product": "Google Play Music",
+   "claim": "Google's email to users, quoted on HN in February 2021: all Google Play Music data, uploads included, would be deleted on 24 February 2021 with no recovery.",
+   "url": "https://news.ycombinator.com/item?id=26081279",
+   "quote": "On February 24, 2021, we will delete all of your Google Play Music data. This includes your music library with any uploads, purchases and anything you've added from Google Play Music. After this date, there will be no way to recover it.",
+   "date": "2021-02-09",
+   "source": "Hacker News",
+   "source_kind": "user-quoting-official",
+   "retrieved_via": "HN Algolia API (official), story title/text",
+   "linked_url": null
+  },
+  {
+   "topic": "google-play-music-shutdown",
+   "product": "Google Play Music",
+   "claim": "The same email offered a one-click transfer of uploads and playlists to YouTube Music, or a download through Google Takeout.",
+   "url": "https://news.ycombinator.com/item?id=26081279",
+   "quote": "You can download your Google Play Music library and data with Google Takeout or transfer it to YouTube Music. As a reminder, with one click you can still transfer your music library, including uploads, playlists, and recommendations, to YouTube Music before February 24, 2021.",
+   "date": "2021-02-09",
+   "source": "Hacker News",
+   "source_kind": "user-quoting-official",
+   "retrieved_via": "HN Algolia API (official), story title/text",
+   "linked_url": null
+  },
+  {
+   "topic": "google-play-music-shutdown",
+   "product": "Google Play Music",
+   "claim": "Some users report that the GPM-to-YouTube Music migration did carry their uploads over.",
+   "url": "https://news.ycombinator.com/item?id=45555685",
+   "quote": "I made the transition, and all of my music moved without a new upload.",
+   "date": "2025-10-12",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "google-play-music-shutdown",
+   "product": "Google Play Music",
+   "claim": "A user complains that YouTube Music's library experience for uploads is worse than GPM's: uploads and library are split into separate tabs.",
+   "url": "https://news.ycombinator.com/item?id=35463189",
+   "quote": "Additionally the library view is intentionally split with a \"uploads\" and \"library\" tab unlike in Google Play Music where it would provide a nice shared experience with the nicer artist pages as well.",
+   "date": "2023-04-06",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "youtube-music-upload",
+   "product": "YouTube Music",
+   "claim": "YouTube Music's official App Store listing still advertises uploading your own songs (listing version of 2026-09-26).",
+   "url": "https://apps.apple.com/us/app/youtube-music/id1017492454",
+   "quote": "Upload songs from your devices so you can enjoy them in one place with YouTube Music",
+   "date": "2026-09-26",
+   "source": "App Store listing: YouTube Music",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "youtube-music-upload",
+   "product": "YouTube Music",
+   "claim": "Per a user citing Google's help page (support.google.com/youtubemusic/answer/9716522, unreachable from here), YouTube Music supports up to 100k uploads, streamable/downloadable on web and iOS.",
+   "url": "https://news.ycombinator.com/item?id=46518743",
+   "quote": "It supports up to 100k uploads and you can stream and/or download your uploads on web/iOS/iPadOS etc.",
+   "date": "2026-01-06",
+   "source": "Hacker News",
+   "source_kind": "user-quoting-official",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "youtube-music-upload",
+   "product": "YouTube Music",
+   "claim": "Per a user quoting the same help page: uploaded songs play in the background, ad-free and offline even without Premium.",
+   "url": "https://news.ycombinator.com/item?id=46520232",
+   "quote": "From the link: You can play uploaded songs in the background, ad-free and offline—even if you are not currently a YouTube Music Premium subscriber.",
+   "date": "2026-01-06",
+   "source": "Hacker News",
+   "source_kind": "user-quoting-official",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "youtube-music-upload",
+   "product": "YouTube Music",
+   "claim": "A long-time uploader says the YouTube Music upload experience gets worse over time and is staying only to avoid self-hosting.",
+   "url": "https://news.ycombinator.com/item?id=48227529",
+   "quote": "I have avoided building my own stack by uploading everything into Youtube Music (which used to be Google Music, which ... whatever.) It gets a little worse every day, and one day it'll get bad enough where the pain of sysadmining something new will be preferable to them.",
+   "date": "2026-05-21",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "youtube-music-upload",
+   "product": "YouTube Music",
+   "claim": "A Google Play reviewer (on iBroadcast's listing) calls YouTube Music a debacle for personal cloud music.",
+   "url": "https://play.google.com/store/apps/details?id=com.iBroadcast",
+   "quote": "Perfect replacement for Google music. You tube music is a debacle for keeping your personal music in the cloud.",
+   "date": "2021-03-01",
+   "source": "Google Play review: iBroadcast",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 5
+  },
+  {
+   "topic": "apple-sync-library",
+   "product": "Apple Music (iCloud Music Library)",
+   "claim": "A user reports iCloud Music Library (with Apple Music) lets them upload 100,000 songs and mix them with catalogue tracks.",
+   "url": "https://news.ycombinator.com/item?id=45246661",
+   "quote": "Now I use Apple Music with iCloud Music Library which lets me upload a hundred thousand songs.",
+   "date": "2025-09-15",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "apple-sync-library",
+   "product": "iTunes Match",
+   "claim": "A user pays $24.99 a year for iTunes Match and expects Apple to deprecate it.",
+   "url": "https://news.ycombinator.com/item?id=45134742",
+   "quote": "And I dutifully pay the $24.99 per year for iTunes Match so that I can tell Siri what to play on HomePods, but I will be 0% surprised when they deprecate that service.",
+   "date": "2025-09-05",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "apple-sync-library",
+   "product": "Apple Music (iCloud Music Library)",
+   "claim": "Complaint: after a subscription lapse, a returning user found their Apple Music playlists and songs gone.",
+   "url": "https://news.ycombinator.com/item?id=48899880",
+   "quote": "all my playlists and songs are gone, deleted, everything as if it’s a new account!",
+   "date": "2026-07-13",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "apple-sync-library",
+   "product": "Apple Music (iCloud Music Library)",
+   "claim": "Limitation reported by a user: FLAC must be converted to ALAC before adding lossless files to Apple Music.",
+   "url": "https://news.ycombinator.com/item?id=38008000",
+   "quote": "you do have to convert FLAC to ALAC if you want to add lossless files to Apple Music",
+   "date": "2023-10-25",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "amazon-music-upload",
+   "product": "Amazon Music",
+   "claim": "Amazon removed MP3 upload and announced the end of its music storage service in December 2017 (HN submission of an Ars Technica article; the article itself is unreachable from here).",
+   "url": "https://news.ycombinator.com/item?id=15980454",
+   "quote": "Amazon Music removes ability to upload MP3s, will shutter storage service",
+   "date": "2017-12-21",
+   "source": "Hacker News",
+   "source_kind": "news-index",
+   "retrieved_via": "HN Algolia API (official), story title/text",
+   "linked_url": "https://arstechnica.com/gadgets/2017/12/amazon-music-ends-mp3-upload-support-will-end-music-storage-service-in-2019/"
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plexamp",
+   "claim": "Plexamp is not hosted storage: it needs a Plex Media Server that the user runs.",
+   "url": "https://apps.apple.com/us/app/plexamp/id1500797510",
+   "quote": "You'll need a Plex Media Server and a Plex account to use this app",
+   "date": "2025-07-14",
+   "source": "App Store listing: Plexamp",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plexamp",
+   "claim": "Plexamp offers offline downloads of playlists and stations.",
+   "url": "https://apps.apple.com/us/app/plexamp/id1500797510",
+   "quote": "Grab a few hours of your favorite playlist or stations with just a few taps.",
+   "date": "2025-07-14",
+   "source": "App Store listing: Plexamp",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plex Pass",
+   "claim": "In May 2026 Plex raised the Lifetime Pass price by 200% (HN submission of an Ars Technica article).",
+   "url": "https://news.ycombinator.com/item?id=48198836",
+   "quote": "Plex's 200% Lifetime Pass price hike tries forcing users to another subscription",
+   "date": "2026-05-19",
+   "source": "Hacker News",
+   "source_kind": "news-index",
+   "retrieved_via": "HN Algolia API (official), story title/text",
+   "linked_url": "https://arstechnica.com/gadgets/2026/05/plexs-200-lifetime-pass-price-hike-tries-forcing-users-to-another-subscription/"
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plexamp",
+   "claim": "A lifetime user says Plexamp is not worth the new $750 lifetime price.",
+   "url": "https://news.ycombinator.com/item?id=48229814",
+   "quote": "PlexAmp is great although not worth anywhere close to $750.",
+   "date": "2026-05-21",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plexamp",
+   "claim": "App Store complaint: no m3u playlist import for a 50,000-song library.",
+   "url": "https://apps.apple.com/us/app/plexamp/id1500797510?see-all=reviews",
+   "quote": "But since plex cannot import m3u playlist files, and because I do not want to spend weeks or months recreating those playlists in the plex ui, this is not an option.",
+   "date": "2025-04-29",
+   "source": "App Store review: Plexamp",
+   "source_kind": "user",
+   "retrieved_via": "App Store customer-reviews RSS feed (official), US storefront",
+   "review_id": "12600854451",
+   "rating": 1,
+   "review_title": "Nice app, one flaw that makes it unusable",
+   "app_version": "4.12.2",
+   "feed_url": "https://itunes.apple.com/us/rss/customerreviews/id=1500797510/sortby=mostrecent/json"
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plexamp",
+   "claim": "Google Play review: price increase and remote loading problems.",
+   "url": "https://play.google.com/store/apps/details?id=tv.plex.labs.plexamp",
+   "quote": "2 years later they want to double the price from $39 to $69 and when I leave my home my music just load all I see is a spinning circle.",
+   "date": "2026-04-03",
+   "source": "Google Play review: Plexamp",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 5
+  },
+  {
+   "topic": "plex-plexamp",
+   "product": "Plexamp",
+   "claim": "Google Play review (1 star): AI-driven organisation gets in the way of browsing your own library.",
+   "url": "https://play.google.com/store/apps/details?id=tv.plex.labs.plexamp",
+   "quote": "it uses AI to organize your music and decide what you listen to. And it's the only arrow in its quiver. you can't really browse your library",
+   "date": "2026-09-07",
+   "source": "Google Play review: Plexamp",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 1
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome",
+   "claim": "Navidrome is a self-hosted server compatible with the Subsonic API and its client apps.",
+   "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/overview/_index.md",
+   "quote": "It can also work as a lightweight Subsonic-API compatible server, that can be used with any Subsonic compatible client.",
+   "date": "2026-10-02",
+   "source": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/overview/_index.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone of the official docs source (navidrome.org itself is blocked by the egress proxy); markdown rendered to text",
+   "rendered_page": "https://www.navidrome.org/docs/overview/"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome",
+   "claim": "Navidrome supports multiple users with separate playlists and play counts.",
+   "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/overview/_index.md",
+   "quote": "Multi-user, each user has their own play counts, playlists, favorites, etc..",
+   "date": "2026-10-02",
+   "source": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/overview/_index.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone of the official docs source (navidrome.org itself is blocked by the egress proxy); markdown rendered to text",
+   "rendered_page": "https://www.navidrome.org/docs/overview/"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome",
+   "claim": "Navidrome deliberately has no upload feature; users must bolt on FileBrowser or FTP/SFTP.",
+   "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/faq/_index.md",
+   "quote": "Navidrome does not include built-in upload functionality, and this is by design.",
+   "date": "2026-10-02",
+   "source": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/faq/_index.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone of the official docs source (navidrome.org itself is blocked by the egress proxy); markdown rendered to text",
+   "rendered_page": "https://www.navidrome.org/docs/faq/"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome",
+   "claim": "The Navidrome FAQ points users to separate tools for uploading.",
+   "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/faq/_index.md",
+   "quote": "However, there are several excellent solutions you can use alongside Navidrome to enable music uploads:",
+   "date": "2026-10-02",
+   "source": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/faq/_index.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone of the official docs source (navidrome.org itself is blocked by the egress proxy); markdown rendered to text",
+   "rendered_page": "https://www.navidrome.org/docs/faq/"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome (managed hosting)",
+   "claim": "Navidrome's officially endorsed managed hosting comes from PikaPods and Zenith, with revenue sharing.",
+   "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/faq/_index.md",
+   "quote": "PikaPods and Zenith offer officially supported, cloud-hosted solutions that support the project through revenue sharing.",
+   "date": "2026-10-02",
+   "source": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/faq/_index.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone of the official docs source (navidrome.org itself is blocked by the egress proxy); markdown rendered to text",
+   "rendered_page": "https://www.navidrome.org/docs/faq/"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome (managed hosting)",
+   "claim": "PikaPods offers 1-click Navidrome hosting with a $5 welcome credit, EU/US regions and daily backups. The docs give no monthly price, and pikapods.com is unreachable from here.",
+   "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/installation/managed.md",
+   "quote": "Offers 1-click deployments for Navidrome with $5 free welcome credit. EU and US regions available. Includes daily backups and regular app updates.",
+   "date": "2026-10-02",
+   "source": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/installation/managed.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone of the official docs source (navidrome.org itself is blocked by the egress proxy); markdown rendered to text",
+   "rendered_page": "https://www.navidrome.org/docs/installation/managed/"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome",
+   "claim": "Users compare the cost of a VPS-hosted Navidrome with a Spotify subscription.",
+   "url": "https://news.ycombinator.com/item?id=49525492",
+   "quote": "For the monthly price of Spotify, one could rent a VPS and host Navidrome on it.",
+   "date": "2026-09-01",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Navidrome",
+   "claim": "One user reports a hosted Navidrome setup costing 4 euros a month.",
+   "url": "https://news.ycombinator.com/item?id=45136980",
+   "quote": "a lot of the music I used to listen to is already over on my own server, for the low low price of 4€ a month.",
+   "date": "2025-09-05",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Self-hosting (general)",
+   "claim": "A counterpoint on self-hosting effort: most people will not assemble a homelab stack.",
+   "url": "https://news.ycombinator.com/item?id=46515180",
+   "quote": "you just described an insane amount of effort just to avoid a one-time cost. Most will not.",
+   "date": "2026-01-06",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Self-hosting (general)",
+   "claim": "Owning files means solving access everywhere yourself, and that takes work.",
+   "url": "https://news.ycombinator.com/item?id=48228323",
+   "quote": "Spotify makes it extremely easy to have access to your music everywhere. Once you get into (or back into) storing MP3s you have to solve that for whatever level of convenience you want. I have Plexamp and things setup myself but it does require some work.",
+   "date": "2026-05-21",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Amperfy (iOS Subsonic client)",
+   "claim": "Subsonic clients such as Amperfy need a private server to work.",
+   "url": "https://apps.apple.com/us/app/amperfy-music/id1530145038",
+   "quote": "Amperfy requires a private hosted Ampache or Subsonic server installation to function.",
+   "date": "2026-08-13",
+   "source": "App Store listing: Amperfy Music",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Substreamer (iOS Subsonic client)",
+   "claim": "Substreamer is a free client that turns a Subsonic-compatible server into a personal streaming service.",
+   "url": "https://apps.apple.com/us/app/substreamer/id1012991665",
+   "quote": "Substreamer turns your Subsonic-compatible server into a personal streaming service. Browse, play, and download your entire music library on iPhone and iPad — free, with no ads, no subscriptions, and no data collection.",
+   "date": "2026-07-28",
+   "source": "App Store listing: SubStreamer",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Symfonium (Android client)",
+   "claim": "Symfonium is a paid Android player (free trial) that streams from Plex, Jellyfin, Subsonic servers or cloud drives such as Google Drive and Dropbox.",
+   "url": "https://play.google.com/store/apps/details?id=app.symfonik.music.player",
+   "quote": "This is a paid app with a free trial.",
+   "date": "2026-08-14",
+   "source": "Google Play listing: Symfonium",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET of Play listing, HTML tag-stripped"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Symfonium (Android client)",
+   "claim": "Symfonium can use consumer cloud drives as the music store.",
+   "url": "https://play.google.com/store/apps/details?id=app.symfonik.music.player",
+   "quote": "Cloud music player: Stream your music from cloud storage providers (Google Drive, Dropbox, OneDrive, Box, WebDAV, Samba/SMB).",
+   "date": "2026-08-14",
+   "source": "Google Play listing: Symfonium",
+   "source_kind": "official",
+   "retrieved_via": "urllib GET of Play listing, HTML tag-stripped"
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Symfonium (Android client)",
+   "claim": "Even fans report a setup learning curve.",
+   "url": "https://play.google.com/store/apps/details?id=app.symfonik.music.player",
+   "quote": "Took some time to learn how to get this up and running, but after a day of messing with it I can safely say Symfonium is the best of its kind.",
+   "date": "2025-09-16",
+   "source": "Google Play review: Symfonium",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 5
+  },
+  {
+   "topic": "self-hosted-navidrome-subsonic",
+   "product": "Symfonium (Android client)",
+   "claim": "A fan stresses that this is only a front end, not a Spotify-like service.",
+   "url": "https://play.google.com/store/apps/details?id=app.symfonik.music.player",
+   "quote": "This is not a service like Spotify or YouTube music for those looking for a 1:1, rather the front end only.",
+   "date": "2026-08-23",
+   "source": "Google Play review: Symfonium",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 5
+  },
+  {
+   "topic": "self-hosted-jellyfin",
+   "product": "Jellyfin",
+   "claim": "Jellyfin is a free, open-source media server and an alternative to Plex.",
+   "url": "https://github.com/jellyfin/jellyfin/blob/305a96471509f11de4d3a93e1ea268d4fd2af76c/README.md",
+   "quote": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
+   "date": "2026-10-01",
+   "source": "https://github.com/jellyfin/jellyfin/blob/305a96471509f11de4d3a93e1ea268d4fd2af76c/README.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone, README markdown rendered to text"
+  },
+  {
+   "topic": "self-hosted-jellyfin",
+   "product": "Jellyfin",
+   "claim": "Jellyfin has no paid tier.",
+   "url": "https://github.com/jellyfin/jellyfin/blob/305a96471509f11de4d3a93e1ea268d4fd2af76c/README.md",
+   "quote": "There are no strings attached, no premium licenses or features, and no hidden agendas",
+   "date": "2026-10-01",
+   "source": "https://github.com/jellyfin/jellyfin/blob/305a96471509f11de4d3a93e1ea268d4fd2af76c/README.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone, README markdown rendered to text"
+  },
+  {
+   "topic": "self-hosted-jellyfin",
+   "product": "Finamp (Jellyfin music client)",
+   "claim": "Finamp is a free Jellyfin music client that needs a Jellyfin server.",
+   "url": "https://github.com/finamp-app/finamp/blob/847769cc87a8505189372d4896d1675b41ee53d1/README.md",
+   "quote": "You need access to a Jellyfin server or you won't be able to use Finamp at all.",
+   "date": "2026-10-03",
+   "source": "https://github.com/finamp-app/finamp/blob/847769cc87a8505189372d4896d1675b41ee53d1/README.md",
+   "source_kind": "official",
+   "retrieved_via": "git shallow clone, README markdown rendered to text"
+  },
+  {
+   "topic": "self-hosted-jellyfin",
+   "product": "Jellyfin",
+   "claim": "A long-time Jellyfin user finds its music support less polished than its video support.",
+   "url": "https://news.ycombinator.com/item?id=48991875",
+   "quote": "The music and audiobook support never felt like it was as polished as TV/movies either, so I gave up on that.",
+   "date": "2026-07-21",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "self-hosted-jellyfin",
+   "product": "Jellyfin",
+   "claim": "Jellyfin still trails Plex on convenience and Apple device support.",
+   "url": "https://news.ycombinator.com/item?id=48200418",
+   "quote": "Jellyfin is becoming better and better but still lacks proper support for certain (Apple) devices, while Plex mostly just works.",
+   "date": "2026-05-19",
+   "source": "Hacker News",
+   "source_kind": "user",
+   "retrieved_via": "HN Algolia API (official), comment_text tag-stripped"
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "iBroadcast",
+   "claim": "iBroadcast is a hosted locker still operating in 2026 (iOS update 2026-09-18). Uploading and playback are free with no ads.",
+   "url": "https://apps.apple.com/us/app/ibroadcast/id536363915",
+   "quote": "Upload your personal music collection to your iBroadcast library and play your music from anywhere - absolutely free.",
+   "date": "2026-09-18",
+   "source": "App Store listing: iBroadcast",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "iBroadcast",
+   "claim": "iBroadcast states that it has no fees and no ads.",
+   "url": "https://apps.apple.com/us/app/ibroadcast/id536363915",
+   "quote": "There are no fees to use iBroadcast and no ads.",
+   "date": "2026-09-18",
+   "source": "App Store listing: iBroadcast",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "iBroadcast",
+   "claim": "A positive review that still notes bugs.",
+   "url": "https://play.google.com/store/apps/details?id=com.iBroadcast",
+   "quote": "It's occasionally buggy depending on how you use it but am confident they are working to make it better all the time.",
+   "date": "2026-07-23",
+   "source": "Google Play review: iBroadcast",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 5
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "iBroadcast",
+   "claim": "A Google Play review praises iBroadcast as a GPM replacement but finds its mixes poor compared with GPM's instant mix.",
+   "url": "https://play.google.com/store/apps/details?id=com.iBroadcast",
+   "quote": "I just wish it had an intelligent instant mix like Google music had. The mix feature picks weird, often nonsensical groupings, of songs.",
+   "date": "2021-12-31",
+   "source": "Google Play review: iBroadcast",
+   "source_kind": "user",
+   "retrieved_via": "Play listing HTML (one of the reviews shown on the page)",
+   "rating": 5
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "VOX Music Cloud",
+   "claim": "VOX sells unlimited cloud storage for your own music as part of VOX Premium.",
+   "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494",
+   "quote": "Unlimited music cloud storage for your music collections;",
+   "date": "2026-09-28",
+   "source": "App Store listing: VOX – MP3 & FLAC Music Player",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "VOX Music Cloud",
+   "claim": "VOX keeps uploaded files in their original quality (no transcoding of FLAC).",
+   "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494",
+   "quote": "Original Quality Playback (VOX doesn't compress your music within Music Cloud. FLAC remains FLAC);",
+   "date": "2026-09-28",
+   "source": "App Store listing: VOX – MP3 & FLAC Music Player",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  },
+  {
+   "topic": "hosted-music-lockers",
+   "product": "VOX Music Cloud",
+   "claim": "VOX Premium costs $4.99 a month or $49.99 a year.",
+   "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494",
+   "quote": "VOX Premium is available by auto-renewable subscriptions: – $4.99 per month; – $49.99 per year.",
+   "date": "2026-09-28",
+   "source": "App Store listing: VOX – MP3 & FLAC Music Player",
+   "source_kind": "official",
+   "retrieved_via": "iTunes Lookup API (official), description field"
+  }
+ ],
+ "unreachable": [
+  {
+   "url": "https://support.google.com/youtubemusic/answer/9716522?hl=en",
+   "why": "egress proxy denied CONNECT (403, organization policy) for curl and WebFetch"
+  },
+  {
+   "url": "https://blog.youtube/news-and-events/youtube-music-will-replace-google-play-music-end-2020/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://blog.youtube/news-and-events/youtube-music-transfer-google-play-music-library/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://9to5google.com/2020/12/03/google-play-music-dead/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://9to5google.com/2021/03/17/google-play-music-download/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.androidauthority.com/youtube-music-personal-uploads-3607287/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://support.apple.com/en-us/118285",
+   "why": "egress proxy 403 (curl and WebFetch)"
+  },
+  {
+   "url": "https://support.apple.com/guide/music/access-your-music-library-on-all-your-devices-musa3dd5209/mac",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://support.apple.com/en-us/108935",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://support.apple.com/en-us/118287",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://discussions.apple.com/thread/256106591",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://discussions.apple.com/thread/252940414",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.aftvnews.com/amazon-music-no-longer-allows-customers-to-upload-their-own-songs/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.whathifi.com/news/amazon-retires-its-music-storage-subscription-plans",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.plex.tv/blog/important-2025-plex-updates/",
+   "why": "egress proxy 403 (curl and WebFetch)"
+  },
+  {
+   "url": "https://www.plex.tv/blog/new-lifetime-plex-pass-pricing/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.plex.tv/plexamp/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.plex.tv/plans/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://forums.plex.tv/t/plexamp-and-the-plexpass-requirement-for-remote-streaming/916078",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.navidrome.org/docs/overview/",
+   "why": "egress proxy 403 (same text read from the official docs repo github.com/navidrome/website instead)"
+  },
+  {
+   "url": "https://www.navidrome.org/docs/installation/managed/",
+   "why": "egress proxy 403 (read from docs repo instead)"
+  },
+  {
+   "url": "https://jellyfin.org/",
+   "why": "egress proxy 403 (README read from github.com/jellyfin/jellyfin instead)"
+  },
+  {
+   "url": "https://github.com/finamp-app/finamp",
+   "why": "HTTP 403 on the HTML page (README read via git clone instead)"
+  },
+  {
+   "url": "https://symfonium.app/android-music-player-plex-jellyfin-subsonic-navidrome/",
+   "why": "egress proxy 403 (Play listing used instead)"
+  },
+  {
+   "url": "https://www.ibroadcast.com/premium/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://www.ibroadcast.com/home/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://vox.rocks/vox-player-premium",
+   "why": "egress proxy 403 (App Store listing used instead)"
+  },
+  {
+   "url": "https://astiga.audio/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://medialeap.com/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://support.deezer.com/hc/en-gb/articles/115004221605-Upload-MP3s-To-Your-Deezer-Account",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://store.elfhosted.com/product/navidrome/",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://community.spotify.com/t5/Live-Ideas/All-Platforms-Cloud-Files/idc-p/270060",
+   "why": "HTTP 403 from the site"
+  },
+  {
+   "url": "https://freeyourmusic.com/blog/how-to-add-songs-to-spotify",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://en.wikipedia.org/w/api.php (Google_Play_Music)",
+   "why": "egress proxy 403"
+  },
+  {
+   "url": "https://itunes.apple.com/search",
+   "why": "HTTP 403 (lookup endpoint worked)"
+  },
+  {
+   "url": "https://itunes.apple.com/us/rss/customerreviews/... iBroadcast (id536363915)",
+   "why": "feed returned 0 entries on every attempt; YouTube Music, VOX and Plexamp feeds returned only some pages (Apple feed flakiness)"
+  }
+ ],
+ "verification": {
+  "verified_on": "2026-10-04",
+  "checked": 80,
+  "passed": 61,
+  "failed": 10,
+  "unverifiable": 9,
+  "method": "Each finding URL was fetched once with python urllib through the configured proxy, 3.6 s apart. Quotes were compared as exact substrings of the HTML-unescaped, tag-stripped, whitespace-collapsed text; HN quotes were checked against the item's own text, with dates matched. Play reviews were matched on embedded rating and timestamp. Apple-review quotes were checked in the official RSS feed by review id, rating and date. github.com blob pages returned HTTP 403 (this session's GitHub policy), so the commit-pinned files (navidrome/website@b0fe572, jellyfin/jellyfin@305a964, finamp-app/finamp@847769c) were read through a shallow git fetch of those exact commits and checked after markdown-to-text rendering.",
+  "excluded_from_this_file": "leads_unverified (search-summary leads, never quotable)",
+  "failures": [
+   {
+    "index": 20,
+    "claim": "Users dislike YouTube Music matching songs in their library with random YouTube audio.",
+    "url": "https://news.ycombinator.com/item?id=42534743",
+    "reason": "Quote is not the linked commenter's words: in item 42534743 it is a '>'-quoted line from the parent comment (item 42531650). The linked comment itself says the matching 'stopped happening' and 'You can also turn off this functionality all together in the settings', so the present-tense claim 'Users dislike YouTube Music matching...' leaves out context that undercuts it. Fix: link the parent comment and note that the reply says the feature can be turned off."
+   },
+   {
+    "index": 27,
+    "claim": "Deezer is one of the few mainstream streamers that lets users upload their own MP3s (user report; Deezer's help page is unreachable from here).",
+    "url": "https://news.ycombinator.com/item?id=39437063",
+    "reason": "Overstated: the quote ('you can upload your own MP3s') supports only 'a user says Deezer lets you upload your own MP3s'. Nothing on the page supports 'one of the few mainstream streamers'. Fix: drop the comparison."
+   },
+   {
+    "index": 30,
+    "claim": "Plexamp's current iOS App Store version was released on 2025-07-14, so the iOS app has had no update for over a year as of 2026-10-04.",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510",
+    "reason": "The quote is a raw iTunes Lookup API JSON fragment. It does not appear on the linked apps.apple.com page. The fact itself is true: the page shows 'Version 4.12.4' dated 07/14/2025, and https://itunes.apple.com/lookup?id=1500797510&country=us contains the exact string. Fix: link the lookup API URL, or quote the page's version/date text."
+   },
+   {
+    "index": 31,
+    "claim": "Plexamp's Google Play listing shows in-app purchases ranging up to $949.99 per item.",
+    "url": "https://play.google.com/store/apps/details?id=tv.plex.labs.plexamp",
+    "reason": "The quote '$0.99 - $949.99 per item' is not on the linked URL (no hl/gl parameters) as served now. It is present only on https://play.google.com/store/apps/details?id=tv.plex.labs.plexamp&hl=en_US&gl=US, in the embedded page data. Fix: use that URL."
+   },
+   {
+    "index": 32,
+    "claim": "In March 2025 Plex ended free remote streaming and roughly doubled the Plex Pass price (HN submission linking the official plex.tv blog post, which is unreachable from here).",
+    "url": "https://news.ycombinator.com/item?id=43439881",
+    "reason": "Overstated: the quote is an HN submitter's own headline, not Plex's words or a publisher's. The linked plex.tv post's slug is 'important-2025-plex-updates', and nothing else on the HN page backs the details (7 comments, none on pricing). The claim turns that headline into dated fact ('In March 2025 Plex ended free remote streaming and roughly doubled the price'). The same file's leads block dates the new pricing 'From 29 Apr 2025' and notes the remote paywall applied to video, not Plexamp music. Fix: frame it as 'an HN submission (2025-03-21) titled ...' or source the official post."
+   },
+   {
+    "index": 35,
+    "claim": "What users pay Plex for is easy remote access. Self-hosted connectivity is the hard part for non-experts.",
+    "url": "https://news.ycombinator.com/item?id=49605360",
+    "reason": "Overstated: one user's comment is generalized into 'What users pay Plex for is easy remote access'. The quote says Plex handles 'the IP stuff for remote play, which is the tough part for me'. Fix: attribute it to one user ('a Plex user says Plex handles the remote-access networking they find hardest when self-hosting')."
+   },
+   {
+    "index": 55,
+    "claim": "play:Sub is a paid ($4.99) iOS client for Subsonic servers.",
+    "url": "https://apps.apple.com/us/app/play-sub-music-streamer/id955329386",
+    "reason": "The quote '\"formattedPrice\":\"$4.99\"' is a Lookup API JSON fragment that is not on the linked apps.apple.com page; the page's embedded data uses a different key, 'priceFormatted'. The fact is true: the page shows '$4.99 · In‑App Purchases', and the lookup API contains the exact string. Fix: quote '$4.99 · In‑App Purchases' from the page, or link the lookup API."
+   },
+   {
+    "index": 58,
+    "claim": "Symfonium's Play listing shows in-app purchases of $0.99 - $14.99 per item.",
+    "url": "https://play.google.com/store/apps/details?id=app.symfonik.music.player",
+    "reason": "The quote '$0.99 - $14.99 per item' is not on the linked URL as served now. It is present only on https://play.google.com/store/apps/details?id=app.symfonik.music.player&hl=en_US&gl=US. Fix: use that URL."
+   },
+   {
+    "index": 68,
+    "claim": "iBroadcast's Google Play listing shows in-app purchases of $3.99 - $44.99 per item (its paid tier). The premium page itself is unreachable from here.",
+    "url": "https://play.google.com/store/apps/details?id=com.iBroadcast",
+    "reason": "The quote '$3.99 - $44.99 per item' is not on the linked URL as served now. It is present only on https://play.google.com/store/apps/details?id=com.iBroadcast&hl=en_US&gl=US. Fix: use that URL."
+   },
+   {
+    "index": 69,
+    "claim": "iBroadcast is small: its US App Store listing has 325 ratings.",
+    "url": "https://apps.apple.com/us/app/ibroadcast/id536363915",
+    "reason": "The quote '\"userRatingCount\":325' is a Lookup API JSON fragment that is not on the linked apps.apple.com page. The fact is true: the page shows '325 Ratings', and the lookup API contains the exact string. Fix: quote '325 Ratings' from the page, or link the lookup API."
+   },
+   {
+    "index": 36,
+    "claim": "App Store complaint: offline downloads require a subscription.",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 37,
+    "claim": "App Store complaint: paying a subscription to download music you already own.",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 38,
+    "claim": "App Store complaint: download limits on offline playlists.",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 39,
+    "claim": "App Store complaint: the app degrades badly when the home server is unreachable.",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 75,
+    "claim": "App Store complaint (2026): VOX cloud sync problems and zero-byte tracks.",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 76,
+    "claim": "App Store complaint: uploads silently lose tracks.",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 77,
+    "claim": "App Store complaint: upload errors and no support.",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 78,
+    "claim": "App Store complaint (2026): pushy paywall and a buggy cloud feature.",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   },
+   {
+    "index": 79,
+    "claim": "App Store complaint: the cloud site was down for a week with no explanation.",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494?see-all=reviews",
+    "reason": "Unverifiable: Apple's official customer-reviews RSS feed (the given feed_url and its page=1..10 variants, XML and JSON) returned empty entry lists for nearly every page across three paced passes (about 40 requests in total). This review id never appeared in any page that did return entries. The apps.apple.com 'see-all=reviews' page lists a different set of reviews.",
+    "status": "unverifiable"
+   }
+  ]
+ }
+}

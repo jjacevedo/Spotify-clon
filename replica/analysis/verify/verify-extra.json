@@ -1,0 +1,256 @@
+{
+ "sample": {
+  "by_source": {
+   "app-store": 1028,
+   "hacker-news": 139,
+   "google-play": 60
+  },
+  "app-store_dates": [
+   "2026-05-21",
+   "2026-10-02"
+  ],
+  "google-play_dates": [
+   "2024-09-01",
+   "2026-09-18"
+  ],
+  "hacker-news_dates": [
+   "2023-01-05",
+   "2026-09-28"
+  ],
+  "ratings": {
+   "app-store:1": 235,
+   "app-store:2": 71,
+   "app-store:3": 103,
+   "app-store:4": 132,
+   "app-store:5": 487,
+   "google-play:1": 28,
+   "google-play:2": 14,
+   "google-play:3": 4,
+   "google-play:4": 6,
+   "google-play:5": 8,
+   "hacker-news:-": 139
+  },
+  "appstore_storefront_rows": {
+   "us": 233,
+   "gb": 178,
+   "ca": 185,
+   "au": 60,
+   "ie": 106,
+   "nz": 266
+  },
+  "appstore_pages": 34,
+  "appstore_pages_by_sf": {
+   "ca": 6,
+   "nz": 8,
+   "us": 8,
+   "gb": 6,
+   "ie": 4,
+   "au": 2
+  },
+  "appstore_sep_oct": 709,
+  "core": 594,
+  "core_src": {
+   "app-store": 409,
+   "google-play": 46,
+   "hacker-news": 139
+  },
+  "high": 633
+ },
+ "ftc_core_subsplit": {
+  "ftc_pick": 62,
+  "ftc_skip": 33,
+  "ftc_order": 25,
+  "ftc_seek": 7,
+  "ftc_repeat": 5,
+  "ftc_queue": 4
+ },
+ "ftc_core_after_2025-09-15": [
+  79,
+  86
+ ],
+ "ads_core_without_ad_word": [
+  18,
+  124,
+  [
+   "Adds \u2014 Didn\u2019t know there were adds like old Pandora I will n",
+   "Review \u2014 Way too many adds or able to skip tunes unless you ",
+   "Adds \u2014 Listen to a song, here\u2019s four adds. Swap genres? Here",
+   "to expensive \u2014 way to much adds and also basically forcing p",
+   "Stupid adds \u2014 Every 3 songs I get some stupid 2 minute add w",
+   "Premium. \u2014 Pretty sure I\u2019ve wrote about this before but idk,",
+   "It\u2019s chill \u2014 It\u2019s really good but the adds are the worst!",
+   "It\u2019s.. okay, i guess. \u2014 I do like Spotify, it\u2019s just not gre",
+   "Annoying \u2014 Premium is so expensive just to listen with out a",
+   "Adds \u2014 Just too many adds, I understand that you need the mo",
+   "Why you should have less adds \u2014 It\u2019s to much adds it\u2019s like ",
+   "spotify has become more like pay to listen. It has now put s",
+   "SPOTIFY ADDS AND CANT PLAY THE SONGS I WANT TO LISTEN TOO \u2014 ",
+   "We need more options. Competition is healthy. \u2014 The free one",
+   "Rubbish \u2014 To many adds I got three thirty seconds adds multi",
+   "irritating \u2014 even having a premium user, spotify always snea",
+   "Bad \u2014 They always play adds I have specifically asked not to",
+   "Love the app! Good music variety. Lyrics are pretty in sync "
+  ]
+ ],
+ "low_store_ads_ftc_paywall": [
+  179,
+  455,
+  39.3
+ ],
+ "low_store_ftc_paywall_only": [
+  100,
+  455
+ ],
+ "price_union_inc": {
+  "n": 78,
+  "core": 63,
+  "src": {
+   "app-store": 64,
+   "google-play": 5,
+   "hacker-news": 9
+  }
+ },
+ "upload_union": {
+  "n": 31,
+  "core": 30,
+  "src": {
+   "app-store": 2,
+   "google-play": 1,
+   "hacker-news": 28
+  },
+  "core_src": {
+   "app-store": 1,
+   "google-play": 1,
+   "hacker-news": 28
+  }
+ },
+ "own_union_export": {
+  "n": 33,
+  "src": {
+   "app-store": 5,
+   "google-play": 2,
+   "hacker-news": 26
+  }
+ },
+ "own_files_group_core": {
+  "n": 69,
+  "src": {
+   "app-store": 6,
+   "google-play": 3,
+   "hacker-news": 60
+  }
+ },
+ "own_files_group_narrow_core": {
+  "n": 58,
+  "src": {
+   "app-store": 4,
+   "hacker-news": 54
+  },
+  "note": "upload+own+effort codes only, no localfiles/notonstreaming/export"
+ },
+ "selfhost": {
+  "effort_incl_pref": 9,
+  "stack": 21,
+  "overlap": 5,
+  "distinct": 25
+ },
+ "date_splits": {
+  "login_core_on_2026-09-29": [
+   21,
+   25
+  ],
+  "shuffle_core_after_2025-11-13": [
+   13,
+   17
+  ],
+  "offline_core_after_2026-05-28": [
+   11,
+   26
+  ],
+  "inject_core_after_2026-05-13": [
+   12,
+   20
+  ],
+  "lossless_core_before_2025-09-10": [
+   6,
+   8
+  ],
+  "icon_core_2026-05_to_06": [
+   12,
+   14
+  ],
+  "ipad_core_after_2026-04-16": [
+   4,
+   4
+  ],
+  "queue_core_after_2026-05-28": [
+   3,
+   10
+  ]
+ },
+ "offline_core_store_2025_2026": [
+  11,
+  11
+ ],
+ "offline_core_hn_2023_2024": [
+  12,
+  15
+ ],
+ "dupes_note": "rows 713, 891, 1107 (google-play IN listing) are near-identical texts (Jaccard 0.85-0.87) dated 2025-08-29, 2026-07-09, 2026-09-15",
+ "music_only_candidates": [
+  [
+   89,
+   "app-store",
+   "4",
+   "Remove Adds on Podcast \u2014 I have had a Spotify Premium account for close to 15 years. I absolutely love Spotify and its features. In my opinion, it is the best music streaming app and has been for a lo"
+  ],
+  [
+   528,
+   "app-store",
+   "1",
+   "Spotify is trying to do way too much now \u2014 We\u2019ve had a premium family for many years. The app updates in the past 1-2 years are making us consider cancelling and going elsewhere. Instead of doing it\u2019s"
+  ],
+  [
+   1022,
+   "app-store",
+   "2",
+   "Software issues not adressed for years \u2014 Spotify plays podcasts again right after finishing them. There is no option of blocking content/creators (even temporarily)and podcasts/content I have no inter"
+  ],
+  [
+   1082,
+   "google-play",
+   "2",
+   "Poor UI. Ads pop up on premium (disguised as something I might like). Ads on podcasts. Often unable to access downloaded library when offline. No option to disable sync between devices. Buggy, especia"
+  ],
+  [
+   1138,
+   "hacker-news",
+   "",
+   "Yeah.. what the hell do they actually work on all day? I have a very long list of features in my head, that seem incredibly obvious and simple to implement. Some of these features were present in othe"
+  ],
+  [
+   1143,
+   "hacker-news",
+   "",
+   "Spotify's app is bloated. I've been premium since 2014 but I'm reaching my limit of all the garbage the app has. I wish I could deactivate all podcasts and audiobooks. I don't care about it. I don't m"
+  ],
+  [
+   1163,
+   "hacker-news",
+   "",
+   "My biggest disappointment with Dark Patterns and Unethical Design is Spotify. I've been using spotify for over a decade, paying for premium almost the entire time. The last couple years have just been"
+  ],
+  [
+   1165,
+   "hacker-news",
+   "",
+   "The announcement mentions continued innovation. Other than their recently added AI DJ, which is basically just a slightly tuned shuffle algorithm, I'm not seeing it. On the contrary, Spotify lacks a l"
+  ],
+  [
+   1203,
+   "hacker-news",
+   "",
+   "I too recently left Spotify for Apple Music because it works better on my Home Pod and Apple TV. I don't know why Spotify doesn't fix this. I know they are in a feud with Apple and maybe they think th"
+  ]
+ ]
+}

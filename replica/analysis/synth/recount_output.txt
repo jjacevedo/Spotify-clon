@@ -1,0 +1,69 @@
+SAMPLE {"rows": 1227, "by_source": {"app-store": 1028, "google-play": 60, "hacker-news": 139}, "app-store_dates": ["2026-05-21", "2026-10-02"], "google-play_dates": ["2024-09-01", "2026-09-18"], "hacker-news_dates": ["2023-01-05", "2026-09-28"], "appstore_pages_captured": 34, "appstore_pages_possible": 60, "appstore_rows_by_storefront": {"us": 233, "gb": 178, "ca": 185, "au": 60, "ie": 106, "nz": 266}, "appstore_sep_oct_2026": 709, "core_n": 594, "core_by_source": {"app-store": 409, "google-play": 46, "hacker-news": 139}, "high_n": 633, "high_by_source": {"app-store": 619, "google-play": 14}}
+
+theme | core(src) | 4-5*(src) | evidence total | re-read +k | final n | sources | thin | dates
+ads | 131 {'app-store': 101, 'google-play': 23, 'hacker-news': 7} | 77 {'app-store': 74, 'google-play': 3} | 208 | +0 | 208 | {'app-store': 175, 'google-play': 26, 'hacker-news': 7} | False | 2024-07-18..2026-10-02
+ads_while_paying | 30 {'app-store': 19, 'google-play': 5, 'hacker-news': 6} | 3 {'app-store': 3} | 33 | +0 | 33 | {'app-store': 22, 'google-play': 5, 'hacker-news': 6} | False | 2023-04-06..2026-10-02
+free_tier_control | 88 {'app-store': 65, 'google-play': 22, 'hacker-news': 1} | 26 {'app-store': 23, 'google-play': 3} | 114 | +2 | 116 | {'app-store': 89, 'google-play': 26, 'hacker-news': 1} | False | 2024-11-24..2026-10-02
+paywall_generic | 15 {'app-store': 15} | n/s {} | 15 | +0 | 15 | {'app-store': 15} | True | 2026-05-27..2026-10-02
+price | 62 {'app-store': 50, 'google-play': 4, 'hacker-news': 8} | 20 {'app-store': 20} | 82 | +0 | 82 | {'app-store': 70, 'google-play': 4, 'hacker-news': 8} | False | 2023-07-24..2026-10-02
+price_increase | 28 {'app-store': 22, 'google-play': 1, 'hacker-news': 5} | 3 {'app-store': 3} | 31 | +0 | 31 | {'app-store': 25, 'google-play': 1, 'hacker-news': 5} | False | 2023-07-24..2026-10-02
+bugs_crashes | 86 {'app-store': 72, 'google-play': 11, 'hacker-news': 3} | n/s {} | 86 | +0 | 86 | {'app-store': 72, 'google-play': 11, 'hacker-news': 3} | False | 2023-12-04..2026-10-02
+clutter_promos | 46 {'app-store': 18, 'google-play': 4, 'hacker-news': 24} | 3 {'app-store': 3} | 49 | +0 | 49 | {'app-store': 21, 'google-play': 4, 'hacker-news': 24} | False | 2023-01-05..2026-10-02
+ui_navigation | 38 {'app-store': 19, 'google-play': 2, 'hacker-news': 17} | 2 {'app-store': 2} | 40 | +0 | 40 | {'app-store': 21, 'google-play': 2, 'hacker-news': 17} | False | 2023-09-02..2026-10-02
+slow | 32 {'app-store': 27, 'google-play': 3, 'hacker-news': 2} | n/s {} | 32 | +0 | 32 | {'app-store': 27, 'google-play': 3, 'hacker-news': 2} | False | 2024-04-30..2026-10-02
+playback_reliability | 28 {'app-store': 22, 'google-play': 5, 'hacker-news': 1} | n/s {} | 28 | +0 | 28 | {'app-store': 22, 'google-play': 5, 'hacker-news': 1} | False | 2024-05-25..2026-10-02
+recs_bad | 27 {'app-store': 15, 'google-play': 2, 'hacker-news': 10} | n/s {} | 27 | +0 | 27 | {'app-store': 15, 'google-play': 2, 'hacker-news': 10} | False | 2023-01-21..2026-10-02
+offline_broken | 26 {'app-store': 8, 'google-play': 4, 'hacker-news': 14} | 1 {'app-store': 1} | 27 | +0 | 27 | {'app-store': 9, 'google-play': 4, 'hacker-news': 14} | False | 2023-01-31..2026-10-02
+login_account | 25 {'app-store': 25} | n/s {} | 25 | +0 | 25 | {'app-store': 25} | True | 2026-06-26..2026-10-02
+playlist_injection | 25 {'app-store': 11, 'google-play': 6, 'hacker-news': 8} | 6 {'app-store': 5, 'google-play': 1} | 31 | +2 | 33 | {'app-store': 17, 'google-play': 8, 'hacker-news': 8} | False | 2023-07-24..2026-10-02
+artist_pay_politics | 23 {'app-store': 16, 'google-play': 1, 'hacker-news': 6} | n/s {} | 23 | +0 | 23 | {'app-store': 16, 'google-play': 1, 'hacker-news': 6} | False | 2023-07-29..2026-10-02
+catalogue_removals | 23 {'app-store': 3, 'google-play': 1, 'hacker-news': 19} | 4 {'app-store': 3, 'google-play': 1} | 27 | +0 | 27 | {'app-store': 6, 'google-play': 2, 'hacker-news': 19} | False | 2023-01-05..2026-10-02
+billing_support | 22 {'app-store': 19, 'google-play': 2, 'hacker-news': 1} | n/s {} | 22 | +0 | 22 | {'app-store': 19, 'google-play': 2, 'hacker-news': 1} | False | 2024-10-16..2026-10-02
+shuffle_not_random | 17 {'app-store': 11, 'google-play': 1, 'hacker-news': 5} | 8 {'app-store': 8} | 25 | +0 | 25 | {'app-store': 19, 'google-play': 1, 'hacker-news': 5} | False | 2023-12-28..2026-10-02
+app_icon | 15 {'app-store': 14, 'hacker-news': 1} | 3 {'app-store': 3} | 18 | +0 | 18 | {'app-store': 17, 'hacker-news': 1} | False | 2025-10-15..2026-09-27
+devices_connect | 14 {'app-store': 11, 'google-play': 1, 'hacker-news': 2} | 3 {'app-store': 3} | 17 | +0 | 17 | {'app-store': 14, 'google-play': 1, 'hacker-news': 2} | False | 2023-12-04..2026-10-01
+devices_paywall | 4 {'app-store': 4} | n/s {} | 4 | +0 | 4 | {'app-store': 4} | True | 2026-09-29..2026-10-01
+ai_music | 13 {'app-store': 10, 'hacker-news': 3} | n/s {} | 13 | +0 | 13 | {'app-store': 10, 'hacker-news': 3} | False | 2023-10-07..2026-10-02
+queue_ux | 13 {'app-store': 4, 'google-play': 5, 'hacker-news': 4} | 3 {'app-store': 3} | 16 | +0 | 16 | {'app-store': 7, 'google-play': 5, 'hacker-news': 4} | False | 2023-12-04..2026-10-02
+review_prompts | 11 {'app-store': 11} | 1 {'app-store': 1} | 12 | +0 | 12 | {'app-store': 12} | True | 2026-06-11..2026-10-02
+audiobook_hours | 11 {'app-store': 8, 'google-play': 2, 'hacker-news': 1} | 6 {'app-store': 6} | 17 | +0 | 17 | {'app-store': 14, 'google-play': 2, 'hacker-news': 1} | False | 2024-11-27..2026-10-02
+ai_features | 9 {'app-store': 6, 'google-play': 1, 'hacker-news': 2} | n/s {} | 9 | +0 | 9 | {'app-store': 6, 'google-play': 1, 'hacker-news': 2} | False | 2024-06-03..2026-10-01
+car | 8 {'app-store': 5, 'google-play': 1, 'hacker-news': 2} | n/s {} | 8 | +0 | 8 | {'app-store': 5, 'google-play': 1, 'hacker-news': 2} | False | 2024-02-19..2026-10-01
+library_data_loss | 7 {'app-store': 5, 'google-play': 2} | n/s {} | 7 | +0 | 7 | {'app-store': 5, 'google-play': 2} | False | 2024-09-01..2026-10-01
+lockscreen_background | 3 {'app-store': 2, 'google-play': 1} | 1 {'app-store': 1} | 4 | +0 | 4 | {'app-store': 3, 'google-play': 1} | False | 2026-04-10..2026-10-02
+location_travel | 3 {'app-store': 2, 'hacker-news': 1} | 3 {'app-store': 3} | 6 | +0 | 6 | {'app-store': 5, 'hacker-news': 1} | False | 2026-06-17..2026-10-01
+kids_content | 6 {'hacker-news': 6} | n/s {} | 6 | +0 | 6 | {'hacker-news': 6} | True | 2023-10-06..2026-09-28
+ipad_tablet | 4 {'app-store': 4} | n/s {} | 4 | +0 | 4 | {'app-store': 4} | True | 2026-07-24..2026-10-01
+podcast_mgmt | 8 {'app-store': 8} | n/s {} | 8 | +0 | 8 | {'app-store': 8} | True | 2026-06-05..2026-10-02
+own_music_upload | 30 {'app-store': 1, 'google-play': 1, 'hacker-news': 28} | 4 {'app-store': 4} | 34 | +0 | 34 | {'app-store': 5, 'google-play': 1, 'hacker-news': 28} | False | 2023-01-13..2026-09-27
+local_files_clunky | 11 {'google-play': 1, 'hacker-news': 10} | n/s {} | 11 | +0 | 11 | {'google-play': 1, 'hacker-news': 10} | False | 2023-05-30..2026-09-18
+ownership_export | 30 {'app-store': 4, 'google-play': 2, 'hacker-news': 24} | n/s {} | 30 | +0 | 30 | {'app-store': 4, 'google-play': 2, 'hacker-news': 24} | False | 2023-01-05..2026-10-02
+export_transfer | 7 {'app-store': 1, 'google-play': 2, 'hacker-news': 4} | n/s {} | 7 | +0 | 7 | {'app-store': 1, 'google-play': 2, 'hacker-news': 4} | False | 2024-01-20..2026-09-28
+library_tools | 8 {'app-store': 4, 'hacker-news': 4} | 10 {'app-store': 8, 'google-play': 2} | 18 | +0 | 18 | {'app-store': 12, 'google-play': 2, 'hacker-news': 4} | False | 2024-02-23..2026-10-02
+listening_history | 7 {'app-store': 2, 'hacker-news': 5} | 2 {'app-store': 2} | 9 | +0 | 9 | {'app-store': 4, 'hacker-news': 5} | False | 2023-10-07..2026-10-02
+audio_quality | 9 {'app-store': 1, 'hacker-news': 8} | 2 {'app-store': 2} | 11 | +0 | 11 | {'app-store': 3, 'hacker-news': 8} | False | 2023-01-31..2026-10-01
+lyrics | 3 {'app-store': 3} | n/s {} | 3 | +0 | 3 | {'app-store': 3} | True | 2026-09-20..2026-10-02
+discovery_missed | 16 {'hacker-news': 16} | n/s {} | 16 | +0 | 16 | {'hacker-news': 16} | True | 2023-01-05..2026-09-01
+selfhost_effort | 17 {'hacker-news': 17} | n/s {} | 17 | +0 | 17 | {'hacker-news': 17} | True | 2023-01-13..2026-09-01
+selfhost_movers | 17 {'hacker-news': 17} | n/s {} | 17 | +0 | 17 | {'hacker-news': 17} | True | 2023-04-06..2026-06-19
+high_only_bugs_reliability {'high_n': 22, 'high_src': {'app-store': 20, 'google-play': 2}}
+high_only_praise_discovery {'high_n': 34, 'high_src': {'app-store': 31, 'google-play': 3}}
+high_only_praise_background_play {'high_n': 13, 'high_src': {'app-store': 11, 'google-play': 2}}
+
+DATE SPLITS
+  login_on_2026-09-29 (22, 25)
+  ftc_after_2025-09-15_pickplay (81, 88)
+  ftc_in_2026 (79, 88)
+  shuffle_after_2025-11-13_fewer_repeats (13, 17)
+  offline_after_2026-05-28_bg_downloads (11, 26)
+  offline_in_2026 (12, 26)
+  injection_after_2026-05-13_smartshuffle_article (13, 25)
+  audio_quality_before_2025-09-10_lossless (8, 9)
+  app_icon_2026-05_to_06 (12, 15)
+  ipad_after_2026-04-16_tablet (4, 4)
+  queue_after_2026-05-28_multiselect (5, 13)
+  catalogue_removals_hn (19, 23)
+free-tier-driven share of low-rated store reviews: (185, 455)
+own files core (upload|own|effort): {'n': 67, 'src': {'app-store': 5, 'google-play': 3, 'hacker-news': 59}}
+own files all (+local files, +4-5*): {'n': 71, 'src': {'app-store': 9, 'google-play': 3, 'hacker-news': 59}}
+switching: {'fit_n': 105, 'fit_src': {'app-store': 27, 'google-play': 9, 'hacker-news': 69}, 'market_n': 112, 'market_src': {'app-store': 42, 'google-play': 11, 'hacker-news': 59}, 'union_n': 125, 'union_src': {'app-store': 43, 'google-play': 11, 'hacker-news': 71}, 'intersection_n': 92, 'fit_upload_or_own_reason': {'n': 25, 'src': {'hacker-news': 25}}, 'union_and_ownfiles': 29}

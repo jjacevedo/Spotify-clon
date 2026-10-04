@@ -198,7 +198,7 @@ Relationships: User 1-n Track; User 1-n Playlist; Playlist n-n Track via Playlis
 
 ## Feature matrix
 
-See `features.csv`. 82 rows: must 34, should 17, could 22 (counting skip rows), and 9 of them are skip. `parity.py` counts 60 features, of which 30 are must-haves.
+See `features.csv`. 73 rows at recon time: must 34, should 17, could 22 (counting skip rows), and 9 of them are skip. `parity.py` counted 60 features, of which 30 were must-haves. `/replica-entrepreneur` added 9 rows (see `fixes.md`).
 Features tunebox adds that Spotify does not have (`original = no`, not counted in parity): metadata editing, storage quota, deleting files, copyright reports.
 
 ## Out of scope (cannot or should not be cloned)

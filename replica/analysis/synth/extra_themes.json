@@ -1,0 +1,29 @@
+{
+ "files_replaced_or_converted": {
+  "n": 4,
+  "by_source": {
+   "hacker-news": 4
+  },
+  "thin": true,
+  "candidates": 8,
+  "urls": [
+   "https://news.ycombinator.com/item?id=42113467",
+   "https://news.ycombinator.com/item?id=41311984",
+   "https://news.ycombinator.com/item?id=38008000",
+   "https://news.ycombinator.com/item?id=37528611"
+  ]
+ },
+ "other_service_offline_fails": {
+  "n": 3,
+  "by_source": {
+   "hacker-news": 3
+  },
+  "thin": true,
+  "candidates": 9,
+  "urls": [
+   "https://news.ycombinator.com/item?id=49520659",
+   "https://news.ycombinator.com/item?id=49523451",
+   "https://news.ycombinator.com/item?id=35462336"
+  ]
+ }
+}

@@ -5,64 +5,73 @@ Password reset by email,auth,must,yes,no,
 Upload audio files (mp3 m4a flac wav),library,must,yes,no,Spotify only links Local Files on the device; tunebox uploads to the cloud so the library follows the user to every device
 Read ID3 tags on upload (title artist album cover track number),library,must,yes,no,Spotify reads tags for Local Files; we use them to build albums and artists automatically
 Edit track metadata and cover art,library,should,no,no,Added: users own their files so they must be able to fix bad tags
-Storage quota per plan with usage meter,library,must,no,no,Added: needed because audio is stored server side
+Storage quota per plan with usage meter,library,must,no,no,"F7 over-quota rule, the one rule for downgrade and cancel (cancelling a paid plan moves the user to the free tier): a library within the new quota stays as it is; over it, uploads pause at once; playback, downloads and export continue for N days; then the user chooses what to keep within quota and the rest is deleted after notice. Replaces the recon F09 edge read-only until under. N is set in /replica-launch and reviewed by counsel."
 Your Library with filters (playlists albums artists tracks),library,must,yes,no,
-Sort and search inside Your Library,library,must,yes,no,
+Sort and search inside Your Library,library,must,yes,no,F8: extend to search inside a playlist (requested in the library tools theme); check the original's current app before claiming a gap.
 Grid and list view of Your Library,library,could,yes,no,
 Liked Songs (heart a track),library,must,yes,no,
 Album page built from tags,library,must,yes,no,
 Artist page built from tags,library,must,yes,no,
-Recently played,library,should,yes,no,
+Recently played,library,should,yes,no,"F8: extend to a full listening-history page. Original = yes for Recently played; a full listening-history page is partial on the original (Recents of the last 50 songs on desktop, support 2025-06-30; weekly listening snapshot, newsroom 2025-12-29; lifetime-history export)."
 Delete tracks and free storage,library,must,no,no,Added: owning files means deleting them
+Bulk folder upload with resume,library,must,no,no,"F6, must and table stakes (YouTube Music uploads, VOX and iBroadcast already offer cloud upload); differs only from the original (no cloud upload) and Navidrome (no upload by design). Web folder drag-drop and mobile. The desktop watch-folder is a separate L outside web, iOS and Android and is out of v1. Hard gate: the bulk and transcode pipeline starts only after the landing-page and waitlist test passes. Evidence: upload own files 31 (hacker-news 28; store support essentially absent); Local Files per-device and unreliable 11 (2 sources). Skills: /replica-backend and /replica-build (S18); storage cost model in /replica-architect."
+Keep stored copy bit for bit (no matching or re-encoding of the stored file),library,must,no,no,"F6. Streams may use a separate transcoded copy, so claim only the stored copy and never say untouched. Bounded claim: kept until the user deletes it, it is removed after a valid copyright notice, or the account-closure and retention policy (F7, including over-quota deletion after notice) applies. Table stakes against VOX (official listing: FLAC remains FLAC); differs from Apple's FLAC to ALAC conversion per one HN user. Evidence: files replaced or converted elsewhere 4 (HN only, thin)."
+Duplicate detection on upload,library,should,no,no,F6. Uses Track.checksum from the recon model. Evidence: duplicates are one of the tools named in the library tools theme (14 reviews across 3 sources in total; duplicates not counted separately).
+M3U/M3U8 playlist import,library,should,no,no,"F6. The original imports playlists only from other streaming services (TuneMyMusic, 2025-11-20) and uploads no audio. Evidence: export or transfer 7 (3 sources); one Plexamp App Store reviewer with a 50000-song library cites missing M3U import (thin)."
+Personal per-track play counts (your own plays) in the app,library,should,no,no,"F8. Personal counts of the user's own plays. Not found in the original's pages checked: it has Recents (last 50 songs on desktop), a weekly listening snapshot and a lifetime-history export, so check the current app before claiming the gap. Its album and artist pages show global play counts per track (general knowledge, not verified this session), a different feature, so any comparison says personal. Parity with Navidrome (per-user play counts, official docs). Built from PlayEvent. Evidence: history and play counts 9 (2 sources)."
 Play pause skip previous seek,player,must,yes,no,
 Persistent now playing bar across navigation,player,must,yes,no,Playback must not stop when the route changes
 Full screen now playing view,player,must,yes,no,
 Volume and mute,player,must,yes,no,
-Shuffle,player,must,yes,no,
+Shuffle,player,must,yes,no,"F4 spec, size M: once-per-cycle order (every track in the shuffled set before any repeat) that survives restarts, device switches and mid-cycle library edits and works with the user queue; visible up-next with reshuffle; optional spread artists and least played first. /replica-architect specifies PlaybackState first (recon confidence: guess). Never market it as truly random; no claim against lockers."
 Repeat (off all one),player,must,yes,no,
-Queue view with reorder and remove,player,must,yes,no,
+Queue view with reorder and remove,player,must,yes,no,"F2 hygiene: playlists and albums play only their own tracks; autoplay after the end is off by default (opt-in, from the user's own library only); clear end-of-queue state and Next from in S14. Original = yes for the switches (Premium can turn Smart Shuffle off, support 2026-05-13; the Autoplay switch has no Premium label, support 2025-09-25), so the difference is the default. Keep nothing slipped in out of ads. Also stays on every plan (F1)."
 Play next and add to queue,player,must,yes,no,
 Gapless playback,player,should,yes,no,
 Crossfade setting,player,could,yes,no,
 Sleep timer,player,should,yes,no,
 Lock screen and media session controls,player,must,yes,no,Media Session API on web; native controls on iOS and Android
 Background playback on mobile,player,must,yes,no,
-Resume where you left off across devices,player,should,yes,no,
+Resume where you left off across devices,player,should,yes,no,Shares the PlaybackState spec with the F4 shuffle cycle; /replica-architect specifies it before build.
 Control playback on another device (Connect),player,could,yes,no,Realtime and hard; later
 Playback speed,player,could,yes,no,Spotify offers it for podcasts and audiobooks
 Lyrics (synced from LRC files),player,could,yes,no,Spotify lyrics are licensed from Musixmatch; we only show lyrics the user supplies
 Audio quality setting (stream bitrate),player,should,yes,no,
-Lossless playback,player,could,yes,no,Premium gate on the original; maps cleanly to a paid tier
+Lossless playback,player,could,yes,no,"Suggest raising priority to should: parity with VOX (FLAC remains FLAC), not a differentiator against the original (Premium lossless since 2025-09-10). Evidence: lossless 10 (2 sources: app-store 2, hacker-news 8)."
+Shuffle whole library and shuffle the queue,player,should,no,no,"F4 (size M together with the once-per-cycle spec on the Shuffle row). Original value unverified: not in the verified changelog, so check the current app before claiming a gap. Needs the PlaybackState spec from /replica-architect first. No claim against lockers (the market file says nothing about how they shuffle). Evidence: shuffle not random 25 (3 sources); shuffle-control requests 9 (2 sources, fit lens)."
 Create rename delete playlist,playlists,must,yes,no,
 Add and remove tracks in a playlist,playlists,must,yes,no,
-Reorder tracks by drag,playlists,must,yes,no,
+Reorder tracks by drag,playlists,must,yes,no,"F1: available on every plan (the original makes mobile drag-reorder Premium only, support 2026-02-26); internal policy, not marketing copy."
 Playlist cover (auto mosaic or custom upload),playlists,should,yes,no,
 Playlist description,playlists,should,yes,no,
 Playlist folders,playlists,could,yes,no,
-Collaborative playlist,playlists,could,yes,no,Only among users who each own the tracks they add
-Pin items in Your Library,playlists,could,yes,no,
+Collaborative playlist,playlists,could,yes,no,"Deferred past v1 for audio: only among users who each own the tracks they add cannot be enforced; if revived, tracklist-only like sharing."
+Pin items in Your Library,playlists,could,yes,no,"F8: allow more pins (library tools theme, 14 reviews across 3 sources)."
+Smart playlists that update live from rules,playlists,should,yes,no,"F8. Original: partial (part of this ships); write yes in features.csv, whose original column takes only yes|no; parity.py scores the row as an original feature either way. Rules on genre, year, date added and play count. The original can generate playlists from Liked Songs by genre or mood in select markets (newsroom 2025-09-05) and has Smart Filters, so the difference is live rule-based updating. Evidence: library tools 14 (3 sources: app-store 9, google-play 1, hacker-news 4). Skills: /replica-build and /replica-backend."
 Search across own library (tracks albums artists playlists),search,must,yes,no,
 Recent searches,search,should,yes,no,
 Browse by genre tag,search,could,yes,no,Built from the user's own genre tags not editorial categories
 Home with recently played and quick picks,home,must,yes,no,
 Home shelves (most played forgotten favorites by genre),home,should,yes,no,Computed from the user's own history; no catalog recommendations
-Download for offline on mobile,offline,must,yes,no,Premium-gated on the original; key paid feature for tunebox
+Download for offline on mobile,offline,must,yes,no,"F5 model (one, chosen): a download is a copy of the user's own file on that device; it plays offline with no periodic online check-in while the file stays in the library and the account exists, including after a downgrade or a cancelled paid plan (the F7 over-quota rule). It is removed when the user removes the download or signs out of that device; when the file leaves the library (the user deletes it, the F7 over-quota policy deletes it after notice, or it is removed after a valid copyright notice); and after account deletion with notice. With no check-in, the device removes its copy at its next connection, so a device that stays offline keeps playing it until then; whether takedowns need a bounded check-in is an open question for /replica-architect and counsel. Single track, album, playlist or whole library. Available on every plan; the plan sets the number of download devices (caps front-loaded egress). After a downgrade or cancel above the new device cap, the user picks which devices keep downloads (default most recently used); the others remove their copies at next connection, after notice, within the F7 N-day window. If /replica-launch makes offline paid, switch fully to a lapse-after-grace model and drop keeps-playing wording. Parity for owners (the original's Local Files, YouTube Music uploads, Plexamp), so a feature line not a pitch; built after the waitlist gate. In-app purchase rules via /replica-launch. Replaces the note calling it the key paid feature."
 Offline indicator and downloaded filter,offline,should,yes,no,
-Storage settings for downloads,offline,should,yes,no,
-Share a playlist by link,social,should,yes,no,Recipients only stream if the owner made it public; rate-limited and DMCA-covered
-Public profile with public playlists,social,could,yes,no,
+Storage settings for downloads,offline,should,yes,no,F5: keep downloads in app storage that the OS does not treat as purgeable cache (check current iOS and Android docs); show space used per device and the device count against the plan cap.
+Share a playlist by link,social,should,yes,no,v1 shares the tracklist only: a recipient plays only tracks they uploaded to their own library (matched by checksum or tags; unmatched rows greyed out); v1 does not stream the owner's audio to anyone else. Replaces recipients stream if public (recon F08 and S25). Evidence: 0 requests to share uploads (fit check). Counsel review before launch.
+Public profile with public playlists,social,could,yes,no,Deferred past v1: public access to uploaded audio is the largest copyright exposure and the data show no demand; revisit with counsel.
 Follow users,social,could,yes,no,
-Report content (copyright),social,must,no,no,Added: required for a DMCA takedown process when content can be shared
-Account settings (email password delete account),settings,must,yes,no,
-Plan and billing management,settings,must,yes,no,
-Free and paid plans with checkout,payments,must,yes,no,Original: Free vs Premium; tunebox gates storage offline and quality
+Report content (copyright),social,must,no,no,"Still must even with tracklist-only sharing: designated DMCA agent, counter-notice process, repeat-infringer policy, and terms where users confirm they hold the rights to uploads."
+Account settings (email password delete account),settings,must,yes,no,"F7: account deletion is the only event that deletes the whole library (cancelling a plan moves the user to the free tier instead); offer a full export before deletion; deletion removes downloads from devices after notice, at each device's next connection (F5 has no check-in); PlayEvent export and deletion covered in the privacy policy."
+Plan and billing management,settings,must,yes,no,"F7: cancelling a paid plan moves the user to the free tier and the over-quota rule on Storage quota per plan with usage meter applies (a library within the free quota stays; over it, uploads pause, playback, downloads and export continue for N days, the user picks what to keep within the free quota, and the rest is deleted after notice). Only account deletion (by the user, or termination under the repeat-infringer policy) or a shutdown after notice deletes the whole library; a user-requested deletion offers an export first. N days notice and working export before any deletion for plan or account reasons or a shutdown; copyright takedowns follow the DMCA process. One-page cancel with no retention maze; publish a price-change policy."
+Free and paid plans with checkout,payments,must,yes,no,"F1 internal entitlement policy, not a headline or proof point: no plan limits playback controls on the user's own files (pick, skip, order, repeat, seek, queue, reorder). Plans differ by storage, streaming quality, seats and the number of download devices: downloads are on every plan and the plan sets the device cap (F5); /replica-launch may switch to the lapse-after-grace model under F5's switch rule (YouTube Music plays uploads offline without Premium per a user quoting Google's help page). Do not echo the original's Premium wording. Test storage-based or one-time pricing next to the subscription; free competitors cap the price. Replaces the note that tunebox gates offline."
 Family or duo plan,payments,could,yes,no,
 Student discount,payments,could,yes,no,
-Notifications settings,settings,could,yes,no,
+Notifications settings,settings,could,yes,no,F3: off by default except account and billing.
+Export library on demand (original audio files plus playlists as M3U8 or CSV and play history as CSV),settings,must,yes,no,"F7. Original: partial (part of this ships); write yes in features.csv, whose original column takes only yes|no; parity.py scores the row as an original feature either way. The original's Download your data tool gives a ZIP of JSON files with playlists, Your Library and lifetime streaming history (support 2025-09-18 and 2026-07-07) but no audio files and no M3U8 or CSV. Playlists and history export is M; full-file export at 96 to 300 GB per 10000 tracks needs a signed-URL manifest and resumable download (M to L) and starts after the waitlist gate. Copy: always exportable with N days notice before any deletion or shutdown, plus the DMCA caveat; never say never held hostage. Evidence (trust, not demand): own rather than rent 30 (3 sources, 24 HN); export or transfer 7 (3 sources). Skills: /replica-backend and /replica-launch."
 Dark theme UI,design,must,yes,no,
 Responsive web layout (desktop sidebar mobile bottom nav),design,must,yes,no,
 Keyboard shortcuts on web,design,should,yes,no,
 Tablet layout,design,could,yes,no,
+No promotional pop-ups or custom rating prompts (policy),design,must,no,no,"F3 in replica/fixes.md. By policy no ads, sponsored slots or promotional modals on any plan and no custom rate-this-app prompts. Table stakes against lockers (iBroadcast and Substreamer official listings state no ads), so its value is retention not acquisition. Copy: no ads in your library on any plan; never say ad-free music. Evidence: clutter and promos 43 (3 sources; google-play 1), paying and still getting ads 33 (3 sources), redesigns 40 (3 sources); rating prompts 12 (thin, app-store only). Skills: /replica-design and /replica-build; voice rule to /replica-brand."
 Spotify music catalogue,content,must,yes,skip,Licensed content owned by labels and Spotify; tunebox plays only files the user uploads
 Podcasts and audiobooks catalogue,content,should,yes,skip,Licensed content; could later accept user uploaded audiobooks as plain files
 Video podcasts and music videos,content,could,yes,skip,Licensed content
@@ -70,5 +79,5 @@ Personalized recommendations from the global catalogue (Discover Weekly DJ Daily
 AI DJ and Talk to Spotify,discovery,could,yes,skip,Depends on catalogue and licensed voice; out of scope
 Wrapped from global listening data,discovery,could,yes,skip,Spotify's data; a personal stats page from own history could be added later
 Jam and Blend group listening,social,could,yes,skip,Depends on everyone having the same catalogue; revisit later
-Ads on the free tier,payments,could,yes,skip,Ad business and partners; tunebox free tier is limited by storage instead
-Integrations (cars smart speakers consoles),integrations,could,yes,skip,Partner deals and hardware
+Ads on the free tier,payments,could,yes,skip,F3 copy rule: say no ads in your library on any plan; never say ad-free music (implies ad-free commercial tracks).
+Integrations (cars smart speakers consoles),integrations,could,yes,skip,"Car 6 (2 sources: app-store 4, hacker-news 2) and speakers or cast 17 (3 sources). In-car audio usually goes through the platforms' own frameworks rather than partner deals (not verified); re-check the skip in /replica-architect."

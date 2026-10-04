@@ -1,0 +1,746 @@
+{
+ "source": "Spotify official: support.spotify.com (US articles), www.spotify.com/us/premium/, newsroom.spotify.com",
+ "verified_from": "/tmp/claude-0/-home-user-Spotify-clon/8bfae393-793e-5eab-927d-977fb44c775d/scratchpad/entrepreneur/spotify-changelog.json",
+ "verified_utc": "2026-10-04T05:39:36Z",
+ "verification_method": "Independent re-fetch of each of the 42 unique URLs once (python urllib via configured proxy, one browser UA, 3.5 s between fetches, all HTTP 200 on 2026-10-04). Quotes checked as exact substrings of text extracted from the raw HTML (scripts/styles removed, inline tags joined without spaces, block tags as spaces, entities unescaped, whitespace collapsed); 92/93 found in visible text, 1 (#89) found verbatim only in the page's raw __NEXT_DATA__ keyword metadata, as that finding itself states. Dates checked against updatedAt (support) / datePublished (newsroom): all match. Each claim read against the quote and the surrounding article text.",
+ "checked": 93,
+ "passed": 92,
+ "findings": [
+  {
+   "topic": "local-files",
+   "claim": "Spotify Local Files plays audio files already stored on the device; the official article describes no upload or cloud storage of those files.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Along with the millions of tracks Spotify offers, you can also use the app to play any of the audio files legally stored on your device.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "On iOS and Android, Local Files is turned on per device with a \"Local audio files\" switch under Settings and privacy > Apps and devices.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Tap Apps and devices. Switch Local audio files on",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "On iOS the files must be copied into a Spotify folder under \"On My iPhone\" (via the Files app, Universal Clipboard over iCloud, or USB from Finder/iTunes), i.e. each phone needs its own copy of the files.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Tap Browse and go to the folder On My iPhone. Tap and press the folder for Spotify. Select Paste or Move Item here. Your stored music is now in Local Files.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "On iOS, the Spotify folder can disappear from On My iPhone if its Help file is deleted (known limitation, fixed by restarting the app).",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "The Spotify folder may disappear from On My iPhone if the Help file within it is deleted. To display the folder again, restart the Spotify app.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "On Android, files must first be downloaded or transferred (e.g. USB / file-transfer app) onto the device itself.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Open the app that can browse and manage the file, such as Google’s Drive app. Find the option to Download the file (ex. More > Download)",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "On desktop, Local Files is enabled in Settings > Library (\"Show Local Files\") and reads from folders the user selects or adds as a source.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Scroll to Library and switch Show Local Files on . Under Show songs from, turn on the folders you want Local Files to have access to. Or, click Add a source to select another folder.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "Crossfade between local files only works when the files share the same sample rate and channel count.",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "When crossfade is enabled, Spotify will crossfade between local files that use the same sample rate and channel count (mono/stereo).",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "local-files",
+   "claim": "Official troubleshooting for Local Files is to remove local files from playlists and start over, or do a clean reinstall (which also wipes downloads).",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Remove local files from any playlists you might have added them to, then start over the steps for adding Local Files",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "premium-pricing",
+   "claim": "Premium Individual in the US is $12.99 per month after a $0 first month for new Premium users.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "$0 for 1 month, then $12.99 per month after. Offer only available if you haven't tried Premium before. Terms apply.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-pricing",
+   "claim": "Premium Student in the US is $6.99 per month (after a $0 first month) and includes access to a Hulu plan.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "$0 for 1 month, then $6.99 per month after. Spotify Premium Student offer currently includes access to Hulu plan on us, subject to eligibility.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-pricing",
+   "claim": "Premium Duo in the US is $18.99 per month for 2 Premium accounts.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Duo $18.99 / month 2 Premium accounts",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-pricing",
+   "claim": "Premium Family in the US is $21.99 per month for up to 6 Premium accounts, with parental controls.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Family $21.99 / month Up to 6 Premium accounts Parental controls over all plan members",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-pricing",
+   "claim": "Individual, Duo (manager only) and Family (manager only) include 15 hours/month of audiobook listening time.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "15 hours/month of listening time from our audiobooks subscriber catalog (plan manager only)",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-pricing",
+   "claim": "A separate Audiobooks Access plan gives 15 h/month of audiobooks while music stays on the free, ad-supported tier.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Get 15 hours/month of audiobook listening time from our audiobooks subscriber catalog. Your music listening experience will be on our free, ad-supported service.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-only-features",
+   "claim": "Ad-free music listening is marketed as a Premium feature.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "All the music, without all the ads. Just nonstop beats.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-only-features",
+   "claim": "Lossless (up to 24-bit/44.1 kHz) is marketed as a Premium feature.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Lose yourself in music with sound quality up to 24-bit/44.1 kHz.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-only-features",
+   "claim": "Offline listening (downloads, plus automatic Offline Backup) is marketed as a Premium feature.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Download thousands of songs, or let Offline Backup do it automatically.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-only-features",
+   "claim": "Full on-demand control (repeat, any order, unlimited skips) is marketed as a Premium feature.",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Repeat songs, play albums in any order, and skip as many times as you want.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "premium-only-features",
+   "claim": "Since Sept 2025 the Free tier can also search for and play any specific track (\"Pick & Play\", \"Search & Play\"), so picking a song on demand is no longer strictly Premium-only.",
+   "url": "https://newsroom.spotify.com/2025-09-15/free-experience-updates-features-tips/",
+   "quote": "Search & Play Type in your favorite track and start listening instantly.",
+   "date": "2025-09-15",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "premium-only-features",
+   "claim": "Spotify's 2025 recap confirms Free users can search and play any song with a single tap.",
+   "url": "https://newsroom.spotify.com/2025-12-29/year-in-features/",
+   "quote": "Our Free experience is even better now that listeners can search and play any song with a single tap.",
+   "date": "2025-12-29",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "premium-plans",
+   "claim": "Premium Family is for up to 6 members living at the same address, plan manager included.",
+   "url": "https://support.spotify.com/us/article/family-plan/",
+   "quote": "Premium Family is a discounted plan for up to 6 family members who live together, including the plan manager.",
+   "date": "2026-07-31",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "premium-plans",
+   "claim": "Premium Duo is for 2 people who live together.",
+   "url": "https://support.spotify.com/us/article/duo-plan/",
+   "quote": "Premium Duo is a discount plan for 2 people who live together.",
+   "date": "2026-03-31",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "premium-plans",
+   "claim": "Premium Student is a discount for eligible students for up to 4 years, re-verified every 12 months.",
+   "url": "https://support.spotify.com/us/article/premium-student/",
+   "quote": "With Premium Student, eligible college/university students get Premium at a discount for up to 4 years (you need to renew and reverify every 12 months).",
+   "date": "2026-08-10",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "premium-plans",
+   "claim": "Legacy \"Basic\" plans (no audiobook hours) exist only for previously existing Premium subscribers.",
+   "url": "https://support.spotify.com/us/article/spotify-basic/",
+   "quote": "Basic is available for previously existing Premium subscribers. Eligible subscribers will see Basic as an available plan on their account page.",
+   "date": "2025-10-22",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "premium-plans",
+   "claim": "The Price updates support article was updated on 2026-10-02; existing subscribers get an email and a one-month grace period before a new price applies.",
+   "url": "https://support.spotify.com/us/article/price-updates/",
+   "quote": "You’ll get an email about the new price, and have a one-month grace period to cancel before it takes effect.",
+   "date": "2026-10-02",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Downloading music (albums, playlists) requires Premium; Free users can only download podcasts.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "On Premium, you can download albums, playlists, and podcasts. On the free version, you can only download podcasts.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Download limit per the Listen offline article: up to 10,000 tracks on each of up to 5 devices.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "You can download as many as 10,000 tracks on each of up to 5 different devices.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "The Premium benefits article words the same limit differently: a maximum of 10,000 tracks across up to 5 devices (the two official articles are inconsistent).",
+   "url": "https://support.spotify.com/us/article/your-premium-benefits/",
+   "quote": "A maximum of 10,000 tracks can be downloaded across up to 5 devices.",
+   "date": "2026-10-02",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Users must go online at least once every 30 days to keep downloads.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "You need to go online at least once every 30 days to keep your downloads. This is so Spotify can collect play data to compensate artists.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Individual songs cannot be downloaded on their own; they must be put in a playlist first.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "Note: You can’t download individual songs, but you can put them in a playlist and download the playlist.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Downloading to a 6th device removes downloads from the least recently used device; reinstalling the app also loses downloads.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "You download to more than 5 devices Note: Downloads are removed from the device you’ve used least recently.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Downloads use Wi-Fi by default; cellular downloading is an opt-in setting.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "Spotify uses WiFi to download by default to save mobile data usage, but you can allow downloading on mobile data:",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Offline Mode makes only downloaded content playable and greys out everything else.",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "Anything you haven’t downloaded is now grayed out and unavailable.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Offline Backup (Premium, phones, Android Auto, CarPlay) auto-builds an offline playlist from cached recent listens, with no manual downloads.",
+   "url": "https://support.spotify.com/us/article/offline-backup/",
+   "quote": "For: Premium on mobile phones, Android Auto, and CarPlay Offline Backup is filled with music you can play offline. No downloads required.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Background downloads on iOS (downloads continue while the app is closed, with progress notifications) rolled out to Premium in May 2026.",
+   "url": "https://newsroom.spotify.com/2026-05-28/playlist-folders-mobile-queue-controls-updates/",
+   "quote": "We’ve made offline listening more dependable with the rollout of background downloads on iOS. Your music and podcasts will keep downloading even when the app isn’t open, and you’ll see notifications showing their progress.",
+   "date": "2026-05-28",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "offline-downloads",
+   "claim": "Since Feb 2026, lyrics are saved automatically with downloaded tracks (Premium).",
+   "url": "https://newsroom.spotify.com/2026-02-04/lyric-translations-offline-previews/",
+   "quote": "Now, when you download your favorite tracks for offline listening, the lyrics will automatically be saved too.",
+   "date": "2026-02-04",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "queue",
+   "claim": "On mobile and tablet, the Play Queue is labelled as a Premium feature (desktop/web section carries no such label).",
+   "url": "https://support.spotify.com/us/article/play-queue/",
+   "quote": "Mobile and tablet For: Premium Open the queue",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "queue",
+   "claim": "Queue supports add, drag-to-reorder, swipe-to-remove and Clear queue.",
+   "url": "https://support.spotify.com/us/article/play-queue/",
+   "quote": "In the Play Queue, tap and hold next to the track. Drag and drop it to the position you want.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "queue",
+   "claim": "In May 2025 Premium got a redesigned queue with Shuffle, Smart Shuffle, Repeat and Sleep Timer controls, plus a preview of autoplay recommendations after the queue ends.",
+   "url": "https://newsroom.spotify.com/2025-05-07/experience-a-new-dimension-of-music-discovery-with-more-controls-and-enhanced-tools/",
+   "quote": "The new design is easier to use and includes controls like Shuffle, Smart Shuffle, Repeat, and Sleep Timer.",
+   "date": "2025-05-07",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "queue",
+   "claim": "In May 2026 Premium regained multi-select in the play queue, and all users got in-playlist bulk actions.",
+   "url": "https://newsroom.spotify.com/2026-05-28/playlist-folders-mobile-queue-controls-updates/",
+   "quote": "And for Premium users, we’ve brought back the ability to select and manage multiple songs in your play queue at once.",
+   "date": "2026-05-28",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "shuffle",
+   "claim": "Premium users can choose between two shuffle styles: \"Fewer repeats\" and \"Standard\".",
+   "url": "https://support.spotify.com/us/article/shuffle-play/",
+   "quote": "Choosing shuffle play styles For: Premium You can choose between two shuffle styles:",
+   "date": "2026-05-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "shuffle",
+   "claim": "Since Nov 2025 the default shuffle is \"Fewer Repeats\" (accounts for recent listening); Premium can switch back to Standard, and Free and Premium can tap a song while shuffling to play it next without reshuffling.",
+   "url": "https://newsroom.spotify.com/2025-11-13/shuffle-update-fewer-repeats/",
+   "quote": "We’ve also updated our default Shuffle so you’ll get Fewer Repeats when you listen.",
+   "date": "2025-11-13",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "shuffle",
+   "claim": "Smart Shuffle (mixes in recommendations) is always on for Free mobile users; Premium can turn it on per playlist or switch it out of the play modes.",
+   "url": "https://support.spotify.com/us/article/shuffle-play/",
+   "quote": "For listeners on free (mobile) Smart Shuffle is always active on mobile.",
+   "date": "2026-05-13",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "shuffle",
+   "claim": "A one-tap reshuffle button for Premium on mobile launched in May 2026.",
+   "url": "https://newsroom.spotify.com/2026-05-28/playlist-folders-mobile-queue-controls-updates/",
+   "quote": "Mix up the order of your shuffle anytime with the reshuffle button.",
+   "date": "2026-05-28",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "repeat",
+   "claim": "Repeat cycles album/playlist repeat and single-song repeat (press twice).",
+   "url": "https://support.spotify.com/us/article/now-playing/",
+   "quote": "Repeat album, playlist, or song When it ends, it starts again! Select twice to repeat a song.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "crossfade",
+   "claim": "Crossfade is a Premium feature with an adjustable length; Automix (beat-matched, select playlists) is also Premium; gapless playback has no Premium label.",
+   "url": "https://support.spotify.com/us/article/tracks-transitions/",
+   "quote": "Crossfade For: Premium Overlaps 2 tracks by fading out of the first while fading in the next.",
+   "date": "2026-05-11",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "crossfade",
+   "claim": "Crossfade, Automix and gapless cannot be set while using Spotify Connect.",
+   "url": "https://support.spotify.com/us/article/tracks-transitions/",
+   "quote": "Note: You can’t set these features when using Spotify Connect.",
+   "date": "2026-05-11",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "crossfade",
+   "claim": "Mixed Playlists (Premium) add custom per-transition volume, EQ and effects with BPM/key shown per song; Free users hear them as normal playlists.",
+   "url": "https://support.spotify.com/us/article/mixed-playlists/",
+   "quote": "On Premium, you can listen to the playlist with transitions. On the free version, you can only listen to it as a regular playlist.",
+   "date": "2026-05-05",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "crossfade",
+   "claim": "Smart Reorder (Feb 2026) re-sequences a mixed playlist by BPM and key in one tap for Premium.",
+   "url": "https://newsroom.spotify.com/2026-02-25/smart-reorder-playlist-mixing/",
+   "quote": "With one tap, this upgrade gives Premium users an easy way to rearrange mixed playlists with BPM and key.",
+   "date": "2026-02-25",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "sleep-timer",
+   "claim": "Sleep Timer is one of the controls in the redesigned Premium queue (Sept 2025 recap of the May 2025 change). No dedicated support article on the sleep timer appears in the support site navigation.",
+   "url": "https://newsroom.spotify.com/2025-09-05/new-user-controls-personalize-listening/",
+   "quote": "Premium users can enjoy a redesigned queue with upgraded controls that make it easier to shuffle, Smart Shuffle, repeat, or add a Sleep Timer.",
+   "date": "2025-09-05",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "playback-speed",
+   "claim": "Playback speed is documented only for podcasts (with 15-second skip/rewind); no music playback-speed control was found in the support or newsroom pages checked.",
+   "url": "https://support.spotify.com/us/article/podcasts-and-shows/",
+   "quote": "Tap to control the play speed. Tap to skip forward 15 seconds, or to rewind 15 seconds.",
+   "date": "2026-01-06",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "playlist-folders",
+   "claim": "Playlist folders can be created on desktop, web player and mobile and show on all devices; nested folders are supported.",
+   "url": "https://support.spotify.com/us/article/playlist-folders/",
+   "quote": "You need to use the desktop app, web player, and mobile app to make playlist folders, but they show on all devices.",
+   "date": "2026-04-27",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "playlist-folders",
+   "claim": "Folders can contain folders.",
+   "url": "https://support.spotify.com/us/article/playlist-folders/",
+   "quote": "You can also create folders within folders!",
+   "date": "2026-04-27",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "collaborative-playlists",
+   "claim": "Any playlist can be made collaborative so friends can add, remove and reorder tracks.",
+   "url": "https://support.spotify.com/us/article/collaborative-playlists/",
+   "quote": "Make any playlist Collaborative to let your friends add, remove, and reorder tracks.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "collaborative-playlists",
+   "claim": "Collaborator invite links expire after 7 days.",
+   "url": "https://support.spotify.com/us/article/collaborative-playlists/",
+   "quote": "Select Invite collaborators. This generates a link that’s valid for 7 days.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "playlist-editing",
+   "claim": "On mobile, drag-to-reorder tracks in a playlist is Premium only.",
+   "url": "https://support.spotify.com/us/article/create-playlists/",
+   "quote": "Tap, hold, and drag to reorder tracks (Premium only)",
+   "date": "2026-02-26",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "sharing",
+   "claim": "Songs, albums, artists, playlists, podcasts and profiles can be shared by link, to social/messaging apps, or as a scannable Spotify Code; desktop also offers embed code.",
+   "url": "https://support.spotify.com/us/article/share-from-spotify/",
+   "quote": "Choose Share. Here you can Copy Link or Copy embed code.",
+   "date": "2026-06-09",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "sharing",
+   "claim": "Jam lets friends listen together in real time and add songs to a shared queue (listed as a Premium benefit).",
+   "url": "https://support.spotify.com/us/article/your-premium-benefits/",
+   "quote": "Friends who join a Jam can listen together and add songs to the queue, sharing control of what's playing whether you're in the same room or tuning in remotely.",
+   "date": "2026-10-02",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "import",
+   "claim": "Spotify's \"Import your music\" (TuneMyMusic, Nov 2025) transfers playlists from other streaming services; it matches playlists and does not upload audio files.",
+   "url": "https://newsroom.spotify.com/2025-11-20/spotify-playlists-guide-transfer/",
+   "quote": "makes it incredibly simple to transfer playlists from other streaming services straight into your Spotify library so you don’t have to start from scratch.",
+   "date": "2025-11-20",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "audio-quality",
+   "claim": "Premium quality tiers go up to Very high (~320 kbit/s) and Lossless (up to 24-bit/44.1 kHz FLAC) on desktop, mobile and tablet.",
+   "url": "https://support.spotify.com/us/article/audio-quality/",
+   "quote": "Very high: Equivalent to approximately 320kbit/s Lossless: Equivalent up to 24-bit/44.1kHz FLAC",
+   "date": "2026-03-05",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "audio-quality",
+   "claim": "The web player streams AAC 128 kbit/s on Free and AAC 256 kbit/s on Premium, and quality cannot be changed there.",
+   "url": "https://support.spotify.com/us/article/audio-quality/",
+   "quote": "Web player AAC 128kbit/s AAC 256kbit/s",
+   "date": "2026-03-05",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "audio-quality",
+   "claim": "Music quality is not adjustable on the web player.",
+   "url": "https://support.spotify.com/us/article/audio-quality/",
+   "quote": "You can’t adjust music quality on the web player.",
+   "date": "2026-03-05",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "audio-quality",
+   "claim": "Mobile has separate quality settings for Wi-Fi streaming, cellular streaming and downloads.",
+   "url": "https://support.spotify.com/us/article/audio-quality/",
+   "quote": "You can have different settings for when you listen online with WiFi or with cellular (streaming quality). You can also choose your download quality.",
+   "date": "2026-03-05",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "lossless",
+   "claim": "Lossless rolled out to Premium starting Sept 10, 2025 (US among the first markets) and reached 50+ markets by Oct 6, 2025.",
+   "url": "https://newsroom.spotify.com/2025-09-10/lossless-listening-arrives-on-spotify-premium-with-a-richer-more-detailed-listening-experience/",
+   "quote": "*Update as of October 6, 2025: Lossless is now available to Premium users in more than 50 markets.",
+   "date": "2025-09-10",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "lossless",
+   "claim": "Lossless must be enabled manually on each device.",
+   "url": "https://newsroom.spotify.com/2025-09-10/lossless-listening-arrives-on-spotify-premium-with-a-richer-more-detailed-listening-experience/",
+   "quote": "You’ll need to enable Lossless manually on each device.",
+   "date": "2025-09-10",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "lossless",
+   "claim": "Spotify says Bluetooth cannot carry lossless; it recommends wired or Spotify Connect.",
+   "url": "https://newsroom.spotify.com/2025-09-10/lossless-listening-arrives-on-spotify-premium-with-a-richer-more-detailed-listening-experience/",
+   "quote": "Currently, Bluetooth doesn’t provide enough bandwidth to transmit lossless audio, so the signal has to be compressed before being sent.",
+   "date": "2025-09-10",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-05-07 — Experience a New Dimension of Music Discovery With More Controls and Enhanced Tools: Redesigned Premium queue (Shuffle, Smart Shuffle, Repeat, Sleep Timer, autoplay preview), refreshed Hide, 30-day Snooze test, Add/Sort/Edit playlist tools, playlists from filtered Liked Songs.",
+   "url": "https://newsroom.spotify.com/2025-05-07/experience-a-new-dimension-of-music-discovery-with-more-controls-and-enhanced-tools/",
+   "quote": "Good news for Premium users: Queue, those three lines at the bottom of your Now Playing view, just got an upgrade.",
+   "date": "2025-05-07",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-08-19 — Mix Your Favorite Playlists Seamlessly by Adding Your Own Transitions: Mix (beta): Premium users add custom transitions (volume, EQ, effects; BPM/key shown) to their own playlists; came to desktop May 19, 2026.",
+   "url": "https://newsroom.spotify.com/2025-08-19/mix-your-favorite-playlists-seamlessly-by-adding-your-own-transitions/",
+   "quote": "Now, Premium users can take their creativity to the next level with the ability to add and customize transitions between tracks.",
+   "date": "2025-08-19",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-09-05 — 7 Ways Spotify’s New User Controls Put You in Charge of Your Listening: Recap of 7 controls: Smart Filters in Your Library, Hide in playlist, Snooze 30 days, Discover Weekly genres, redesigned queue, playlist tools, voice requests to DJ.",
+   "url": "https://newsroom.spotify.com/2025-09-05/new-user-controls-personalize-listening/",
+   "quote": "Here are seven new controls to try right now:",
+   "date": "2025-09-05",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-09-10 — Lossless Listening Arrives on Spotify Premium With a Richer, More Detailed Listening Experience: Lossless (up to 24-bit/44.1 kHz FLAC) starts rolling out to Premium; per-device opt-in for Wi-Fi/cellular/downloads; 50+ markets by Oct 6, 2025.",
+   "url": "https://newsroom.spotify.com/2025-09-10/lossless-listening-arrives-on-spotify-premium-with-a-richer-more-detailed-listening-experience/",
+   "quote": "With Lossless, you can now stream tracks in up to 24-bit/44.1 kHz FLAC, unlocking greater detail across nearly every song available on Spotify.",
+   "date": "2025-09-10",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-09-15 — Spotify’s Free Experience Is Even Better—Here’s How to Make the Most of It: Free tier gains Pick & Play, Search & Play and Share & Play: free users can choose and play specific tracks.",
+   "url": "https://newsroom.spotify.com/2025-09-15/free-experience-updates-features-tips/",
+   "quote": "You now have more control over how you listen: Search and play any track or jump right into something your friend just shared.",
+   "date": "2025-09-15",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-10-01 — Spotify Gives You Even More Control With the Ability to Exclude Tracks From Your Taste Profile: Free and Premium users can exclude individual tracks (not only playlists) from their taste profile on all platforms.",
+   "url": "https://newsroom.spotify.com/2025-10-01/exclude-tracks-taste-profile/",
+   "quote": "Starting today, you can exclude individual tracks from your taste profile, in addition to playlists.",
+   "date": "2025-10-01",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-10-08 — 5 New Spotify Features You Should Be Using Right Now: Roundup: Spotify in ChatGPT, exclude tracks from Taste Profile, Lossless in all eligible markets, in-app Messages (16+), Mix transitions (Premium beta).",
+   "url": "https://newsroom.spotify.com/2025-10-08/new-spotify-features-to-use/",
+   "quote": "Lossless has now rolled out for Spotify Premium users in all eligible markets, delivering higher-quality audio at up to 24-bit/44.1 kHz FLAC.",
+   "date": "2025-10-08",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-11-13 — Spotify Updates Shuffle to Keep Your Playlists Feeling Fresh: Default shuffle becomes \"Fewer Repeats\"; Premium can switch to Standard or turn off Smart Shuffle; anyone can tap a song while shuffling to play it next.",
+   "url": "https://newsroom.spotify.com/2025-11-13/shuffle-update-fewer-repeats/",
+   "quote": "Premium users who prefer our previous version of Shuffle can switch to Standard Shuffle in their settings.",
+   "date": "2025-11-13",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-11-20 — 5 Ways to Get More out of Your Playlists on Spotify: Playlist import from other streaming services via TuneMyMusic (\"Import your music\" in Your Library, mobile).",
+   "url": "https://newsroom.spotify.com/2025-11-20/spotify-playlists-guide-transfer/",
+   "quote": "Tap “Import your music” and follow the prompts to connect with TuneMyMusic.",
+   "date": "2025-11-20",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2025-12-29 — 25 Ways Spotify Leveled Up Your Listening in 2025: 25 features shipped in 2025 (Lossless, free-tier on-demand, Mix, shuffle update, queue controls, Smart Filters, playlist transfer, Messages, listening stats, etc.).",
+   "url": "https://newsroom.spotify.com/2025-12-29/year-in-features/",
+   "quote": "here’s a look at 25 things Spotify delivered in 2025.",
+   "date": "2025-12-29",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-01-28 — 3 Easy Ways to Discover Music That Fits Your Moment on Spotify: DJ button on Home with text/voice requests (Premium), Prompted Playlist beta (US/CA/NZ Premium), Discover Weekly genre controls.",
+   "url": "https://newsroom.spotify.com/2026-01-28/music-discovery-features/",
+   "quote": "Now, Premium users can instantly start a personalized session—or make a request by text or voice—using a new, dedicated DJ button on the Spotify Home screen, located just under Shortcuts.",
+   "date": "2026-01-28",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-02-04 — Get More From Lyrics on Spotify With These 3 Upgrades: Lyric translations worldwide, lyrics saved with downloads for offline (Premium), lyric previews under the artwork.",
+   "url": "https://newsroom.spotify.com/2026-02-04/lyric-translations-offline-previews/",
+   "quote": "Offline lyrics are rolling out around the world for Premium users.",
+   "date": "2026-02-04",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-02-25 — Level Up Your Playlists’ Transitions With Smart Reorder: Smart Reorder: one tap re-sequences a mixed playlist by BPM and key (Premium).",
+   "url": "https://newsroom.spotify.com/2026-02-25/smart-reorder-playlist-mixing/",
+   "quote": "Now, mixing great transitions is even smoother with Smart Reorder.",
+   "date": "2026-02-25",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-03-13 — A New Era of Personalization: Shape Your Taste Profile on Spotify: Taste Profile beta announced at SXSW: view and steer how Spotify understands your taste; Premium in New Zealand first.",
+   "url": "https://newsroom.spotify.com/2026-03-13/taste-profile-beta-announcement/",
+   "quote": "This new beta feature will begin rolling out to Premium listeners in New Zealand in the coming weeks.",
+   "date": "2026-03-13",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-04-16 — Introducing a Smarter, Smoother Experience for Tablets: Redesigned tablet app for iOS and Android: adaptive orientation, collapsible sidebar, parallel browsing while playing, front-and-center video toggle.",
+   "url": "https://newsroom.spotify.com/2026-04-16/new-tablet-app-experience/",
+   "quote": "Today we’re introducing a new app experience tailored for your tablet, designed to make listening, watching, and discovery feel more natural on larger screens.",
+   "date": "2026-04-16",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-05-21 — Create, Control, and Personalize Your Listening Across Every Moment: Studio by Spotify Labs: standalone desktop AI app (research preview, 18+, 20+ markets) that generates personal podcasts/playlists and saves them to the Library.",
+   "url": "https://newsroom.spotify.com/2026-05-21/studio-by-spotify-labs-launch/",
+   "quote": "Introducing Studio by Spotify Labs, a standalone desktop app designed to create audio shaped around you.",
+   "date": "2026-05-21",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-05-28 — More Control, Faster Playlist Editing, and Other Updates for Everyday Listening on Spotify: Playlist folders on mobile (all users), in-playlist bulk actions, queue multi-select back for Premium, iOS background downloads, reshuffle button.",
+   "url": "https://newsroom.spotify.com/2026-05-28/playlist-folders-mobile-queue-controls-updates/",
+   "quote": "Based on your feedback, we’re rolling out a series of improvements focused on the everyday features that help keep listening smooth.",
+   "date": "2026-05-28",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-07-10 — Spotify’s Discovery-Driven Playlists Keep Your Weekly Music Rotation Feeling Fresh: Release Radar gets session controls (genre / new-to-you artists, up to five options) and a new look.",
+   "url": "https://newsroom.spotify.com/2026-07-10/discovery-playlists-release-radar-control-updates/",
+   "quote": "This month, we’re introducing refined session controls that give you a new way to shape your listening experience.",
+   "date": "2026-07-10",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-07-14 — Just Say the Word: A More Personal Way to Ask, Discover, and Listen: Talk to Spotify (beta): type or speak to control playback, add to queue, ask about music and listening history; Premium 18+ in US, Ireland, Sweden.",
+   "url": "https://newsroom.spotify.com/2026-07-14/talk-to-spotify-announcement-beta/",
+   "quote": "It’s rolling out gradually in beta for Premium users 18+ in the U.S., Ireland, and Sweden across iOS and Android devices in English.",
+   "date": "2026-07-14",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-09-15 — Reclaim Your Wrapped: You Can Now Control Whether Kids and Family Music Shapes Your Recommendations: Settings toggle to keep kids and family music out of your taste profile and Wrapped (Free and Premium, mobile, retroactive).",
+   "url": "https://newsroom.spotify.com/2026-09-15/exclude-kids-family-music-toggle/",
+   "quote": "Starting today, we’re rolling out a new toggle in your settings that lets you exclude kids and family music from your taste profile, so those streams no longer shape your recommendations.",
+   "date": "2026-09-15",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "newsroom-2025-2026",
+   "claim": "2026-09-23 — How to Use Our Taste Profile Feature to Shape Your Spotify Homepage: Taste Profile (Beta) expands to US Premium listeners 18+: read Spotify's interpretation of your taste and steer the Home feed with notes.",
+   "url": "https://newsroom.spotify.com/2026-09-23/taste-profile-shape-home-feed/",
+   "quote": "Following initial testing in New Zealand earlier this year, we’re rolling out Taste Profile (Beta) to Premium listeners ages 18 and older in the U.S.",
+   "date": "2026-09-23",
+   "date_kind": "newsroom datePublished"
+  },
+  {
+   "topic": "recon-check",
+   "claim": "Recon claim \"Local Files does not upload to the cloud; files must be on each device\": CONFIRMED (implied, not stated in those words: the official article only describes playing files stored on the device and gives separate copy-to-device steps for iOS, Android and desktop; it never mentions uploading, cloud storage or syncing local files between devices.)",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "Along with the millions of tracks Spotify offers, you can also use the app to play any of the audio files legally stored on your device.",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "recon-check",
+   "claim": "Recon claim \"Local Files supports mp3, m4p, mp4\": NOT FOUND (The current official Local Files article (updated 2025-06-30) lists no supported file formats at all. \"MP3\" and \"M4P\" appear only in the page's hidden search-keyword metadata (raw JSON), which is not a statement of format support; \"mp4\" does not appear. The recon claim comes from a third-party site (soundguys.com), not from Spotify.)",
+   "url": "https://support.spotify.com/us/article/local-files/",
+   "quote": "\"keywords\":[\"Download\",\"MP3\",\"Files on device\",\"Storage\",\"Local songs\",\"Upload\",\"File transfer\",\"M4P\",\"Import file\",\"Transfer files\",\"On My iPhone\"]",
+   "date": "2025-06-30",
+   "date_kind": "support article updatedAt"
+  },
+  {
+   "topic": "recon-check",
+   "claim": "Recon claim \"Premium Individual is $12.99/month in the US\": CONFIRMED (explicit, on www.spotify.com/us/premium/ fetched 2026-10-04)",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "$0 for 1 month, then $12.99 per month after.",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "recon-check",
+   "claim": "Recon claim \"Duo $18.99, Family $21.99 up to 6 accounts, Student $6.99\": CONFIRMED (explicit, all three prices plus \"Up to 6 Premium accounts\" on the US Premium page fetched 2026-10-04)",
+   "url": "https://www.spotify.com/us/premium/",
+   "quote": "Family $21.99 / month Up to 6 Premium accounts",
+   "date": "2026-10-04",
+   "date_kind": "fetch date (page is undated)"
+  },
+  {
+   "topic": "recon-check",
+   "claim": "Recon claim \"Downloads require Premium\": CONFIRMED (explicit for music; nuance: Free users can download podcasts (and Spotify notes some shows need Premium to download).)",
+   "url": "https://support.spotify.com/us/article/listen-offline/",
+   "quote": "On Premium, you can download albums, playlists, and podcasts. On the free version, you can only download podcasts.",
+   "date": "2025-11-13",
+   "date_kind": "support article updatedAt"
+  }
+ ]
+}

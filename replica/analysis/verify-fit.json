@@ -1,0 +1,579 @@
+{
+ "method": "keyword nets as candidate generators, every candidate read in full and hand-coded; one coder (this check), codes stored in this script keyed by URL",
+ "checks": {
+  "free_tier_control_owner_signal": {
+   "theme_n": 116,
+   "theme_src": {
+    "app-store": 89,
+    "hacker-news": 1,
+    "google-play": 26
+   },
+   "keyword_hits": 2,
+   "hits": [
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605436498",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620375347"
+   ],
+   "manual": {
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605436498": "catalogue pick (\"my own song\" = chosen catalogue song), not owned files",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620375347": "catalogue pick (\"my own song\" = chosen catalogue song), not owned files"
+   },
+   "owners_after_reading": 0
+  },
+  "angle_A_store_support": {
+   "own_core_union_n": 67,
+   "own_core_src": {
+    "hacker-news": 59,
+    "app-store": 5,
+    "google-play": 3
+   },
+   "own_union_incl_localfiles_export_4_5star_n": 71,
+   "own_union_src": {
+    "hacker-news": 59,
+    "app-store": 9,
+    "google-play": 3
+   },
+   "store_rows_in_union": 12,
+   "store_classification": {
+    "catalogue_or_ugc_gap": 4,
+    "ambiguous": 1,
+    "owned_files": 1,
+    "ownership_statement": 3,
+    "catalogue_transfer": 3
+   },
+   "manual": {
+    "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14212416420": "wants YouTube content in the app (catalogue/UGC gap), not owned files",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14113038711": "wants a SoundCloud merger (catalogue/UGC gap)",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14184354624": "wants songs that are on YouTube (catalogue/UGC gap)",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601011908": "wants to upload YouTube remixes (copyright red flag)",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145695214": "ambiguous (\"can't upload songs\" next to a login/TV complaint)",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17": "OWNED FILES: Local Files glitch (\"local songs ... not available to play\")",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607408439": "ownership-adjacent: \"No option to save purchased tracks to a device's memory\"",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620615454": "pro-ownership statement (buy once on a store), not a locker request",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14617552745": "politics / \"buy CDs and vinyls\" statement, not a locker request",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604098603": "wants to move catalogue playlists to Apple Music (catalogue transfer)",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-3": "wants to import catalogue playlists elsewhere (catalogue transfer)",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-17": "wants to move 7000 catalogue songs elsewhere (catalogue transfer)"
+   },
+   "own_music_upload_store_rows": 6,
+   "own_music_upload_store_rows_that_mean_owned_files": 1
+  },
+  "store_owner_signal_net": {
+   "store_rows": 1088,
+   "keyword_hits": 13,
+   "hits": [
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620434344",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620375347",
+    "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620082301",
+    "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14617552745",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607589710",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607408439",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14605436498",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601011908",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14574473476",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14359879282",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14258365038",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145695214"
+   ],
+   "note": "read all 13: 1 Local Files user (GP 2026-09-18), 1 \"save purchased tracks\", 1 YouTube-remix upload request, 1 ambiguous \"can't upload songs\"; the rest use \"my own song\" for catalogue picks, \"CD\" as a simile, \"uploading\" for loading, or an idiom. 0 unambiguous requests to upload legally held files to a cloud."
+  },
+  "playlist_injection_tier": {
+   "n": 33,
+   "tier": {
+    "free": 16,
+    "unknown": 12,
+    "paying": 5
+   },
+   "manual": {
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615235629": "free",
+    "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632": "free",
+    "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606957170": "free",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601162770": "free",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14580557011": "unknown",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14429893822": "paying",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14440021880": "free",
+    "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14308360652": "free",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14575535291": "free",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14379440421": "unknown",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14260109375": "free",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14145322479": "unknown",
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620553678": "unknown",
+    "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619602976": "unknown",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617426629": "free",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616380802": "free",
+    "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616607168": "free",
+    "https://news.ycombinator.com/item?id=36853525": "paying",
+    "https://news.ycombinator.com/item?id=36916187": "unknown",
+    "https://news.ycombinator.com/item?id=37802590": "paying",
+    "https://news.ycombinator.com/item?id=39354635": "unknown",
+    "https://news.ycombinator.com/item?id=40472957": "unknown",
+    "https://news.ycombinator.com/item?id=42860611": "unknown",
+    "https://news.ycombinator.com/item?id=44334326": "paying",
+    "https://news.ycombinator.com/item?id=44906845": "paying",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-20": "unknown",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-9": "free",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-18": "free",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-20": "free",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-12": "unknown",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-2": "unknown",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-20": "free",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-5": "free"
+   },
+   "core_after_2026-05-13": 13,
+   "core_after_by_tier": {
+    "unknown": 3,
+    "free": 10
+   },
+   "paying_dates": [
+    "2023-07-24",
+    "2023-10-07",
+    "2025-06-21",
+    "2025-08-14",
+    "2026-08-15"
+   ]
+  },
+  "offline_what": {
+   "n": 27,
+   "src": {
+    "app-store": 9,
+    "hacker-news": 14,
+    "google-play": 4
+   },
+   "codes": {
+    "the original's catalogue downloads": 26,
+    "Local Files (owned files on the phone)": 1
+   },
+   "note": "Music downloads are Premium-only on the original (changelog: \"On the free version, you can only download podcasts.\"), so the 26 catalogue-download complainers are, by construction, current or former payers.",
+   "manual": {
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607434628": "the original's catalogue downloads",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607822557": "the original's catalogue downloads",
+    "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607403572": "the original's catalogue downloads",
+    "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614101383": "the original's catalogue downloads",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14389660945": "the original's catalogue downloads",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14238797849": "the original's catalogue downloads",
+    "https://itunes.apple.com/nz/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14183591232": "the original's catalogue downloads",
+    "https://itunes.apple.com/us/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/xml#review-14620444910": "the original's catalogue downloads",
+    "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617041160": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=34603708": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=34695080": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=37802590": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=39105740": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=39261935": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=39272401": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=39428784": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=39432095": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=39776396": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=41119283": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=42111135": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=42532727": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=42861610": "the original's catalogue downloads",
+    "https://news.ycombinator.com/item?id=48567156": "the original's catalogue downloads",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-14": "the original's catalogue downloads",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-17": "Local Files (owned files on the phone)",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_GB&gl=GB#review-7": "the original's catalogue downloads",
+    "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-4": "the original's catalogue downloads"
+   }
+  },
+  "alternatives_named": {
+   "owner_set_n": 76,
+   "owner_set_src": {
+    "hacker-news": 64,
+    "app-store": 9,
+    "google-play": 3
+   },
+   "alts": {
+    "YouTube Music": {
+     "all": 28,
+     "all_src": {
+      "app-store": 11,
+      "hacker-news": 17
+     },
+     "in_owner_set": 11,
+     "urls": [
+      "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620217052",
+      "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614440897",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607590199",
+      "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14605741993",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14585269807",
+      "https://news.ycombinator.com/item?id=49523451",
+      "https://news.ycombinator.com/item?id=49526315",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14400909879",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14385709403",
+      "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14308360652",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14224210718",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14212416420",
+      "https://itunes.apple.com/ie/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/json#review-14178936770",
+      "https://news.ycombinator.com/item?id=46651080",
+      "https://news.ycombinator.com/item?id=46518870",
+      "https://news.ycombinator.com/item?id=45972340",
+      "https://news.ycombinator.com/item?id=45590991",
+      "https://news.ycombinator.com/item?id=45134042",
+      "https://news.ycombinator.com/item?id=44295699",
+      "https://news.ycombinator.com/item?id=44302357",
+      "https://news.ycombinator.com/item?id=42531034",
+      "https://news.ycombinator.com/item?id=41221819",
+      "https://news.ycombinator.com/item?id=39995587",
+      "https://news.ycombinator.com/item?id=39315400",
+      "https://news.ycombinator.com/item?id=39068954",
+      "https://news.ycombinator.com/item?id=38536011",
+      "https://news.ycombinator.com/item?id=37802590",
+      "https://news.ycombinator.com/item?id=37792608"
+     ]
+    },
+    "Apple Music": {
+     "all": 54,
+     "all_src": {
+      "app-store": 26,
+      "hacker-news": 28
+     },
+     "in_owner_set": 15,
+     "urls": [
+      "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620410554",
+      "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620191605",
+      "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14620899674",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14617947089",
+      "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617091022",
+      "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616728569",
+      "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616652599",
+      "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616538225",
+      "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616352885",
+      "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14615549754",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607357571",
+      "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14606957170",
+      "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14606150955",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604956465",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14604098603",
+      "https://itunes.apple.com/au/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14605741993",
+      "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601183146",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601219405",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601018157",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14600201916",
+      "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595577064",
+      "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595244406",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14575041384",
+      "https://itunes.apple.com/ca/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14572543331",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14452342368",
+      "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14134595663",
+      "https://news.ycombinator.com/item?id=47844499",
+      "https://news.ycombinator.com/item?id=47430396",
+      "https://news.ycombinator.com/item?id=46518870",
+      "https://news.ycombinator.com/item?id=46058654",
+      "https://news.ycombinator.com/item?id=45246661",
+      "https://news.ycombinator.com/item?id=43658039",
+      "https://news.ycombinator.com/item?id=43400578",
+      "https://news.ycombinator.com/item?id=43299536",
+      "https://news.ycombinator.com/item?id=42532727",
+      "https://news.ycombinator.com/item?id=42113400",
+      "https://news.ycombinator.com/item?id=42113467",
+      "https://news.ycombinator.com/item?id=41311984",
+      "https://news.ycombinator.com/item?id=41222569",
+      "https://news.ycombinator.com/item?id=39995587",
+      "https://news.ycombinator.com/item?id=39968033",
+      "https://news.ycombinator.com/item?id=39775580",
+      "https://news.ycombinator.com/item?id=39776258",
+      "https://news.ycombinator.com/item?id=39484314",
+      "https://news.ycombinator.com/item?id=39431927",
+      "https://news.ycombinator.com/item?id=39315400",
+      "https://news.ycombinator.com/item?id=39261935",
+      "https://news.ycombinator.com/item?id=38566269",
+      "https://news.ycombinator.com/item?id=38520656",
+      "https://news.ycombinator.com/item?id=38226866",
+      "https://news.ycombinator.com/item?id=38008000",
+      "https://news.ycombinator.com/item?id=37792608",
+      "https://news.ycombinator.com/item?id=37528611",
+      "https://news.ycombinator.com/item?id=35462336"
+     ]
+    },
+    "Google Play Music": {
+     "all": 5,
+     "all_src": {
+      "hacker-news": 5
+     },
+     "in_owner_set": 5,
+     "urls": [
+      "https://news.ycombinator.com/item?id=48228365",
+      "https://news.ycombinator.com/item?id=46058654",
+      "https://news.ycombinator.com/item?id=43204178",
+      "https://news.ycombinator.com/item?id=39968033",
+      "https://news.ycombinator.com/item?id=38008000"
+     ]
+    },
+    "Plex / Plexamp": {
+     "all": 13,
+     "all_src": {
+      "hacker-news": 13
+     },
+     "in_owner_set": 12,
+     "urls": [
+      "https://news.ycombinator.com/item?id=49518972",
+      "https://news.ycombinator.com/item?id=48374133",
+      "https://news.ycombinator.com/item?id=48228323",
+      "https://news.ycombinator.com/item?id=46518747",
+      "https://news.ycombinator.com/item?id=45246661",
+      "https://news.ycombinator.com/item?id=45134042",
+      "https://news.ycombinator.com/item?id=45018756",
+      "https://news.ycombinator.com/item?id=43713314",
+      "https://news.ycombinator.com/item?id=39437699",
+      "https://news.ycombinator.com/item?id=39431191",
+      "https://news.ycombinator.com/item?id=37193102",
+      "https://news.ycombinator.com/item?id=36916187",
+      "https://news.ycombinator.com/item?id=35462336"
+     ]
+    },
+    "Navidrome": {
+     "all": 8,
+     "all_src": {
+      "hacker-news": 8
+     },
+     "in_owner_set": 8,
+     "urls": [
+      "https://news.ycombinator.com/item?id=49518972",
+      "https://news.ycombinator.com/item?id=48601078",
+      "https://news.ycombinator.com/item?id=46777110",
+      "https://news.ycombinator.com/item?id=46712608",
+      "https://news.ycombinator.com/item?id=46518747",
+      "https://news.ycombinator.com/item?id=44914281",
+      "https://news.ycombinator.com/item?id=43713614",
+      "https://news.ycombinator.com/item?id=42861370"
+     ]
+    },
+    "Jellyfin / Finamp": {
+     "all": 6,
+     "all_src": {
+      "hacker-news": 6
+     },
+     "in_owner_set": 6,
+     "urls": [
+      "https://news.ycombinator.com/item?id=48374133",
+      "https://news.ycombinator.com/item?id=46518747",
+      "https://news.ycombinator.com/item?id=44914281",
+      "https://news.ycombinator.com/item?id=44334326",
+      "https://news.ycombinator.com/item?id=43713614",
+      "https://news.ycombinator.com/item?id=42113467"
+     ]
+    },
+    "Subsonic family": {
+     "all": 4,
+     "all_src": {
+      "hacker-news": 4
+     },
+     "in_owner_set": 4,
+     "urls": [
+      "https://news.ycombinator.com/item?id=46777110",
+      "https://news.ycombinator.com/item?id=46717359",
+      "https://news.ycombinator.com/item?id=42861370",
+      "https://news.ycombinator.com/item?id=39995587"
+     ]
+    },
+    "iBroadcast": {
+     "all": 0,
+     "all_src": {},
+     "in_owner_set": 0,
+     "urls": []
+    },
+    "VOX": {
+     "all": 1,
+     "all_src": {
+      "hacker-news": 1
+     },
+     "in_owner_set": 1,
+     "urls": [
+      "https://news.ycombinator.com/item?id=42513052"
+     ]
+    },
+    "Bandcamp": {
+     "all": 9,
+     "all_src": {
+      "hacker-news": 9
+     },
+     "in_owner_set": 6,
+     "urls": [
+      "https://news.ycombinator.com/item?id=49526315",
+      "https://news.ycombinator.com/item?id=45246661",
+      "https://news.ycombinator.com/item?id=45134042",
+      "https://news.ycombinator.com/item?id=42861370",
+      "https://news.ycombinator.com/item?id=42111135",
+      "https://news.ycombinator.com/item?id=40472070",
+      "https://news.ycombinator.com/item?id=37901068",
+      "https://news.ycombinator.com/item?id=35636121",
+      "https://news.ycombinator.com/item?id=34603708"
+     ]
+    }
+   }
+  },
+  "owner_segments": {
+   "hybrid_gap_fillers": {
+    "n": 6,
+    "src": {
+     "hacker-news": 6
+    },
+    "urls": [
+     "https://news.ycombinator.com/item?id=44295699",
+     "https://news.ycombinator.com/item?id=39968033",
+     "https://news.ycombinator.com/item?id=37792608",
+     "https://news.ycombinator.com/item?id=39484314",
+     "https://news.ycombinator.com/item?id=43204178",
+     "https://news.ycombinator.com/item?id=46653930"
+    ]
+   },
+   "subscription_averse": {
+    "n": 4,
+    "src": {
+     "hacker-news": 3,
+     "app-store": 1
+    },
+    "urls": [
+     "https://news.ycombinator.com/item?id=39430718",
+     "https://news.ycombinator.com/item?id=47021054",
+     "https://news.ycombinator.com/item?id=42861370",
+     "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620615454"
+    ]
+   },
+   "share_keyword_hits": [
+    "https://news.ycombinator.com/item?id=35462336",
+    "https://news.ycombinator.com/item?id=41221819"
+   ],
+   "share_requests_after_reading": 0,
+   "share_note": "both hits are about a family PLAN, neither asks to share uploaded audio with other people"
+  },
+  "share_uploads_demand_all_rows": {
+   "keyword_hits": 0,
+   "urls": []
+  },
+  "already_shipped_new_fetch": [
+   {
+    "what": "autoplay toggle (all users, no Premium label)",
+    "url": "https://support.spotify.com/us/article/autoplay/",
+    "final_url": "https://support.spotify.com/us/article/autoplay/",
+    "updatedAt": "2025-09-25",
+    "quote": "Under Playback, scroll down to Autoplay and switch it on , or off .",
+    "exact": true
+   },
+   {
+    "what": "data export: playlists",
+    "url": "https://support.spotify.com/us/article/understanding-my-data/",
+    "final_url": "https://support.spotify.com/us/article/understanding-your-data/",
+    "updatedAt": "2026-07-07",
+    "quote": "Local track name, if the user uploaded locally saved audio to be played on Spotify service.",
+    "exact": true
+   },
+   {
+    "what": "data export: lifetime history",
+    "url": "https://support.spotify.com/us/article/understanding-my-data/",
+    "final_url": "https://support.spotify.com/us/article/understanding-your-data/",
+    "updatedAt": "2026-07-07",
+    "quote": "A list of items (e.g. songs, videos, and podcasts) listened to or watched during the lifetime of your account",
+    "exact": true
+   },
+   {
+    "what": "data export tool",
+    "url": "https://support.spotify.com/us/article/data-rights-and-privacy-settings/",
+    "final_url": "https://support.spotify.com/us/article/data-rights-and-privacy-settings/",
+    "updatedAt": "2025-09-18",
+    "quote": "You can get a ZIP file with a copy of your personal data by using the automated Download your data tool on your Account Privacy page or by contacting us.",
+    "exact": true
+   },
+   {
+    "what": "recents (history in app)",
+    "url": "https://support.spotify.com/us/article/recent-activity/",
+    "final_url": "https://support.spotify.com/us/article/recent-activity/",
+    "updatedAt": "2025-06-30",
+    "quote": "To view the last 50 songs you listened to: Click the Play Queue at the bottom. Click Recents.",
+    "exact": true
+   }
+  ],
+  "already_shipped_changelog": [
+   {
+    "url": "https://newsroom.spotify.com/2025-05-07/experience-a-new-dimension-of-music-discovery-with-more-controls-and-enhanced-tools/",
+    "quote": "Prefer to stick with your own picks during your listening sessions? You can easily switch Autoplay and Smart Shuffle off in your settings for full control.",
+    "exact": true
+   },
+   {
+    "url": "https://newsroom.spotify.com/2025-09-05/new-user-controls-personalize-listening/",
+    "quote": "In select markets, you can generate new playlists from your Liked Songs by filtering them by genre or mood.",
+    "exact": true
+   },
+   {
+    "url": "https://newsroom.spotify.com/2025-12-29/year-in-features/",
+    "quote": "The new weekly listening snapshot shows you your top songs and artists every week, perfect for tracking trends between Wrapped.",
+    "exact": true
+   },
+   {
+    "url": "https://support.spotify.com/us/article/shuffle-play/",
+    "quote": "Switch Include Smart Shuffle in play modes off .",
+    "exact": true
+   },
+   {
+    "url": "https://support.spotify.com/us/article/local-files/",
+    "quote": "Along with the millions of tracks Spotify offers, you can also use the app to play any of the audio files legally stored on your device.",
+    "exact": true
+   }
+  ],
+  "competitor_parity": [
+   {
+    "quote": "You can play uploaded songs in the background, ad-free and offline",
+    "url": "https://news.ycombinator.com/item?id=46520232",
+    "source_kind": "user-quoting-official",
+    "date": "2026-01-06"
+   },
+   {
+    "quote": "It supports up to 100k uploads",
+    "url": "https://news.ycombinator.com/item?id=46518743",
+    "source_kind": "user-quoting-official",
+    "date": "2026-01-06"
+   },
+   {
+    "quote": "Upload songs from your devices so you can enjoy them in one place with YouTube Music",
+    "url": "https://apps.apple.com/us/app/youtube-music/id1017492454",
+    "source_kind": "official",
+    "date": "2026-09-26"
+   },
+   {
+    "quote": "There are no fees to use iBroadcast and no ads.",
+    "url": "https://apps.apple.com/us/app/ibroadcast/id536363915",
+    "source_kind": "official",
+    "date": "2026-09-18"
+   },
+   {
+    "quote": "FLAC remains FLAC",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494",
+    "source_kind": "official",
+    "date": "2026-09-28"
+   },
+   {
+    "quote": "Unlimited music cloud storage for your music collections;",
+    "url": "https://apps.apple.com/us/app/vox-mp3-flac-music-player/id916215494",
+    "source_kind": "official",
+    "date": "2026-09-28"
+   },
+   {
+    "quote": "Grab a few hours of your favorite playlist or stations with just a few taps.",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510",
+    "source_kind": "official",
+    "date": "2025-07-14"
+   },
+   {
+    "quote": "Multi-user, each user has their own play counts, playlists, favorites, etc..",
+    "url": "https://github.com/navidrome/website/blob/b0fe572513288225562fc4a71d06e01333f03602/content/en/docs/overview/_index.md",
+    "source_kind": "official",
+    "date": "2026-10-02"
+   },
+   {
+    "quote": "free, with no ads, no subscriptions, and no data collection.",
+    "url": "https://apps.apple.com/us/app/substreamer/id1012991665",
+    "source_kind": "official",
+    "date": "2026-07-28"
+   },
+   {
+    "quote": "But since plex cannot import m3u playlist files",
+    "url": "https://apps.apple.com/us/app/plexamp/id1500797510?see-all=reviews",
+    "source_kind": "user",
+    "date": "2025-04-29"
+   }
+  ],
+  "quote_context": {
+   "quotes_checked": 24,
+   "exact": 24
+  }
+ }
+}

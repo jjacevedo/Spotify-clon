@@ -1,0 +1,786 @@
+[
+ {
+  "key": "ads",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/xml#review-14616051292",
+  "quote": "Yall really put four ads in between every TWO songs???",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "ads",
+  "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-6",
+  "quote": "roughly 2-3 minutes of ads per 3-5 minutes of music",
+  "source": "google-play",
+  "rating": "1",
+  "date": "2025-07-25"
+ },
+ {
+  "key": "ftc",
+  "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN&gl=IN#review-11",
+  "quote": "I can no longer choose songs freely from my Liked Songs/playlist.",
+  "source": "google-play",
+  "rating": "1",
+  "date": "2026-09-11"
+ },
+ {
+  "key": "ftc",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617030464",
+  "quote": "LET ME LISTEN TO MY SONGS IN ORDER",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "bugs",
+  "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-16",
+  "quote": "The app crashes on me every other song",
+  "source": "google-play",
+  "rating": "2",
+  "date": "2024-12-10"
+ },
+ {
+  "key": "bugs",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607593296",
+  "quote": "Would be a great app if it wasn’t for the constant bugs, crashes, and performance issues.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-29"
+ },
+ {
+  "key": "price",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620111962",
+  "quote": "The price keeps going up on me and I’m starting to get upset by that.",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "price",
+  "url": "https://news.ycombinator.com/item?id=40563837",
+  "quote": "I'll be cancelling this month because I'm not getting enough value.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-06-03"
+ },
+ {
+  "key": "clutter",
+  "url": "https://news.ycombinator.com/item?id=39428119",
+  "quote": "I quit Spotify because I can’t customise the home page which pushes podcasts and music I’m not interested in.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-02-19"
+ },
+ {
+  "key": "clutter",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14243562668",
+  "quote": "All those irrelevant pop ups for podcasts and shows I don’t want to listen",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-06-29"
+ },
+ {
+  "key": "ui",
+  "url": "https://news.ycombinator.com/item?id=45590991",
+  "quote": "I stopped using Spotify because of their constant UI churn.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2025-10-15"
+ },
+ {
+  "key": "ui",
+  "url": "https://news.ycombinator.com/item?id=44083095",
+  "quote": "I just simply can't find my way around the app anymore.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2025-05-24"
+ },
+ {
+  "key": "slow",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14196583670",
+  "quote": "press one song and it takes nearly 30 seconds to play or to load",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-06-18"
+ },
+ {
+  "key": "adspaid",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14355942538",
+  "quote": "why am i getting ads on a premium account?",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-07-27"
+ },
+ {
+  "key": "adspaid",
+  "url": "https://news.ycombinator.com/item?id=45972340",
+  "quote": "I’m paying to not have ads, and you still serve me ads.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2025-11-18"
+ },
+ {
+  "key": "playback",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617041160",
+  "quote": "the playback stops by itself like 5-7 times on my way to work",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "playback",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14583851300",
+  "quote": "The android version of this app pauses randomly during my work day.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-23"
+ },
+ {
+  "key": "recs",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14360268231",
+  "quote": "the algorithm keeps giving me the same songs over and over again",
+  "source": "app-store",
+  "rating": "2",
+  "date": "2026-07-28"
+ },
+ {
+  "key": "recs",
+  "url": "https://news.ycombinator.com/item?id=34469711",
+  "quote": "Daily playlists are just several of my favorite artists shuffled.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-01-21"
+ },
+ {
+  "key": "offline",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14614101383",
+  "quote": "I’ve tried playing my downloaded music offline but it won’t play unless I’m connected to WiFi or on my 4/5g.",
+  "source": "app-store",
+  "rating": "2",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "offline",
+  "url": "https://news.ycombinator.com/item?id=34695080",
+  "quote": "I've had many flights where my \"offline\" library won't play",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-02-07"
+ },
+ {
+  "key": "login",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14607959550",
+  "quote": "now I can’t log back in as it says something went wrong",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-29"
+ },
+ {
+  "key": "inject",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619602976",
+  "quote": "is adding song not on the list. I made the list for a reason.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "inject",
+  "url": "https://news.ycombinator.com/item?id=44334326",
+  "quote": "They would try to insert songs to my playlists where they don’t belong.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2025-06-21"
+ },
+ {
+  "key": "artistpay",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14263660522",
+  "quote": "Spotify needs to pay artists what they are worth",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-07-04"
+ },
+ {
+  "key": "artistpay",
+  "url": "https://news.ycombinator.com/item?id=46712608",
+  "quote": "their treatment of artists is abominable",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-01-21"
+ },
+ {
+  "key": "removed",
+  "url": "https://news.ycombinator.com/item?id=35636121",
+  "quote": "So many tracks in my playlists are no longer available on the service.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-04-20"
+ },
+ {
+  "key": "removed",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620611771",
+  "quote": "they don’t tell you when you song gets taken off it just disappears from the playlist it was on",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "billing",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14603746577",
+  "quote": "I don’t think customers should have to fight this hard to get their own money back",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-28"
+ },
+ {
+  "key": "billing",
+  "url": "https://news.ycombinator.com/item?id=41859836",
+  "quote": "I had to \"continue to cancel\"",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-10-16"
+ },
+ {
+  "key": "shuffle",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600507830",
+  "quote": "I get the same sings every day on a playlist of around 1500 songs",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-27"
+ },
+ {
+  "key": "shuffle",
+  "url": "https://news.ycombinator.com/item?id=49523937",
+  "quote": "I'm aware last year Spotify announced \"fewer repeats\" shuffle - but it doesn't work, or isn't sufficient anyway.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-09-01"
+ },
+ {
+  "key": "icon",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14138031207",
+  "quote": "so hard to find Spotify icon on home screen",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-06-02"
+ },
+ {
+  "key": "paywall",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/xml#review-14581806561",
+  "quote": "It’s the best if you have premium the opposite if you don’t",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-22"
+ },
+ {
+  "key": "devices",
+  "url": "https://itunes.apple.com/ie/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14607828148",
+  "quote": "connecting to things like speakers shouldn’t cost money",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-29"
+ },
+ {
+  "key": "aimusic",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14432688196",
+  "quote": "Spotify should let us know if a song is AI generated.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-08-15"
+ },
+ {
+  "key": "aimusic",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=8/id=324684580/sortby=mostrecent/json#review-14222769708",
+  "quote": "there was no way for me to filter out and avoid all of the terrible AI music that is clogging up the platform",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-06-24"
+ },
+ {
+  "key": "queue",
+  "url": "https://news.ycombinator.com/item?id=47430204",
+  "quote": "how hard it is to add something to your current playing queue",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-03-18"
+ },
+ {
+  "key": "queue",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620191605",
+  "quote": "you guys need to let me queue a song next like apple music has instead of it being added to the bottom of the queue",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "prompts",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14616377763",
+  "quote": "this is the 1,000th time they have asked me to review their app",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "prompts",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14595122095",
+  "quote": "being asked to rate the app with a stupid pop up every single day is incredibly irritating",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-26"
+ },
+ {
+  "key": "audiobook",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14600885705",
+  "quote": "informed me that my hours (!) have been used up",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-27"
+ },
+ {
+  "key": "aifeat",
+  "url": "https://itunes.apple.com/ie/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14259905328",
+  "quote": "remove all the ai features that no one ever asked for",
+  "source": "app-store",
+  "rating": "2",
+  "date": "2026-07-03"
+ },
+ {
+  "key": "car",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=10/id=324684580/sortby=mostrecent/json#review-14092118927",
+  "quote": "CarPlay doesn’t work properly. The song on car infotainment does not match the song playing.",
+  "source": "app-store",
+  "rating": "2",
+  "date": "2026-05-22"
+ },
+ {
+  "key": "podcast",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/xml#review-14601013313",
+  "quote": "the app has suddenly started playing podcasts newest to oldest",
+  "source": "app-store",
+  "rating": "2",
+  "date": "2026-09-27"
+ },
+ {
+  "key": "libloss",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14614433626",
+  "quote": "It removes a lot of my liked songs unsure why",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "kids",
+  "url": "https://news.ycombinator.com/item?id=37791138",
+  "quote": "my kids used it to watch stupid TikTok videos all the time",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-10-06"
+ },
+ {
+  "key": "ipad",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14345061152",
+  "quote": "IT STILL CRASHES THE APP WHILE TRYING TO SWITCH FROM ONE SIDE TO THE OTHER!!",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-07-24"
+ },
+ {
+  "key": "lock",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618566405",
+  "quote": "Spotify removed the function to play it in locked screen mode",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "location",
+  "url": "https://itunes.apple.com/ie/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/xml#review-14462322496",
+  "quote": "Your location doesn't match your profile, upgrade to premium to listen internationally.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-08-23"
+ },
+ {
+  "key": "upload",
+  "url": "https://news.ycombinator.com/item?id=39428119",
+  "quote": "The one major gripe is not being able to upload my own songs",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-02-19"
+ },
+ {
+  "key": "upload",
+  "url": "https://news.ycombinator.com/item?id=41221819",
+  "quote": "I moved my family plan from Spotify because they still don’t have an easy to use music locker solution.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-08-12"
+ },
+ {
+  "key": "localfiles",
+  "url": "https://news.ycombinator.com/item?id=39428365",
+  "quote": "Local files in Spotify is extremely iffy. It has forgot them many times for me.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-02-19"
+ },
+ {
+  "key": "localfiles",
+  "url": "https://news.ycombinator.com/item?id=42113400",
+  "quote": "it just allows you to access local files per device",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-11-12"
+ },
+ {
+  "key": "own",
+  "url": "https://news.ycombinator.com/item?id=46776986",
+  "quote": "At the end, I had nothing to show for it.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-01-27"
+ },
+ {
+  "key": "own",
+  "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-17",
+  "quote": "can't get my 7000 songs off the damn app without starting completely over on something else, no transfer apps work.",
+  "source": "google-play",
+  "rating": "1",
+  "date": "2025-01-16"
+ },
+ {
+  "key": "export",
+  "url": "https://news.ycombinator.com/item?id=41119283",
+  "quote": "There is no way to export playlists.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-07-31"
+ },
+ {
+  "key": "export",
+  "url": "https://news.ycombinator.com/item?id=46777110",
+  "quote": "I was very annoyed that I had to pay a 3rd party company to export this data",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-01-27"
+ },
+ {
+  "key": "libtools",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/xml#review-14620065931",
+  "quote": "We need smart playlists.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "libtools",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14620004065",
+  "quote": "cannot search within my own playlist.",
+  "source": "app-store",
+  "rating": "2",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "libtools",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=4/id=324684580/sortby=mostrecent/json#review-14619890522",
+  "quote": "needs a dragging scrolling bar on the liked songs library",
+  "source": "app-store",
+  "rating": "5",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "history",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14359879282",
+  "quote": "I would like to know what the track play counts are.",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-07-28"
+ },
+ {
+  "key": "history",
+  "url": "https://news.ycombinator.com/item?id=40472957",
+  "quote": "Why can’t I see a stream of the songs I played so I can easily find what I recently played and play it again?",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-05-25"
+ },
+ {
+  "key": "shreq",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14619811598",
+  "quote": "I’d like to be able to just randomise my entire catalogue I have saved on my account",
+  "source": "app-store",
+  "rating": "4",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "shreq",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617332175",
+  "quote": "I really wish that it was possible to shuffle the queue",
+  "source": "app-store",
+  "rating": "4",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "shreq",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=9/id=324684580/sortby=mostrecent/xml#review-14594404521",
+  "quote": "should be a function that it will only play a song once until the playlists has looped back round again",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-09-25"
+ },
+ {
+  "key": "hide",
+  "url": "https://news.ycombinator.com/item?id=38520656",
+  "quote": "I don't like that I can't hide or disable audiobooks or podcasts.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-12-04"
+ },
+ {
+  "key": "lossless",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=7/id=324684580/sortby=mostrecent/json#review-14617292590",
+  "quote": "Not a good quality like Dolby or 4 k sound",
+  "source": "app-store",
+  "rating": "3",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "lossless",
+  "url": "https://news.ycombinator.com/item?id=34596537",
+  "quote": "they don't have offer a lossless quality stream",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-01-31"
+ },
+ {
+  "key": "lyrics",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/json#review-14607276368",
+  "quote": "i need the lyrics back",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-29"
+ },
+ {
+  "key": "noton",
+  "url": "https://news.ycombinator.com/item?id=39968033",
+  "quote": "I have a fair number of sentimental tracks that I've carried with me in my collection for decades which aren't on streaming sites.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-04-08"
+ },
+ {
+  "key": "noton_risk",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601011908",
+  "quote": "I wish Spotify would let people upload songs and remixes they like on YouTube but don’t exist on Spotify.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-27"
+ },
+ {
+  "key": "u_host",
+  "url": "https://news.ycombinator.com/item?id=42513052",
+  "quote": "I’ve been searching for services that host personal music collections, but there doesn’t seem to be much available.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-12-26"
+ },
+ {
+  "key": "u_host",
+  "url": "https://news.ycombinator.com/item?id=42513052",
+  "quote": "Some existing services allow you to add your own music files, like MP3s, but this often feels like a second-class citizen.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-12-26"
+ },
+ {
+  "key": "u_effort",
+  "url": "https://news.ycombinator.com/item?id=49518972",
+  "quote": "if something takes more than a few clicks to go from zero to music that leaves 95% of users out!",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-09-01"
+ },
+ {
+  "key": "u_effort",
+  "url": "https://news.ycombinator.com/item?id=43713614",
+  "quote": "i really have no idea what any of these words mean.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2025-04-17"
+ },
+ {
+  "key": "u_match",
+  "url": "https://news.ycombinator.com/item?id=41311984",
+  "quote": "Tracks I'd ripped from original CDs were replaced with different recordings.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-08-21"
+ },
+ {
+  "key": "u_match",
+  "url": "https://news.ycombinator.com/item?id=42113467",
+  "quote": "spotify used whatever it had in its database with the same name/artist, which wasn't always the same recording or even the same song",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-11-12"
+ },
+ {
+  "key": "u_offline",
+  "url": "https://news.ycombinator.com/item?id=49523451",
+  "quote": "the \"download for offline\" functionality is incredibly broken",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-09-01"
+ },
+ {
+  "key": "u_offline",
+  "url": "https://news.ycombinator.com/item?id=39776396",
+  "quote": "I have my library downloaded, why is the UI \"loading\" and blocking? It should be instant.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-03-21"
+ },
+ {
+  "key": "u_removed",
+  "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-2",
+  "quote": "It would be amazing if y'all could add a way to let us know when a song is removed from a playlist.",
+  "source": "google-play",
+  "rating": "4",
+  "date": "2026-04-13"
+ },
+ {
+  "key": "u_removed",
+  "url": "https://news.ycombinator.com/item?id=39967357",
+  "quote": "A music service that hides their catalog changes by subtly modifying my playlists is a no-go.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-04-08"
+ },
+ {
+  "key": "u_disc",
+  "url": "https://news.ycombinator.com/item?id=46518747",
+  "quote": "the thing I miss most is music discovery via radios / discover weekly",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-01-06"
+ },
+ {
+  "key": "u_disc",
+  "url": "https://news.ycombinator.com/item?id=48374133",
+  "quote": "Actually owning music I listen to now feels great, but I missed the automatic recommendations.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-06-02"
+ },
+ {
+  "key": "u_shuffle",
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14388226533",
+  "quote": "I have a playlist with over 2000 songs and yet I still hear the same song’s multiple times a day.",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-08-04"
+ },
+ {
+  "key": "u_kids",
+  "url": "https://news.ycombinator.com/item?id=42861610",
+  "quote": "There are no parental controls or any other method for blocking podcasts.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2025-01-29"
+ },
+ {
+  "key": "fx_ftc",
+  "url": "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=324684580/sortby=mostrecent/json#review-14613907575",
+  "quote": "you have to pay for your playlist to be lay in order",
+  "source": "app-store",
+  "rating": "5",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "fx_inject",
+  "url": "https://itunes.apple.com/au/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/json#review-14616895632",
+  "quote": "I JUST WANT TO LISTEN TO THE SONGS IN MY PLAYLIST!!",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "fx_quiet",
+  "url": "https://news.ycombinator.com/item?id=35462336",
+  "quote": "via full-screen modal popups in the app with no way to prevent them",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-04-06"
+ },
+ {
+  "key": "fx_shuffle",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=324684580/sortby=mostrecent/xml#review-14617171320",
+  "quote": "Shuffles the same few songs in my 600 song playlist",
+  "source": "app-store",
+  "rating": "4",
+  "date": "2026-10-01"
+ },
+ {
+  "key": "fx_offline",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=3/id=324684580/sortby=mostrecent/json#review-14607434628",
+  "quote": "I have to redownload every dam song every 3 days just for when I’m out of service",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-29"
+ },
+ {
+  "key": "fx_locker",
+  "url": "https://news.ycombinator.com/item?id=37792608",
+  "quote": "you can't upload to your own cloud library. Apple Music and YouTube Music both let you do that.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2023-10-06"
+ },
+ {
+  "key": "fx_hostage",
+  "url": "https://itunes.apple.com/us/rss/customerreviews/page=6/id=324684580/sortby=mostrecent/xml#review-14618139577",
+  "quote": "every song is blacked out and wont let me listen to it",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-10-02"
+ },
+ {
+  "key": "fx_hostage",
+  "url": "https://news.ycombinator.com/item?id=47021054",
+  "quote": "i felt they used my library to hold me hostage",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2026-02-15"
+ },
+ {
+  "key": "fx_libtools",
+  "url": "https://news.ycombinator.com/item?id=40472070",
+  "quote": "I want control over how my library is organized and made accessible to me.",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-05-25"
+ },
+ {
+  "key": "n_price",
+  "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US#review-1",
+  "quote": "maybe lower the price instead of increasing an extra dollar every year for premium",
+  "source": "google-play",
+  "rating": "3",
+  "date": "2026-04-10"
+ },
+ {
+  "key": "n_family",
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=5/id=324684580/sortby=mostrecent/xml#review-14601979221",
+  "quote": "Family plan is almost 50% more than the competition!",
+  "source": "app-store",
+  "rating": "1",
+  "date": "2026-09-27"
+ },
+ {
+  "key": "n_cancel",
+  "url": "https://news.ycombinator.com/item?id=41859836",
+  "quote": "I think I proceeded through 7-8 pages before my subscription was actually canceled",
+  "source": "hacker-news",
+  "rating": "",
+  "date": "2024-10-16"
+ }
+]
