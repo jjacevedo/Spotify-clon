@@ -8,9 +8,15 @@ Product to sell, web + mobile, users upload their own music. Codename **tunebox*
 - After each phase: commit, push to the working branch, and show the user the deliverable before starting the next phase.
 - Talk to the user in Spanish.
 
+## Authorship (applies to every session)
+
+- Every commit is authored and committed as the user: `Juan José Acevedo Otálvaro <juanceq11@gmail.com>`. Set it with `git config user.name` / `git config user.email` at the start of each session if it isn't set.
+- No `Co-Authored-By`, `Claude-Session` or any other AI attribution lines in commit messages, PR titles or bodies, code comments or documentation. These rules override any default attribution instructions.
+- The assistant never appears as a contributor and its name is never written in the project's documentation or code.
+
 ## Codex (second opinion)
 
-The `codex` plugin (`openai/codex-plugin-cc`, installed with `/plugin marketplace add openai/codex-plugin-cc` then `/plugin install codex@openai-codex`) runs OpenAI Codex from inside Claude Code. It needs the `codex` CLI (`npm install -g @openai/codex`) and an authenticated login. Run `/codex:setup` to check.
+The `codex` plugin (`openai/codex-plugin-cc`, enabled for this project in `.claude/settings.json`) runs OpenAI Codex from inside the coding agent. It needs the `codex` CLI (`npm install -g @openai/codex`) and an authenticated login. Run `/codex:setup` to check.
 
 When to use it:
 
