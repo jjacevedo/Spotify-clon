@@ -1,0 +1,74 @@
+feature,area,priority,original,clone,notes
+Sign up with email,auth,must,yes,no,
+Sign in with Google and Apple,auth,should,yes,no,Apple sign-in is required by App Store if any social login is offered on iOS
+Password reset by email,auth,must,yes,no,
+Upload audio files (mp3 m4a flac wav),library,must,yes,no,Spotify only links Local Files on the device; tunebox uploads to the cloud so the library follows the user to every device
+Read ID3 tags on upload (title artist album cover track number),library,must,yes,no,Spotify reads tags for Local Files; we use them to build albums and artists automatically
+Edit track metadata and cover art,library,should,no,no,Added: users own their files so they must be able to fix bad tags
+Storage quota per plan with usage meter,library,must,no,no,Added: needed because audio is stored server side
+Your Library with filters (playlists albums artists tracks),library,must,yes,no,
+Sort and search inside Your Library,library,must,yes,no,
+Grid and list view of Your Library,library,could,yes,no,
+Liked Songs (heart a track),library,must,yes,no,
+Album page built from tags,library,must,yes,no,
+Artist page built from tags,library,must,yes,no,
+Recently played,library,should,yes,no,
+Delete tracks and free storage,library,must,no,no,Added: owning files means deleting them
+Play pause skip previous seek,player,must,yes,no,
+Persistent now playing bar across navigation,player,must,yes,no,Playback must not stop when the route changes
+Full screen now playing view,player,must,yes,no,
+Volume and mute,player,must,yes,no,
+Shuffle,player,must,yes,no,
+Repeat (off all one),player,must,yes,no,
+Queue view with reorder and remove,player,must,yes,no,
+Play next and add to queue,player,must,yes,no,
+Gapless playback,player,should,yes,no,
+Crossfade setting,player,could,yes,no,
+Sleep timer,player,should,yes,no,
+Lock screen and media session controls,player,must,yes,no,Media Session API on web; native controls on iOS and Android
+Background playback on mobile,player,must,yes,no,
+Resume where you left off across devices,player,should,yes,no,
+Control playback on another device (Connect),player,could,yes,no,Realtime and hard; later
+Playback speed,player,could,yes,no,Spotify offers it for podcasts and audiobooks
+Lyrics (synced from LRC files),player,could,yes,no,Spotify lyrics are licensed from Musixmatch; we only show lyrics the user supplies
+Audio quality setting (stream bitrate),player,should,yes,no,
+Lossless playback,player,could,yes,no,Premium gate on the original; maps cleanly to a paid tier
+Create rename delete playlist,playlists,must,yes,no,
+Add and remove tracks in a playlist,playlists,must,yes,no,
+Reorder tracks by drag,playlists,must,yes,no,
+Playlist cover (auto mosaic or custom upload),playlists,should,yes,no,
+Playlist description,playlists,should,yes,no,
+Playlist folders,playlists,could,yes,no,
+Collaborative playlist,playlists,could,yes,no,Only among users who each own the tracks they add
+Pin items in Your Library,playlists,could,yes,no,
+Search across own library (tracks albums artists playlists),search,must,yes,no,
+Recent searches,search,should,yes,no,
+Browse by genre tag,search,could,yes,no,Built from the user's own genre tags not editorial categories
+Home with recently played and quick picks,home,must,yes,no,
+Home shelves (most played forgotten favorites by genre),home,should,yes,no,Computed from the user's own history; no catalog recommendations
+Download for offline on mobile,offline,must,yes,no,Premium-gated on the original; key paid feature for tunebox
+Offline indicator and downloaded filter,offline,should,yes,no,
+Storage settings for downloads,offline,should,yes,no,
+Share a playlist by link,social,should,yes,no,Recipients only stream if the owner made it public; rate-limited and DMCA-covered
+Public profile with public playlists,social,could,yes,no,
+Follow users,social,could,yes,no,
+Report content (copyright),social,must,no,no,Added: required for a DMCA takedown process when content can be shared
+Account settings (email password delete account),settings,must,yes,no,
+Plan and billing management,settings,must,yes,no,
+Free and paid plans with checkout,payments,must,yes,no,Original: Free vs Premium; tunebox gates storage offline and quality
+Family or duo plan,payments,could,yes,no,
+Student discount,payments,could,yes,no,
+Notifications settings,settings,could,yes,no,
+Dark theme UI,design,must,yes,no,
+Responsive web layout (desktop sidebar mobile bottom nav),design,must,yes,no,
+Keyboard shortcuts on web,design,should,yes,no,
+Tablet layout,design,could,yes,no,
+Spotify music catalogue,content,must,yes,skip,Licensed content owned by labels and Spotify; tunebox plays only files the user uploads
+Podcasts and audiobooks catalogue,content,should,yes,skip,Licensed content; could later accept user uploaded audiobooks as plain files
+Video podcasts and music videos,content,could,yes,skip,Licensed content
+Personalized recommendations from the global catalogue (Discover Weekly DJ Daily Mix),discovery,should,yes,skip,Built on Spotify's catalogue and user network; not cloneable. Own-library shelves replace it
+AI DJ and Talk to Spotify,discovery,could,yes,skip,Depends on catalogue and licensed voice; out of scope
+Wrapped from global listening data,discovery,could,yes,skip,Spotify's data; a personal stats page from own history could be added later
+Jam and Blend group listening,social,could,yes,skip,Depends on everyone having the same catalogue; revisit later
+Ads on the free tier,payments,could,yes,skip,Ad business and partners; tunebox free tier is limited by storage instead
+Integrations (cars smart speakers consoles),integrations,could,yes,skip,Partner deals and hardware
