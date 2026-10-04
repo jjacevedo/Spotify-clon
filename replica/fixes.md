@@ -1,4 +1,5 @@
 Note: the product was later named Tunehold (see brand.md); this document uses the earlier codename tunebox.
+> **Scope update (2026-10-04):** Tunehold is for personal use for now. Payments, pricing, the landing-page market gate, store billing and legal work in this document are deferred; see `deferred.md`.
 
 # tunebox: what users of the original hate, miss and leave unsolved, and what tunebox does about it
 

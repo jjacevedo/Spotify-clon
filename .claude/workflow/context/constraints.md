@@ -2,6 +2,8 @@
 
 ## Scope and legal
 
+0. **Personal-use scope (overrides the items below where they conflict).** No payments, plans, pricing, legal workflows (DMCA/takedown, terms, launch-country rules), store listings or market-validation gate until the founder decides to launch; see `replica/deferred.md`. Files are private to their uploader; nothing is shared publicly in this stage, so item 4 applies only when sharing is built.
+
 1. **Clean-room.** Rebuild functionality and UX patterns, never Spotify's code, logo, name, green, Circular font, copy, illustrations or private APIs. Write every line fresh.
 2. **The word "Spotify" never appears** in code, identifiers, assets, user-facing copy or commits for app code. Use `Tunehold` (`tunehold` in identifiers and package names). Deploy gate: `sweep.py <folder> --config replica/brand.json` must exit 0 for each of the app's own folders (the ones /replica-architect sets up, plus `public/` and any email templates). The run from the repository root is a report: the only hits allowed there are the 9 instruction lines listed in `replica/brand.md` (Sweep). The only exceptions are reference documents under `replica/` and `.claude/workflow/` (recon, specs) that describe the original.
 3. **No catalogue.** Tunehold only plays files the user uploaded. No integration with licensed catalogues or lyrics.

@@ -4,7 +4,7 @@ Formerly code-named tunebox; earlier research docs in replica/ use that codename
 
 ## What it is
 
-A music player sold as a product: web + iOS + Android. Users **upload their own audio files** to the cloud, organize them in a library and playlists, and play them on every device with a queue, offline downloads and playlist sharing. It's a clean-room rebuild of Spotify's features and flows (see `replica/recon.md`), never of its code, brand, copy or catalogue. Product name **Tunehold**, chosen in the `/replica-brand` phase (see `replica/brand.md`; screening checks only, a trademark lawyer still has to search before money is spent on the name).
+A music player for web + iOS + Android, **for personal use for now** (the founder and a few friends; invite-only accounts). Payments, pricing, legal work, store listings and market validation are deferred (see `replica/deferred.md`); a public launch may come much later. Users **upload their own audio files** to the cloud, organize them in a library and playlists, and play them on every device with a queue, offline downloads and playlist sharing. It's a clean-room rebuild of Spotify's features and flows (see `replica/recon.md`), never of its code, brand, copy or catalogue. Product name **Tunehold**, chosen in the `/replica-brand` phase (see `replica/brand.md`; screening checks only, a trademark lawyer still has to search before money is spent on the name).
 
 ## Status (2026-10-04)
 

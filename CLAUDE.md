@@ -1,6 +1,6 @@
 # Tunehold (Spotify-style clone)
 
-Product to sell, web + mobile, users upload their own music. Product name **Tunehold** (see `replica/brand.md`): never write "Spotify" in code, assets or user-facing copy.
+Web + mobile app where users upload their own music. **For now it is for personal use** (the founder and a few friends): payments, pricing, legal work, store listings and market validation are deferred, see `replica/deferred.md`. Don't build them or block on them. Product name **Tunehold** (see `replica/brand.md`): never write "Spotify" in code, assets or user-facing copy.
 
 Formerly code-named tunebox; earlier research docs in replica/ use that codename.
 
