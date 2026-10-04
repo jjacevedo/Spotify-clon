@@ -5,6 +5,7 @@ Product to sell, web + mobile, users upload their own music. Codename **tunebox*
 ## Workflow
 
 - The Replica skills in `.claude/skills/replica-*` drive the project, one phase at a time: recon → entrepreneur (early pass) → architect → design → build → backend → test → diff → entrepreneur (final pass) → brand → launch → deploy. Their outputs live in `replica/`.
+- Phases that produce code (build, backend, test/diff fixes) follow the multi-agent workflow in `.claude/workflow/WORKFLOW.md`: the main session orchestrates the `architect`, `frontend-developer`, `backend-developer`, `qa-reviewer` and `tech-lead` subagents (`.claude/agents/`), classifies every task as small/medium/large, and keeps `.claude/workflow/state.json` up to date.
 - After each phase: commit, push to the working branch, and show the user the deliverable before starting the next phase.
 - Talk to the user in Spanish.
 

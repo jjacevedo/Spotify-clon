@@ -1,0 +1,5 @@
+{
+  "base_branch": "cl/great-gauss-36g7dv",
+  "stages": ["planning", "development", "qa_review", "integration", "validation", "complete"],
+  "features": {}
+}
