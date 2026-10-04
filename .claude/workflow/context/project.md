@@ -60,5 +60,5 @@ codex login --device-auth                                                       
 
 - **Base branch:** `cl/great-gauss-36g7dv`. It's the only branch on the remote and there is no `main`.
 - Feature branches: `feature/<feature-key>`, created from the base branch (the `developer` worktree).
-- Author of every commit: `Juan José Acevedo Otálvaro <juanceq11@gmail.com>`. No AI attribution lines.
+- Author of every commit: `Juan José Acevedo Otálvaro <178350246+jjacevedo@users.noreply.github.com>`. No AI attribution lines.
 - Commit convention (from the history): short subject in English, imperative ("Add …", "Fix …"), or `<Phase>: <summary>` for Replica phases (e.g. `Recon: map …`). Optional body explaining the why.

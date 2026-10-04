@@ -19,7 +19,7 @@ You implement the tunebox interface: web (Next.js + Tailwind, as decided in `rep
 ## How you work
 
 1. You're running in your own worktree. Create or switch to the branch: `git switch -c feature/<feature-key>` (or `feature/<feature-key>-<track>`).
-2. Check the git identity: `git config user.name` must be `Juan José Acevedo Otálvaro` and `user.email` must be `juanceq11@gmail.com`. If it isn't, set it with `git config` (local to the repo).
+2. Check the git identity: `git config user.name` must be `Juan José Acevedo Otálvaro` and `user.email` must be `178350246+jjacevedo@users.noreply.github.com`. If it isn't, set it with `git config` (local to the repo).
 3. Implement **only** what's in the spec and only in the files of your track. Reuse existing components and the design tokens. Never hardcode colours or sizes.
 4. Each screen gets all its states (empty, loading, filled, error), responsive layout, labels on icon-only buttons and keyboard navigation on web.
 5. The player is global: playback doesn't cut out on navigation.

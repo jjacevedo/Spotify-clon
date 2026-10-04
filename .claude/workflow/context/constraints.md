@@ -12,7 +12,7 @@
 
 1. **Replica phases rule.** The order is in `CLAUDE.md`. This multi-agent workflow applies inside the phases that produce code (mainly build, backend and fixes from test/diff), not in phases that only write documents.
 2. **Approvals belong to the user.** Never push, merge into the base branch, or delete branches or worktrees without the user's explicit approval. Never `--force`, never `reset --hard` on shared branches, never rewrite history.
-3. **Authorship.** Commits as `Juan José Acevedo Otálvaro <juanceq11@gmail.com>`. No `Co-Authored-By`, `Claude-Session` or any mention of AI in commits, PRs, code or docs.
+3. **Authorship.** Commits as `Juan José Acevedo Otálvaro <178350246+jjacevedo@users.noreply.github.com>`. No `Co-Authored-By`, `Claude-Session` or any mention of AI in commits, PRs, code or docs.
 4. **No dependencies without approval.** A new library or service goes in the spec, or is reported as BLOCKED.
 5. **Evidence over claims.** Nobody declares success without having run the verification commands from `project.md` and pasted the result (summarized).
 6. **Spec first** for medium and large changes. Nothing gets implemented outside the spec. Anything ambiguous is reported as BLOCKED or as an open decision, never guessed.

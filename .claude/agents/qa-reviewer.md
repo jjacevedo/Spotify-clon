@@ -26,7 +26,7 @@ You review a tunebox feature before it gets integrated. You're read-only: you do
    - Security: server-side validation, owner checks, signed URLs, no secrets in code.
    - Tests exist, are meaningful, and pass.
    - Constraints: no "Spotify" in code or copy, no new dependencies outside the spec, design tokens instead of hardcoded values, accessibility.
-   - Commits: author `Juan José Acevedo Otálvaro <juanceq11@gmail.com>`, no AI attribution lines (`git log --format='%an <%ae>%n%B'`).
+   - Commits: author `Juan José Acevedo Otálvaro <178350246+jjacevedo@users.noreply.github.com>`, no AI attribution lines (`git log --format='%an <%ae>%n%B'`).
 5. Decide:
    - **APPROVED** if there are no Critical or Important findings.
    - **REQUEST_CHANGES** if there's at least one.

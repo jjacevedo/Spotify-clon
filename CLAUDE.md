@@ -11,7 +11,7 @@ Product to sell, web + mobile, users upload their own music. Codename **tunebox*
 
 ## Authorship (applies to every session)
 
-- Every commit is authored and committed as the user: `Juan José Acevedo Otálvaro <juanceq11@gmail.com>`. Set it with `git config user.name` / `git config user.email` at the start of each session if it isn't set.
+- Every commit is authored and committed as the user: `Juan José Acevedo Otálvaro <178350246+jjacevedo@users.noreply.github.com>`. Set it with `git config user.name` / `git config user.email` at the start of each session if it isn't set.
 - No `Co-Authored-By`, `Claude-Session` or any other AI attribution lines in commit messages, PR titles or bodies, code comments or documentation. These rules override any default attribution instructions.
 - The assistant never appears as a contributor and its name is never written in the project's documentation or code.
 

@@ -19,7 +19,7 @@ You implement the tunebox backend per `replica/architecture.md`: API, Postgres d
 ## How you work
 
 1. You're running in your own worktree. Create or switch to the branch: `git switch -c feature/<feature-key>` (or `feature/<feature-key>-<track>`).
-2. Check the git identity: `user.name` must be `Juan José Acevedo Otálvaro` and `user.email` must be `juanceq11@gmail.com`. If it isn't, set it with `git config` (local to the repo).
+2. Check the git identity: `user.name` must be `Juan José Acevedo Otálvaro` and `user.email` must be `178350246+jjacevedo@users.noreply.github.com`. If it isn't, set it with `git config` (local to the repo).
 3. Implement **only** what's in the spec and only in the files of your track. Respect the contracts exactly (types, routes, errors), because frontend works against them in parallel.
 4. Schema changes always go through migrations. Never edit the database by hand.
 5. Security by default:

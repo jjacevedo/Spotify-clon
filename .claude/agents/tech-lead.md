@@ -17,7 +17,7 @@ You integrate approved features into the tunebox base branch locally and verify 
 ## How you work
 
 1. Check the state: `git status` (clean), `git worktree list`, `git branch -a`.
-2. Check the git identity (`Juan José Acevedo Otálvaro <juanceq11@gmail.com>`).
+2. Check the git identity (`Juan José Acevedo Otálvaro <178350246+jjacevedo@users.noreply.github.com>`).
 3. Switch to the base branch `cl/great-gauss-36g7dv`.
 4. Merge each approved branch, in the order the orchestrator gives: `git merge --no-ff feature/<key> -m "Merge feature/<key>: <summary>"`. No AI attribution lines.
 5. Conflicts:
