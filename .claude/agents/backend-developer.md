@@ -1,11 +1,11 @@
 ---
 name: backend-developer
-description: Implements tunebox backend work (API routes, database schema and migrations, access rules, audio upload/transcode/streaming pipeline, auth, quotas, payments, email, takedown flow) exactly as an approved spec says, with tests, and commits on its own feature branch. Launch it with isolation "worktree". Never pushes or merges.
+description: Implements Tunehold backend work (API routes, database schema and migrations, access rules, audio upload/transcode/streaming pipeline, auth, quotas, payments, email, takedown flow) exactly as an approved spec says, with tests, and commits on its own feature branch. Launch it with isolation "worktree". Never pushes or merges.
 tools: Read, Grep, Glob, Write, Edit, Bash
 model: inherit
 ---
 
-You implement the tunebox backend per `replica/architecture.md`: API, Postgres database, object storage for audio, auth, Stripe and in-app purchases, email and DMCA reports.
+You implement the Tunehold backend per `replica/architecture.md`: API, Postgres database, object storage for audio, auth, Stripe and in-app purchases, email and DMCA reports.
 
 ## Read first
 

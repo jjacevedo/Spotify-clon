@@ -1,0 +1,76 @@
+{
+  "_about": "Tunehold brand file. sweep.py (--config) reads avoid, domains and colors; listing.py reads avoid (copy it into replica/launch/listing.json); replica-deploy runs the sweep with this file. Every other key is information for people and later phases and is ignored by the tools. Screening checks, not legal clearance: see replica/brand.md.",
+  "name": "Tunehold",
+  "codename_previous": "tunebox",
+  "avoid": ["Spotify", "Spotify AB", "Spotify Technology"],
+  "domains": ["spotify.com", "open.spotify.com", "scdn.co"],
+  "colors": ["#1DB954", "#1ED760"],
+  "labels_to_avoid": {
+    "_about": "The original's feature and tier names. Not read by sweep.py --config, because plain words like Wrapped, Jam or Premium would flood it with false hits. Check sweep_with_avoid with: python3 .claude/skills/replica-brand/sweep.py . --avoid \"Liked Songs,Smart Shuffle,Discover Weekly,Daily Mix\" (no --config: adding it also reports the 9 instruction lines listed in replica/brand.md#sweep, so it always exits 1; without it, exit 0 means clean). check_by_eye: words that sweep.py, which matches names in any case, would also flag in approved copy, so check them by eye. That is why \"Your Library\" is there: the sweep would flag the approved body text \"your library\". Check the Title-case label with a case-sensitive grep: grep -rnI --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=replica \"Your Library\" . (no output means clean).",
+    "sweep_with_avoid": ["Liked Songs", "Smart Shuffle", "Discover Weekly", "Daily Mix"],
+    "check_by_eye": ["Your Library", "Wrapped", "Jam", "Blend", "Premium Individual", "Premium Duo", "Premium Family", "Premium Student"]
+  },
+  "palette": {
+    "name": "A · Dusk",
+    "tokens": "replica/design/tokens.json",
+    "theme_app": "color (dark)",
+    "theme_landing": "color-light",
+    "dark": {
+      "bg": "#100E17",
+      "surface": "#18151F",
+      "surface-raised": "#221E2C",
+      "border": "#363042",
+      "border-input": "#ADA7BC",
+      "text": "#F3F1F8",
+      "text-muted": "#ADA7BC",
+      "accent": "#AC9CFA",
+      "on-accent": "#140F2E",
+      "accent-2": "#FFB48C",
+      "danger": "#FF8F84",
+      "success": "#A9D88B"
+    },
+    "light": {
+      "bg": "#FBFAFE",
+      "surface": "#F2F0F8",
+      "surface-raised": "#FFFFFF",
+      "border": "#DAD6E6",
+      "border-input": "#595369",
+      "text": "#17141F",
+      "text-muted": "#595369",
+      "accent": "#5E3DCB",
+      "on-accent": "#FFFFFF",
+      "accent-2": "#A2481A",
+      "danger": "#BC2F28",
+      "success": "#3C7420"
+    },
+    "contrast": "24 pairs per theme, 0 failing AA (contrast.py, 2026-10-04)",
+    "font": {
+      "sans": "Atkinson Hyperlegible Next",
+      "mono": "Atkinson Hyperlegible Mono",
+      "licence": "SIL Open Font License 1.1",
+      "source": "Google Fonts"
+    },
+    "details": "replica/brand.md#palette"
+  },
+  "checks": {
+    "date": "2026-10-04",
+    "verdict": "caution",
+    "kind": "screening checks, not legal clearance",
+    "tunehold_table": "replica/brand.md#name",
+    "all_names": "replica/brand/checks-summary.md",
+    "open_issue": "TUNEHOOD, US sn 99899715, pending application, class 41, filed 2026-06-23",
+    "to_run": [
+      "EU: TMview / EUIPO eSearch for TUNEHOLD and TUNEHOOD, classes 9, 41, 42",
+      "WIPO Global Brand Database",
+      "Colombia: SIC register",
+      "Domains: tunehold.app, tunehold.fm, tunehold.io, tunehold.co at a registrar",
+      "Handles: X, Instagram, TikTok",
+      "5-listener 'hold music' association test"
+    ],
+    "domains_free_at_check": {
+      "tunehold.com": "RDAP 404, 2026-10-04 11:20 UTC, re-checked ~16:59 UTC; not reserved",
+      "tunehold.net": "RDAP 404, 2026-10-04 11:20 UTC, re-checked ~16:59 UTC; not reserved"
+    },
+    "lawyer": "A trademark lawyer should search the US, the EU and Colombia (classes 9, 41, 42) before money is spent on the name."
+  }
+}

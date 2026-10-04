@@ -1,3 +1,5 @@
+Note: the product was later named Tunehold (see brand.md); this document uses the earlier codename tunebox.
+
 # Recon map: Spotify (web + iOS + Android)
 
 Scope: the personal-library music player loop. Upload your own audio, organize it into a library and playlists, and play it everywhere with a queue, offline downloads and sharing. The Spotify catalogue, recommendations and social graph are out of scope (see below).

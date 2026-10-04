@@ -1,8 +1,10 @@
-# Project: tunebox
+# Project: Tunehold
+
+Formerly code-named tunebox; earlier research docs in replica/ use that codename.
 
 ## What it is
 
-A music player sold as a product: web + iOS + Android. Users **upload their own audio files** to the cloud, organize them in a library and playlists, and play them on every device with a queue, offline downloads and playlist sharing. It's a clean-room rebuild of Spotify's features and flows (see `replica/recon.md`), never of its code, brand, copy or catalogue. Codename **tunebox**. The final name comes out of the `/replica-brand` phase.
+A music player sold as a product: web + iOS + Android. Users **upload their own audio files** to the cloud, organize them in a library and playlists, and play them on every device with a queue, offline downloads and playlist sharing. It's a clean-room rebuild of Spotify's features and flows (see `replica/recon.md`), never of its code, brand, copy or catalogue. Product name **Tunehold**, chosen in the `/replica-brand` phase (see `replica/brand.md`; screening checks only, a trademark lawyer still has to search before money is spent on the name).
 
 ## Status (2026-10-04)
 
@@ -41,7 +43,7 @@ Available today (standard-library Python 3, no dependencies):
 ```bash
 python3 .claude/skills/replica-diff/parity.py replica/features.csv          # parity score + missing list
 python3 .claude/skills/replica-design/contrast.py replica/design/tokens.json # WCAG contrast of the tokens
-python3 .claude/skills/replica-brand/sweep.py . --avoid "Spotify"           # leftovers of the original
+python3 .claude/skills/replica-brand/sweep.py . --config replica/brand.json # leftovers of the original (report: exits 1 on the 9 instruction lines in replica/brand.md#sweep; the gate is constraint 2)
 python3 .claude/skills/replica-diff/imgdiff.py original.png clone.png --out diff.png
 python3 .claude/skills/replica-launch/listing.py replica/launch/listing.json
 python3 .claude/skills/replica-entrepreneur/reviews.py replica/reviews.csv

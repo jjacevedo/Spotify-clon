@@ -3,8 +3,8 @@
 ## Scope and legal
 
 1. **Clean-room.** Rebuild functionality and UX patterns, never Spotify's code, logo, name, green, Circular font, copy, illustrations or private APIs. Write every line fresh.
-2. **The word "Spotify" never appears** in code, identifiers, assets, user-facing copy or commits for app code. Use `tunebox`. `sweep.py --avoid "Spotify"` must come out clean before deploy. The only exceptions are reference documents under `replica/` and `.claude/workflow/` (recon, specs) that describe the original.
-3. **No catalogue.** tunebox only plays files the user uploaded. No integration with licensed catalogues or lyrics.
+2. **The word "Spotify" never appears** in code, identifiers, assets, user-facing copy or commits for app code. Use `Tunehold` (`tunehold` in identifiers and package names). Deploy gate: `sweep.py <folder> --config replica/brand.json` must exit 0 for each of the app's own folders (the ones /replica-architect sets up, plus `public/` and any email templates). The run from the repository root is a report: the only hits allowed there are the 9 instruction lines listed in `replica/brand.md` (Sweep). The only exceptions are reference documents under `replica/` and `.claude/workflow/` (recon, specs) that describe the original.
+3. **No catalogue.** Tunehold only plays files the user uploaded. No integration with licensed catalogues or lyrics.
 4. **Copyright on uploads.** Any feature that makes content visible to other people (sharing, public profiles, collaborative playlists) needs reporting/takedown (F11, S26), rate limits, and recipients can't download. Raise it in the spec if it's missing.
 5. **Out of scope** (`skip` rows in `features.csv`): recommendations from a global catalogue, AI DJ, Wrapped, Jam/Blend, ads, partner integrations. Don't implement them without explicit approval.
 

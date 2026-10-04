@@ -1,3 +1,5 @@
+Note: the product was later named Tunehold (see brand.md); this document uses the earlier codename tunebox.
+
 # tunebox: what users of the original hate, miss and leave unsolved, and what tunebox does about it
 
 Final, 2026-10-04. /replica-entrepreneur research document. Three analyst lenses (evidence, fit, market) coded the same data, then three adversarial verifiers (quotes, counts, fit) checked the draft. Every verifier finding is applied, and so are the findings of two independent audits of the final document (7 each) and the 14 findings of a final business and legal review; section 8 lists every round. tunebox has no licensed catalogue. It only plays files the user uploaded (web, iOS, Android).
