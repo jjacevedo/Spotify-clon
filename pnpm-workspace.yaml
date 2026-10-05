@@ -11,3 +11,7 @@ catalog:
 
 allowBuilds:
   unrs-resolver: false
+
+strictDepBuilds: true
+
+minimumReleaseAge: 1440
