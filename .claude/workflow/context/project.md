@@ -14,12 +14,19 @@ A music player for web + iOS + Android, **for personal use for now** (the founde
 
 ## Stack
 
-Not decided. Current direction, to be confirmed in `/replica-architect`:
-- Web: Next.js (TypeScript) + Tailwind
-- Mobile: Expo / React Native (TypeScript), sharing logic with the web through a monorepo
-- Backend: Postgres + audio storage in S3-compatible object storage, with signed streaming URLs
-- Payments: Stripe on the web, plus in-app purchases on iOS and Android
-- E2E tests: Playwright (Chromium preinstalled in the cloud container at `/opt/pw-browsers`)
+Decided in `/replica-architect` (2026-10-04). Full table, schema, API and build order are in `replica/architecture.md`, and the SQL is in `replica/schema.sql`.
+
+- **Monorepo:** pnpm workspaces + Turborepo, TypeScript `strict`, Node 22 LTS. Apps: `apps/web`, `apps/mobile`. Packages (`@tunehold/*`): `contract`, `db`, `player-core`, `media`, `storage`, `tokens`, `config`.
+- **Web + API + landing:** Next.js (current stable, App Router) as one Vercel Hobby project (`iad1`). The landing page is at `/` (`app/(marketing)`), the app under `app/(app)`, REST under `/api/v1`, and the sweep at `/api/cron/sweep`. Tailwind CSS v4 themed from `replica/design/tokens.json`, Radix UI, TanStack Query and Virtual, dnd-kit, Zustand.
+- **Mobile:** Expo SDK 58 + expo-router, EAS development builds (no Expo Go). expo-audio (`AudioPlaylist`, lock screen, background), expo-file-system (uploads and downloads), expo-sqlite (offline mirror and outbox), FlashList, expo-image.
+- **Database:** Supabase Postgres Free (dev and prod projects) with `pg_trgm` and `unaccent`. Drizzle ORM; plain-SQL migrations in `packages/db/migrations` applied by `drizzle-kit migrate` (never `push`); postgres.js through the Supavisor transaction pooler.
+- **Access rules:** data-layer checks (owner-scoped repositories), plus RLS enabled with no policies, the Data API off, and composite owner foreign keys.
+- **Auth:** Supabase Auth, email + password, invite-only (sign-ups off; admin `generateLink`). Cookies on web (`@supabase/ssr`), Bearer + `getClaims` on mobile. No email provider in v1.
+- **Files:** Backblaze B2 private bucket through the S3 API (`@aws-sdk/client-s3`, checksum mode `WHEN_REQUIRED`), presigned PUT/GET only. Audio never passes through Vercel. Cloudflare R2 is the env-var swap.
+- **Media:** `music-metadata` + `@tokenizer/s3`, `file-type`, `sharp`. Web uploads use Uppy (`@uppy/aws-s3`, headless) + `hash-wasm`.
+- **Jobs:** a Postgres `jobs` table run by `after()`. GitHub Actions runs the sweep hourly and a nightly `pg_dump` to a B2 backups bucket. A Vercel daily cron is the second trigger.
+- **Payments:** deferred (`replica/deferred.md`).
+- **Tests:** Vitest (packages, repositories, second-user suite), Playwright for web e2e (Chromium preinstalled at `/opt/pw-browsers`), GitHub Actions CI, an on-device checklist for mobile playback.
 
 ## Current structure
 
@@ -49,7 +56,36 @@ python3 .claude/skills/replica-launch/listing.py replica/launch/listing.json
 python3 .claude/skills/replica-entrepreneur/reviews.py replica/reviews.csv
 ```
 
-App commands (install, dev, test, lint, typecheck, build): **they don't exist yet**. They're defined in `/replica-architect` and written here. Until then no developer can claim "tests passing".
+App commands: **planned, created by the first build task** (milestone 0, the scaffold + landing task in `replica/architecture.md`). The commands marked (M1a) arrive with the web slice and the ones marked (M1b) with the Android slice. Until a command exists in `package.json`, no developer can claim it passes.
+
+```bash
+# planned — created by the first build task (milestone 0)
+pnpm install                                   # whole monorepo (pnpm workspaces)
+pnpm dev                                       # turbo: apps/web on http://localhost:3000
+pnpm lint                                      # eslint, every workspace
+pnpm typecheck                                 # tsc --noEmit, every workspace (strict)
+pnpm test                                      # vitest, every workspace that has tests
+pnpm build                                     # turbo build (web: next build; packages: tsc)
+pnpm --filter @tunehold/web build              # web only
+python3 .claude/skills/replica-brand/sweep.py apps/web --config replica/brand.json   # deploy gate, must exit 0
+
+# planned — created by the web slice (M1a)
+pnpm --filter @tunehold/db db:migrate          # drizzle-kit migrate against DATABASE_URL_DIRECT
+pnpm --filter @tunehold/db db:seed             # admin profile for ADMIN_EMAIL
+pnpm test:db                                   # repository + second-user suite; needs DATABASE_URL_TEST (Postgres 17)
+PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers pnpm --filter @tunehold/web e2e   # Playwright web e2e
+psql "$DATABASE_URL_TEST" -v ON_ERROR_STOP=1 --single-transaction -f replica/schema.sql   # schema smoke run (not executed yet)
+python3 .claude/skills/replica-brand/sweep.py packages --config replica/brand.json      # must exit 0
+
+# planned — created by the Android slice (M1b)
+pnpm --filter @tunehold/mobile start           # expo start --dev-client
+pnpm --filter @tunehold/mobile typecheck
+pnpm --filter @tunehold/mobile test            # vitest on pure modules (offline/sync logic); no RN test runner in v1
+pnpm --filter @tunehold/mobile exec eas build --profile development --platform android
+pnpm --filter @tunehold/mobile exec eas build --profile preview --platform android    # internal APK for friends
+pnpm --filter @tunehold/mobile exec eas build --profile testflight --platform ios     # after the Apple Developer Program decision
+python3 .claude/skills/replica-brand/sweep.py apps/mobile --config replica/brand.json  # must exit 0
+```
 
 Codex (second reviewer, run by the orchestrator in the main session):
 
