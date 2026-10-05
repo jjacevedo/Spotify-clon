@@ -21,3 +21,6 @@ blob-report/
 
 # OS
 .DS_Store
+
+# agent worktrees
+.claude/worktrees/
