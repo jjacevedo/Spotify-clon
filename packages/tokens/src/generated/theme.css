@@ -1,0 +1,93 @@
+/* Generated from replica/design/tokens.json by packages/tokens/scripts/generate.mjs.
+   Do not edit by hand: change the JSON, then run `pnpm --filter @tunehold/tokens generate`. */
+
+/* Tailwind theme. The dark block is the default, because the app is dark first.
+   --color-*: initial removes the default palette, so only token colours exist. */
+@theme {
+  --color-*: initial;
+  --color-bg: #100E17;
+  --color-surface: #18151F;
+  --color-surface-raised: #221E2C;
+  --color-border: #363042;
+  --color-border-input: #ADA7BC;
+  --color-text: #F3F1F8;
+  --color-text-muted: #ADA7BC;
+  --color-accent: #AC9CFA;
+  --color-on-accent: #140F2E;
+  --color-accent-2: #FFB48C;
+  --color-danger: #FF8F84;
+  --color-success: #A9D88B;
+
+  --font-sans: var(--tunehold-font-sans, "Atkinson Hyperlegible Next"), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-mono: var(--tunehold-font-mono, "Atkinson Hyperlegible Mono"), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-xs--font-weight: 500;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-sm--font-weight: 400;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-base--font-weight: 400;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.75rem;
+  --text-lg--font-weight: 600;
+  --text-xl: 1.75rem;
+  --text-xl--line-height: 2.125rem;
+  --text-xl--font-weight: 700;
+  --text-display: 2.5rem;
+  --text-display--line-height: 2.75rem;
+  --text-display--font-weight: 700;
+
+  --spacing: 0.25rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.10);
+  --shadow-pop: 0 12px 32px rgba(16,24,40,.16);
+
+  --ease-standard: cubic-bezier(.2,.8,.2,1);
+}
+
+/* Bands: a [data-theme] element re-points the colour roles for its subtree. */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #100E17;
+  --color-surface: #18151F;
+  --color-surface-raised: #221E2C;
+  --color-border: #363042;
+  --color-border-input: #ADA7BC;
+  --color-text: #F3F1F8;
+  --color-text-muted: #ADA7BC;
+  --color-accent: #AC9CFA;
+  --color-on-accent: #140F2E;
+  --color-accent-2: #FFB48C;
+  --color-danger: #FF8F84;
+  --color-success: #A9D88B;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #FBFAFE;
+  --color-surface: #F2F0F8;
+  --color-surface-raised: #FFFFFF;
+  --color-border: #DAD6E6;
+  --color-border-input: #595369;
+  --color-text: #17141F;
+  --color-text-muted: #595369;
+  --color-accent: #5E3DCB;
+  --color-on-accent: #FFFFFF;
+  --color-accent-2: #A2481A;
+  --color-danger: #BC2F28;
+  --color-success: #3C7420;
+}
+
+:root {
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+}
