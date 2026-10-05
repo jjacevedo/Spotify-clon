@@ -57,10 +57,12 @@ python3 .claude/skills/replica-launch/listing.py replica/launch/listing.json
 python3 .claude/skills/replica-entrepreneur/reviews.py replica/reviews.csv
 ```
 
-App commands: **planned, created by the first build task** (milestone 0, the scaffold + landing task in `replica/architecture.md`). The commands marked (M1a) arrive with the web slice and the ones marked (M1b) with the Android slice. Until a command exists in `package.json`, no developer can claim it passes.
+App commands: milestone 0 commands are **available** (merged 2026-10-05); the rest are **planned** (milestone 0, the scaffold + landing task in `replica/architecture.md`). The commands marked (M1a) arrive with the web slice and the ones marked (M1b) with the Android slice. Until a command exists in `package.json`, no developer can claim it passes.
 
 ```bash
-# planned — created by the first build task (milestone 0)
+# available since milestone 0 (2026-10-05). In this cloud container: next build needs NODE_USE_ENV_PROXY=1, e2e needs PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers, agents in worktrees set TURBO_CACHE_DIR=.turbo/cache
+pnpm brand-gate                                # sweeps + Title-case grep + contrast on both colour blocks
+PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers pnpm --filter @tunehold/web e2e   # landing + health e2e (CI from 1a)
 pnpm install                                   # whole monorepo (pnpm workspaces)
 pnpm dev                                       # turbo: apps/web on http://localhost:3000
 pnpm lint                                      # eslint, every workspace

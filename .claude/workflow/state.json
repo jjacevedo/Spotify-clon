@@ -10,8 +10,8 @@
   ],
   "features": {
     "m0-scaffold-landing": {
-      "status": "approved",
-      "current_stage": "integration",
+      "status": "merged",
+      "current_stage": "complete",
       "spec": ".claude/workflow/specs/m0-scaffold-landing.md",
       "branch": "feature/m0-scaffold-landing",
       "commits": [
@@ -25,7 +25,7 @@
         "5946834"
       ],
       "qa_result": {
-        "decision": "REQUEST_CHANGES",
+        "decision": "APPROVED_BY_FOUNDER_OVERRIDE",
         "cycle": 2,
         "findings": [
           "Important: lockfile resolved before minimumReleaseAge (4 transitive versions < 24h old) \u2014 founder accepted as is",
@@ -75,8 +75,21 @@
           "agent": "founder",
           "at": "2026-10-05T10:40:00Z",
           "note": "After 2 cycles the founder decided: accept the lockfile as is and integrate; pin pnpm/action-setup to v6.0.10."
+        },
+        {
+          "stage": "integration",
+          "agent": "tech-lead",
+          "at": "2026-10-05T11:10:00Z",
+          "note": "Merged --no-ff into cl/great-gauss-36g7dv (7479655), clean; install/lint/typecheck/test/build/e2e/brand-gate all pass on the base."
+        },
+        {
+          "stage": "complete",
+          "agent": "orchestrator",
+          "at": "2026-10-05T11:15:00Z",
+          "note": "Medium feature: no architect validation stage. Pushed after founder's integrate decision. Worktree and feature branch cleanup pending founder approval."
         }
-      ]
+      ],
+      "merge_commit": "7479655"
     }
   }
 }
