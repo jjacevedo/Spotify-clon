@@ -18,13 +18,13 @@ Decided in `/replica-architect` (2026-10-04). Full table, schema, API and build 
 
 - **Monorepo:** pnpm workspaces + Turborepo, TypeScript `strict`, Node 22 LTS. Apps: `apps/web`, `apps/mobile`. Packages (`@tunehold/*`): `contract`, `db`, `player-core`, `media`, `storage`, `tokens`, `config`.
 - **Web + API + landing:** Next.js (current stable, App Router) as one Vercel Hobby project (`iad1`). The landing page is at `/` (`app/(marketing)`), the app under `app/(app)`, REST under `/api/v1`, and the sweep at `/api/cron/sweep`. Tailwind CSS v4 themed from `replica/design/tokens.json`, Radix UI, TanStack Query and Virtual, dnd-kit, Zustand.
-- **Mobile:** Expo SDK 58 + expo-router, EAS development builds (no Expo Go). expo-audio (`AudioPlaylist`, lock screen, background), expo-file-system (uploads and downloads), expo-sqlite (offline mirror and outbox), FlashList, expo-image.
-- **Database:** Supabase Postgres Free (dev and prod projects) with `pg_trgm` and `unaccent`. Drizzle ORM; plain-SQL migrations in `packages/db/migrations` applied by `drizzle-kit migrate` (never `push`); postgres.js through the Supavisor transaction pooler.
-- **Access rules:** data-layer checks (owner-scoped repositories), plus RLS enabled with no policies, the Data API off, and composite owner foreign keys.
-- **Auth:** Supabase Auth, email + password, invite-only (sign-ups off; admin `generateLink`). Cookies on web (`@supabase/ssr`), Bearer + `getClaims` on mobile. No email provider in v1.
-- **Files:** Backblaze B2 private bucket through the S3 API (`@aws-sdk/client-s3`, checksum mode `WHEN_REQUIRED`), presigned PUT/GET only. Audio never passes through Vercel. Cloudflare R2 is the env-var swap.
-- **Media:** `music-metadata` + `@tokenizer/s3`, `file-type`, `sharp`. Web uploads use Uppy (`@uppy/aws-s3`, headless) + `hash-wasm`.
-- **Jobs:** a Postgres `jobs` table run by `after()`. GitHub Actions runs the sweep hourly and a nightly `pg_dump` to a B2 backups bucket. A Vercel daily cron is the second trigger.
+- **Mobile:** Expo SDK 58 (required; SDK 57 is not a fallback) + expo-router, EAS development builds (no Expo Go). expo-audio (`AudioPlaylist` with an append-only window, recovery through a `pnpm patch` or a playlist rebuild, lock screen, background, `doNotMixPersistent`), expo-file-system (foreground-first transfer queue for uploads and downloads), expo-sqlite in a backup-excluded folder (offline mirror, index with scope links, outbox, session), FlashList, expo-image. Bundle id / package `app.tunehold.mobile` (frozen).
+- **Database:** Supabase Postgres Free (dev and prod projects) with `pg_trgm` and `unaccent`. Drizzle ORM; plain-SQL migrations in `packages/db/migrations` applied by `drizzle-kit migrate` (never `push`); postgres.js through the Supavisor transaction pooler. Two roles: `tunehold_app` (API requests, RLS applies) and the owner (jobs, sweep, admin, migrations). Storage counters are kept by triggers.
+- **Access rules:** row level security with real policies for `tunehold_app` (each request is one transaction that starts with `set_config('app.uid', …, true)`), plus owner-scoped repositories, the Data API off, composite owner foreign keys, and a second-user suite generated from the route table.
+- **Auth:** Supabase Auth, email + password, invite-only (sign-ups off; admin `generateLink`; settings checked in as `supabase/config.toml`). Cookies on web (`@supabase/ssr`), Bearer + `getClaims` on mobile (Bearer wins when both are present). Requests from a revoked device's session get `401 device_revoked`. No email provider in v1.
+- **Files:** Backblaze B2 private bucket through the S3 API (`@aws-sdk/client-s3`, checksum mode `WHEN_REQUIRED`), presigned PUT/GET only, with Content-Length, Content-Type and Content-MD5 fixed in every upload signature. Stream URLs last 2 h. Audio never passes through Vercel. Cloudflare R2 is the env-var swap.
+- **Media:** `music-metadata` + `@tokenizer/s3`, `file-type` (over the range tokenizer), `sharp` (with pixel limits). Web uploads use Uppy (`@uppy/aws-s3`, headless) + `hash-wasm`.
+- **Jobs:** a Postgres `jobs` table run by `after()`. GitHub Actions runs the sweep hourly and a nightly `age`-encrypted `pg_dump` to a B2 backups bucket. A Vercel daily cron is the second trigger. A Postgres fixed-window rate limiter guards the expensive routes.
 - **Payments:** deferred (`replica/deferred.md`).
 - **Tests:** Vitest (packages, repositories, second-user suite), Playwright for web e2e (Chromium preinstalled at `/opt/pw-browsers`), GitHub Actions CI, an on-device checklist for mobile playback.
 
@@ -74,7 +74,7 @@ pnpm --filter @tunehold/db db:migrate          # drizzle-kit migrate against DAT
 pnpm --filter @tunehold/db db:seed             # admin profile for ADMIN_EMAIL
 pnpm test:db                                   # repository + second-user suite; needs DATABASE_URL_TEST (Postgres 17)
 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers pnpm --filter @tunehold/web e2e   # Playwright web e2e
-psql "$DATABASE_URL_TEST" -v ON_ERROR_STOP=1 --single-transaction -f replica/schema.sql   # schema smoke run (not executed yet)
+psql "$DATABASE_URL_TEST" -v ON_ERROR_STOP=1 --single-transaction -f replica/schema.sql   # schema smoke run: the previous revision passed on PG16.14 in review; the current one is not executed yet (run it, plus "Schema checks before 1a" in replica/architecture.md, before milestone 1a)
 python3 .claude/skills/replica-brand/sweep.py packages --config replica/brand.json      # must exit 0
 
 # planned — created by the Android slice (M1b)
