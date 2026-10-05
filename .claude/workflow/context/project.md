@@ -9,8 +9,9 @@ A music player for web + iOS + Android, **for personal use for now** (the founde
 ## Status (2026-10-04)
 
 - Phase 1 (`/replica-recon`) is done: `replica/recon.md` (27 screens S01–S27, 12 flows F01–F12, components, data model) and `replica/features.csv` (feature matrix).
-- No app code yet. The **stack is not decided**. `/replica-architect` decides it (phase 3) and writes `replica/architecture.md`.
-- When the architect phase closes, update this file's "Stack" and "Commands" sections with the real values.
+- Done: recon, entrepreneur (early pass), brand (Tunehold), landing copy, architect (`replica/architecture.md`, `replica/schema.sql`, approved 2026-10-05: B2 storage, public repo, founder has a Mac).
+- Scope: personal use; payments/legal deferred (`replica/deferred.md`).
+- Next: build milestone 0 (scaffold + landing page), then 1a (web vertical slice).
 
 ## Stack
 
