@@ -1,0 +1,32 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "agentGuidance": false,
+  "globalDependencies": [
+    "replica/design/tokens.json",
+    "replica/launch/landing.md",
+    "replica/brand.json"
+  ],
+  "globalPassThroughEnv": [
+    "HTTPS_PROXY",
+    "HTTP_PROXY",
+    "NO_PROXY",
+    "NODE_EXTRA_CA_CERTS",
+    "SSL_CERT_FILE",
+    "NODE_USE_ENV_PROXY"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "typecheck": {},
+    "test": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

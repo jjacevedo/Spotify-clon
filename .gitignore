@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build output and caches
+.next/
+.turbo/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.vercel/
+
+# environment files
+.env*
+!.env.example
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
+# OS
+.DS_Store
