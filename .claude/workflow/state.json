@@ -22,6 +22,18 @@
           "agent": "orchestrator",
           "at": "2026-10-05T04:30:00Z",
           "note": "Milestone 0 classified medium (architecture.md build order). Spec by architect, then frontend-developer in a worktree."
+        },
+        {
+          "stage": "planning",
+          "agent": "architect",
+          "at": "2026-10-05T08:10:00Z",
+          "note": "Spec written (draft). Developer reported BLOCKED on dependency approval and pnpm version."
+        },
+        {
+          "stage": "planning",
+          "agent": "founder",
+          "at": "2026-10-05T08:30:00Z",
+          "note": "Founder approved spec OPEN 1 dependencies and pins; chose pnpm 10 (not 12.9.1). Other OPEN items take the spec defaults."
         }
       ]
     }
