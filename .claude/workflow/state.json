@@ -10,24 +10,28 @@
   ],
   "features": {
     "m0-scaffold-landing": {
-      "status": "changes_requested",
-      "current_stage": "qa_review",
+      "status": "approved",
+      "current_stage": "integration",
       "spec": ".claude/workflow/specs/m0-scaffold-landing.md",
       "branch": "feature/m0-scaffold-landing",
       "commits": [
         "c61c60d",
         "2c03a89",
         "93eeeac",
-        "6798b32"
+        "6798b32",
+        "a7d5a61",
+        "75888a4",
+        "199c82b",
+        "5946834"
       ],
       "qa_result": {
         "decision": "REQUEST_CHANGES",
-        "cycle": 1,
+        "cycle": 2,
         "findings": [
-          "Important: ci.yml checkout/setup-node not SHA-pinned",
-          "Important: pnpm-workspace.yaml missing strictDepBuilds and minimumReleaseAge",
-          "Minor x5: resolved in spec (FAQ 9, focus refocus, agentGuidance, twitter card, Allow header)"
-        ]
+          "Important: lockfile resolved before minimumReleaseAge (4 transitive versions < 24h old) \u2014 founder accepted as is",
+          "Minor: pnpm/action-setup v6.1.0 vs v6 tag \u2014 founder chose v6.0.10 (applied by orchestrator, 5946834)"
+        ],
+        "founder_decision": "accept and integrate (2026-10-05)"
       },
       "history": [
         {
@@ -59,6 +63,18 @@
           "agent": "qa-reviewer",
           "at": "2026-10-05T09:45:00Z",
           "note": "Cycle 1: REQUEST_CHANGES (2 important, 5 minor). Minor items resolved in the spec. Codex review running."
+        },
+        {
+          "stage": "qa_review",
+          "agent": "qa-reviewer",
+          "at": "2026-10-05T10:30:00Z",
+          "note": "Cycle 2: cycle-1 findings fixed; new Important on lockfile release age. Codex review found the same two cycle-1 issues and nothing else."
+        },
+        {
+          "stage": "qa_review",
+          "agent": "founder",
+          "at": "2026-10-05T10:40:00Z",
+          "note": "After 2 cycles the founder decided: accept the lockfile as is and integrate; pin pnpm/action-setup to v6.0.10."
         }
       ]
     }
