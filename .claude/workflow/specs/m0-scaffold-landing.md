@@ -2,7 +2,8 @@
 
 - Size: medium
 - Replica phase: build (milestone 0, "First code task: scaffold + landing page" in `replica/architecture.md`)
-- Status: draft (2026-10-05)
+- Status: approved (2026-10-05)
+- Decisions: the founder's answers to OPEN 1–6 are under "Founder decisions (2026-10-05)" at the end. pnpm is 10.34.6, not 12.9.1
 - References: screen S01 (landing, states "default" and "mobile"); no flow; `replica/features.csv` has no row for the landing page (see Acceptance criteria)
 - Sources: `replica/architecture.md` (Stack, Dependencies, Environment variables, Repo layout, Build order 0, Landing page, Open decisions, founder decisions of 2026-10-05), `replica/launch/landing.md` (copy and Build notes), `replica/design/tokens.json`, `replica/brand.md`, `replica/brand.json`, `.claude/workflow/context/project.md`, `.claude/workflow/context/constraints.md`
 - Branch: `feature/m0-scaffold-landing` (one track, `frontend-developer`, worktree)
@@ -14,7 +15,7 @@ The repository has no code yet. Before any backend exists, Tunehold needs the mo
 ## Scope
 
 **In:**
-- **Root workspace.** `package.json` (scripts `dev`, `lint`, `typecheck`, `test`, `build`, `format`, `brand-gate`), `pnpm-workspace.yaml` (workspaces, a version catalog, `allowBuilds`), `pnpm-lock.yaml`, `turbo.json`, `.nvmrc` (`22`), `.gitignore`, `.editorconfig`, `.prettierrc.json`, `.prettierignore`, `scripts/brand-gate.sh`, `README.md`.
+- **Root workspace.** `package.json` (scripts `dev`, `lint`, `typecheck`, `test`, `build`, `format`, `brand-gate`), `pnpm-workspace.yaml` (workspaces, a version catalog, `allowBuilds`, `strictDepBuilds`, `minimumReleaseAge`), `pnpm-lock.yaml`, `turbo.json`, `.nvmrc` (`22`), `.gitignore`, `.editorconfig`, `.prettierrc.json`, `.prettierignore`, `scripts/brand-gate.sh`, `README.md`.
 - **`packages/config` (`@tunehold/config`).** TypeScript presets (strict) and ESLint flat-config presets (base, Next.js). No build step, no tests.
 - **`packages/tokens` (`@tunehold/tokens`).** A generator (`scripts/generate.mjs`, plain Node, no dependency) that reads `replica/design/tokens.json` and writes a typed TS export and a Tailwind v4 theme CSS file (both committed), plus a Vitest suite that fails when either generated file has drifted from the JSON. Source-only package (no build output).
 - **`apps/web` (`@tunehold/web`).** Next.js 16 App Router with:
@@ -31,11 +32,12 @@ The repository has no code yet. Before any backend exists, Tunehold needs the mo
 - Supabase, B2, auth, `packages/contract|db|storage|media|player-core`, any app screen, `/login`: milestone 1a. So the header shows no "Log in" link and the final section uses its no-sign-in variant (Build notes, "Call to action").
 - `apps/mobile`: milestone 1b.
 - `sweep.yml` and `backup.yml`: milestone 1a. Because the repository is public (founder decision, 2026-10-05), `sweep.yml` can run every 30 minutes instead of hourly when it lands.
-- E2E and database tests in CI: database tests arrive with 1a, and e2e in CI waits for the founder's answer (OPEN 3). In M0, e2e runs locally and in QA.
+- E2E and database tests in CI: both arrive with 1a (founder decision on OPEN 3 for e2e). In M0, e2e runs locally and in QA.
 - Security headers and CSP: they arrive with the request proxy in 1a. Next.js 16 renamed `middleware.ts` to `proxy.ts`, so 1a should use the new name. The landing page has no forms, user data or third-party scripts.
-- Open Graph image: the lockup in the logo brief doesn't exist yet (OPEN 4).
+- Open Graph image: none until the lockup in the logo brief exists (founder decision on OPEN 4).
+- A `LICENSE` file: none in M0, so all rights stay reserved by default. Choosing a licence belongs to the deferred legal work (founder decision on OPEN 6).
 - Optional `prefers-color-scheme: dark` switch for the light sections (an optional item in `landing.md`).
-- `.env.example`, `.npmrc`, root `tsconfig.base.json`: M0 reads no variables. pnpm 11+ reads only auth and registry settings from `.npmrc`. The TypeScript presets live in `packages/config`.
+- `.env.example`, `.npmrc`, root `tsconfig.base.json`: M0 reads no variables. Every pnpm setting lives in `pnpm-workspace.yaml` (pnpm 10.6+ reads all settings there, in camelCase), and M0 needs no registry or auth setting, so there is no `.npmrc`. The TypeScript presets live in `packages/config`.
 - Vercel project creation and the first deploy: these are founder actions, listed under "Founder follow-up" below.
 - A skip link, a custom 404 page, analytics, cookies, any third-party script: they aren't in `landing.md`, which forbids analytics and tracking.
 - Screenshots in `replica/clone-screens/`: there is no reference screenshot for S01, and the landing page is Tunehold's own page, not a rebuild of the original's.
@@ -44,7 +46,7 @@ The repository has no code yet. Before any backend exists, Tunehold needs the mo
 1. The landing page has one small client component, the "See how it works" link, because `landing.md` asks that focus moves to the "How it works" heading after the jump. A plain in-page link only moves the focus starting point, so it can't do that reliably. The page stays `force-static` with no data and no third-party code. Everything else is a server component.
 2. Workspace packages are source-only (TS consumed through `transpilePackages`), so `pnpm build` builds only `apps/web`. `project.md` said "packages: tsc", but there is nothing to emit yet.
 3. Prettier config sits at the root, not in `packages/config`, because one formatter covers the whole workspace.
-4. The health route returns `{ ok: true, version }` as `architecture.md` (Infrastructure) specifies, not the `{ status: 'ok' }` of the task brief (OPEN 2).
+4. The health route returns `{ ok: true, version }` as `architecture.md` (Infrastructure) specifies, not the `{ status: 'ok' }` of the task brief (OPEN 2, confirmed by the founder).
 5. The e2e command (`project.md` lists it under M1a) is created now, because the landing page needs it.
 
 ## Files
@@ -53,8 +55,8 @@ Every file below is new (the repository has no code yet). Don't use `create-next
 
 | path | action | what it contains |
 | --- | --- | --- |
-| `package.json` | create | `name: "tunehold"`, `private: true`, `type: "module"`, `packageManager: "pnpm@12.9.1"`, `engines.node: "22.x"`. Scripts: `dev: turbo run dev`; `lint: prettier --check . && turbo run lint`; `typecheck: turbo run typecheck`; `test: turbo run test`; `build: turbo run build`; `format: prettier --write .`; `brand-gate: bash scripts/brand-gate.sh`. devDependencies: `turbo`, `prettier`, `typescript` (catalog) |
-| `pnpm-workspace.yaml` | create | `packages: [apps/*, packages/*]`; `catalog:` with the versions shared by more than one workspace (see Dependencies); `allowBuilds:` listing exactly the packages that the first `pnpm install` reports as having build scripts, each `false` unless the package fails without its script (expected: `sharp`, `@tailwindcss/oxide`, `unrs-resolver`, possibly `esbuild`). No other keys, because pnpm 12 rejects unknown settings |
+| `package.json` | create | `name: "tunehold"`, `private: true`, `type: "module"`, `packageManager: "pnpm@10.34.6"`, `engines.node: "22.x"`. Scripts: `dev: turbo run dev`; `lint: prettier --check . && turbo run lint`; `typecheck: turbo run typecheck`; `test: turbo run test`; `build: turbo run build`; `format: prettier --write .`; `brand-gate: bash scripts/brand-gate.sh`. devDependencies: `turbo`, `prettier`, `typescript` (catalog) |
+| `pnpm-workspace.yaml` | create | `packages: [apps/*, packages/*]`; `catalog:` with the versions shared by more than one workspace (see Dependencies); `allowBuilds:` listing exactly the packages that the first `pnpm install` reports as having ignored build scripts, each `false` unless the package fails without its script (expected: `sharp`, `@tailwindcss/oxide`, `unrs-resolver`, possibly `esbuild`); `strictDepBuilds: true`; `minimumReleaseAge: 1440`. No other keys. Each key is in the pnpm 10.x settings reference: `catalog` (since 9.5), `strictDepBuilds` (10.3.0, default `false`), `minimumReleaseAge` (10.16.0, minutes, default `0`), `allowBuilds` (10.26.0). Use `allowBuilds`, not `onlyBuiltDependencies` / `ignoredBuiltDependencies`: the 10.x docs mark those two deprecated in favour of `allowBuilds`. Don't add `dangerouslyAllowAllBuilds` or `neverBuiltDependencies` |
 | `pnpm-lock.yaml` | create | generated by `pnpm install`, committed |
 | `turbo.json` | create | `tasks`: `build` (`dependsOn: ["^build"]`, `outputs: [".next/**", "!.next/cache/**"]`), `lint`, `typecheck`, `test` (`outputs: []`), `dev` (`cache: false`, `persistent: true`). `globalDependencies: ["replica/design/tokens.json", "replica/launch/landing.md", "replica/brand.json"]`, because tests read them. `globalPassThroughEnv: ["HTTPS_PROXY", "HTTP_PROXY", "NO_PROXY", "NODE_EXTRA_CA_CERTS", "SSL_CERT_FILE", "NODE_USE_ENV_PROXY"]`, so that `next build` can fetch the font through a proxy under turbo's strict env mode |
 | `.nvmrc` | create | `22` |
@@ -63,7 +65,7 @@ Every file below is new (the repository has no code yet). Don't use `create-next
 | `.prettierrc.json` | create | `{ "singleQuote": true, "trailingComma": "all", "printWidth": 100 }` |
 | `.prettierignore` | create | `replica/`, `.claude/`, `CLAUDE.md`, `pnpm-lock.yaml`, `packages/tokens/src/generated/`, `**/.next/`, `**/.turbo/` |
 | `scripts/brand-gate.sh` | create | `#!/usr/bin/env bash`, `set -euo pipefail`, run from the repo root. Runs, in order: sweep `apps/web` and `packages` with `--config replica/brand.json`; sweep both with `--avoid "Liked Songs,Smart Shuffle,Discover Weekly,Daily Mix"`; `! grep -rnI --exclude-dir=node_modules --exclude-dir=.next "Your Library" apps packages`; `contrast.py replica/design/tokens.json`; contrast of the light block through a `mktemp` copy with `color` replaced by `color-light` (command in Verification). Exits non-zero on the first failure |
-| `README.md` | create | What Tunehold is (two or three sentences in the brand voice: plain, calm, exact; it's in development for its maker and a few friends). Requirements (Node 22, pnpm 12.9.1 through `npm i -g pnpm@12.9.1` or corepack). Commands (install, dev, lint, typecheck, test, build, e2e with the `PLAYWRIGHT_BROWSERS_PATH` note, plus `playwright install chromium` on a normal machine, brand-gate). Repo layout. Pointers to `replica/architecture.md` and `.claude/workflow/`. Works on macOS and Linux. No mention of the original's name or of any tool that wrote code |
+| `README.md` | create | What Tunehold is (two or three sentences in the brand voice: plain, calm, exact; it's in development for its maker and a few friends). Requirements (Node 22, pnpm 10.34.6 through `corepack enable`, which reads `packageManager`, or `npm i -g pnpm@10.34.6`). Commands (install, dev, lint, typecheck, test, build, e2e with the `PLAYWRIGHT_BROWSERS_PATH` note, plus `playwright install chromium` on a normal machine, brand-gate). Repo layout. Pointers to `replica/architecture.md` and `.claude/workflow/`. Works on macOS and Linux. No mention of the original's name or of any tool that wrote code |
 | `.github/workflows/ci.yml` | create | See Contracts, "CI" |
 | `packages/config/package.json` | create | `name: "@tunehold/config"`, `private`, `type: "module"`, `exports`: `./tsconfig/base.json`, `./tsconfig/nextjs.json`, `./tsconfig/library.json`, `./eslint/base` → `./eslint/base.js`, `./eslint/next` → `./eslint/next.js`. dependencies: `@eslint/js`, `typescript-eslint`, `eslint-config-next`. peerDependencies: `eslint`, `typescript` |
 | `packages/config/tsconfig/base.json` | create | Set explicitly (TypeScript 6 changed several defaults): `strict: true`, `noUncheckedIndexedAccess: true`, `noImplicitOverride: true`, `noFallthroughCasesInSwitch: true`, `forceConsistentCasingInFileNames: true`, `isolatedModules: true`, `esModuleInterop: true`, `resolveJsonModule: true`, `skipLibCheck: true`, `noEmit: true`, `target: "ES2022"`, `module: "ESNext"`, `moduleResolution: "Bundler"`, `lib: ["ES2023"]`, `types: []` (each workspace lists its own). No `baseUrl` (deprecated in TS 6) |
@@ -95,7 +97,7 @@ Every file below is new (the repository has no code yet). Don't use `create-next
 | `apps/web/app/api/v1/health/route.test.ts` | create | Vitest: 200; body equals `{ ok: true, version: 'dev' }` with `VERCEL_GIT_COMMIT_SHA` unset; `{ ok: true, version: 'abc1234' }` with it stubbed to `abc1234def567890` (`vi.stubEnv`); `Cache-Control` is `no-store`; `Content-Type` starts with `application/json` |
 | `apps/web/src/marketing/copy.ts` | create | Every string the page renders, typed as in Contracts. Nothing else (no ids, no class names) |
 | `apps/web/src/marketing/status.ts` | create | `featureStatus` and `loginAvailable` (Contracts) |
-| `apps/web/src/marketing/copy.test.ts` | create | The verbatim check (Contracts, "Copy check"), plus: `featureStatus.length === copy.features.cards.length`, and the tuple lengths 3/3/8/9/8 |
+| `apps/web/src/marketing/copy.test.ts` | create | The verbatim check (Contracts, "Copy check"), plus: `featureStatus.length === copy.features.cards.length`, and the tuple lengths 3/3/8/9/9 |
 | `apps/web/src/marketing/components/site-header.tsx` | create | `<header>`, dark band: wordmark link (`href="#top"`, text "Tunehold", bold, at least 44×44px target). Renders the "Log in" link to `/login` only when `loginAvailable` |
 | `apps/web/src/marketing/components/hero.tsx` | create | `<section id="top">`, dark band: `h1`, lead line, `HowItWorksLink`, small print, `ScreenshotMock`. Text left and mock right from `lg`; one column below that, with the mock under the text |
 | `apps/web/src/marketing/components/how-it-works-link.tsx` | create | `'use client'`. `<a href="#how-it-works">` styled as the primary button (`bg-accent text-on-accent rounded-md min-h-11`). On click it doesn't call `preventDefault`: it calls `document.getElementById('how-it-works-title')?.focus({ preventScroll: true })` and lets the browser follow the link, so the CSS smooth scroll (or the instant jump under reduced motion) still applies. It works as a plain link without JS |
@@ -140,7 +142,7 @@ Approved in `architecture.md`:
 | `vitest` | 5.0.3 | tokens, web (dev) | engines Node `^22.12.0` |
 | `zod` | — | — | approved but not needed in M0 |
 
-Not in the approved table, needed for M0 (they need the founder's approval, see OPEN 1):
+Not in `architecture.md`'s approved table, needed for M0. The founder approved them on 2026-10-05 (OPEN 1), together with the three bold non-`latest` pins above:
 
 | package | version | where | why |
 | --- | --- | --- | --- |
@@ -152,8 +154,8 @@ Not in the approved table, needed for M0 (they need the founder's approval, see 
 | `@eslint/js` | 9.39.5 | config | ESLint's recommended core rules (a separate package since ESLint 9) |
 | `@types/node` | 22.20.5 | tokens, web (dev) | Node 22 types. Confirm it is still the highest 22.x with `pnpm view @types/node@22 version` |
 | `@types/react`, `@types/react-dom` | 19.3.0 | web (dev) | React types for strict TS |
-| pnpm | 12.9.1 | `packageManager` | The workspace tool named in the stack; current `latest` |
-| GitHub Actions `actions/checkout`, `actions/setup-node`, `pnpm/action-setup` | current major at implementation time | `ci.yml` | `pnpm/action-setup` is third-party, so pin it by full commit SHA with the version in a comment |
+| pnpm | **10.34.6** | `packageManager` | The workspace tool named in the stack. The founder chose pnpm 10 over the current `latest` (12.9.1). 10.34.6 is the `latest-10` tag (engines Node `>=18.12`) |
+| GitHub Actions `actions/checkout`, `actions/setup-node`, `pnpm/action-setup` | current release of the current major at implementation time | `ci.yml` | Pin all three by full commit SHA, with the release tag in a trailing comment. `pnpm/action-setup` is third-party, and the two official actions are pinned the same way so that the file has one rule |
 
 Put `typescript`, `eslint`, `vitest`, `vite` and `@types/node` in the pnpm `catalog:` and reference them as `"catalog:"`. Not added: `@axe-core/playwright` (axe scans). M0 uses hand-written accessibility checks instead (AC10). It's a candidate for 1a.
 
@@ -172,7 +174,7 @@ export type HealthResponse = {
 export function GET(): Response; // 200, Response.json(body), header Cache-Control: no-store
 ```
 
-- Errors: none of its own. Other methods get the framework's `405` with an `Allow` header. `HEAD` is derived from `GET` by Next.js.
+- Errors: none of its own. Other methods get the framework's `405` (Next 16 sends no `Allow` header; accepted). `HEAD` is derived from `GET` by Next.js.
 - When `packages/contract` arrives (1a), `HealthResponse` moves there as a zod schema, and the shape doesn't change.
 
 ### Environment variables
@@ -266,7 +268,7 @@ export const copy: {
   howItWorks: { heading: string; intro: string; steps: readonly [Item, Item, Item] };
   features: { heading: string; intro: string; cards: Eight<Item>; alsoLabel: string; also: readonly [string, string, string, string, string, string, string, string, string] };
   status: { worksToday: string; inProgress: string };
-  faq: { heading: string; items: Eight<QA> };
+  faq: { heading: string; items: Nine<QA> };
   finalCta: { heading: string; lineWithLogin: string; button: string; lineWithoutLogin: string };
   footer: { wordmark: string; statusLine: string };
 };
@@ -302,7 +304,7 @@ export const loginAvailable: boolean; // M0: false
    - trim each part and collapse internal whitespace.
    Also add every `"…"`-quoted and every `` `…` ``-backticked substring of every line as its own segment. Drop empty strings.
 3. Walk every string leaf of `copy` and assert that it is **exactly equal** to one segment. A shortened sentence or a changed word fails, and so does any string that isn't in `landing.md`.
-4. Check the tuple lengths (3 problem items, 3 steps, 8 cards, 9 "also" items, 8 FAQ items) and that `featureStatus` has as many entries as there are cards.
+4. Check the tuple lengths (3 problem items, 3 steps, 8 cards, 9 "also" items, 9 FAQ items) and that `featureStatus` has as many entries as there are cards.
 
 ### Metadata (`app/(marketing)/page.tsx`)
 
@@ -310,12 +312,12 @@ export const loginAvailable: boolean; // M0: false
 export const metadata: Metadata = {
   title: copy.meta.title,               // "Tunehold: the music you own, on the web, iPhone and Android"
   description: copy.meta.description,
-  robots: { index: false },             // renders <meta name="robots" content="noindex">; proposed default, founder's call (OPEN 5)
+  robots: { index: false },             // renders <meta name="robots" content="noindex">; founder decision (OPEN 5), reversible in one line
   openGraph: { title: copy.meta.ogTitle, description: copy.meta.description, type: 'website' },
 };
 ```
 
-No `og:image`, no `metadataBase`, no Twitter card, no analytics. The favicon comes from `app/icon.svg`.
+No `og:image`, no `metadataBase`, no analytics. Next 16 derives a text-only `twitter:card` (`summary`) from `openGraph`; accepted (no image). The favicon comes from `app/icon.svg`.
 
 ### Hero link behaviour
 
@@ -333,7 +335,7 @@ No `og:image`, no `metadataBase`, no Twitter card, no analytics. The favicon com
 - Settings: `permissions: contents: read`; `concurrency: { group: ci-${{ github.ref }}, cancel-in-progress: true }`; `env: { NEXT_TELEMETRY_DISABLED: 1, TURBO_TELEMETRY_DISABLED: 1 }`.
 - One job, `ci`, on `ubuntu-latest` with `timeout-minutes: 15`. Steps:
   1. checkout;
-  2. `pnpm/action-setup`, which reads `packageManager`;
+  2. `pnpm/action-setup`, which reads `packageManager` (no `version` input, so the pin lives in one place);
   3. `actions/setup-node` with `node-version-file: .nvmrc` and `cache: pnpm`;
   4. `pnpm install --frozen-lockfile`;
   5. `pnpm lint`;
@@ -342,6 +344,8 @@ No `og:image`, no `metadataBase`, no Twitter card, no analytics. The favicon com
   8. `pnpm build`;
   9. `pnpm brand-gate`.
 - No secrets and no environments. The repository is public, so Actions minutes are free.
+- No e2e job in M0 (founder decision on OPEN 3). It arrives in 1a.
+- Every `uses:` is pinned by full commit SHA with the tag in a comment (OPEN 1).
 
 ## Tracks
 
@@ -351,7 +355,7 @@ Single track (medium): `frontend-developer` owns every file in the table above. 
 
 The landing page is static and has no data, so it has no empty, loading or error state. S01's recorded states, "default" and "mobile", are covered by AC6–AC9. The health route has no failure path of its own.
 
-- [ ] **AC1 Install.** On Node 22.x with pnpm 12.9.1, `pnpm install` succeeds from a clean clone: no unapproved build-script error, no peer-dependency error, and no browser download. `pnpm install --frozen-lockfile` passes with the committed lockfile.
+- [ ] **AC1 Install.** On Node 22.x with pnpm 10.34.6 (`pnpm --version`), `pnpm install` succeeds from a clean clone with `strictDepBuilds: true`: no unreviewed build-script error, no "Ignored build scripts" warning (every package with a build script is in `allowBuilds`), no peer-dependency error, and no browser download. `pnpm install --frozen-lockfile` passes with the committed lockfile. `pnpm-workspace.yaml` holds only the keys listed in Files, and there is no `.npmrc`.
 - [ ] **AC2 Lint.** `pnpm lint` exits 0. It covers Prettier on the whole workspace (minus `.prettierignore`) and ESLint in `apps/web` and `packages/tokens`. A temporary `const x: any = 1` in `apps/web` makes it fail (checked once, not committed).
 - [ ] **AC3 Typecheck.** `pnpm typecheck` exits 0 under `strict` in both workspaces, with no `any` and no `@ts-ignore`.
 - [ ] **AC4 Unit tests.** `pnpm test` exits 0 and runs at least these: the tokens deep-equal, same-roles and generator `--check` tests; the health route tests; the copy check. Changing one hex value in `packages/tokens/src/generated/theme.css` by hand makes `pnpm test` fail (checked once, reverted).
@@ -365,7 +369,7 @@ The landing page is static and has no data, so it has no empty, loading or error
   - the problem section has a `ul` of 3 items, and how it works has an `ol` of 3;
   - 8 feature `h3`s, each card showing the text "In progress";
   - the 9 "also" items are visible;
-  - 8 FAQ `h3`s with their answers visible (no collapsed content);
+  - 9 FAQ `h3`s with their answers visible (no collapsed content);
   - the final section shows `copy.finalCta.lineWithoutLogin`;
   - there is no link or button named "Log in";
   - the footer shows the status line;
@@ -398,13 +402,15 @@ The landing page is static and has no data, so it has no empty, loading or error
   - The e2e asserts that the rendered HTML contains none of `replica/brand.json` `avoid` (case-insensitive), `domains` or `colors`. Test files read those lists from `brand.json` and never write the original's name themselves, because the sweep would flag them.
   - Run from the root, the sweep reports no hit in any file this milestone creates. The only hits allowed are the instruction lines listed in `replica/brand.md` (Sweep).
 - [ ] **AC15 No template leftovers.** No `favicon.ico`, `next.svg`, `vercel.svg`, `file.svg`, `globe.svg` or `window.svg`, no Geist font, and no `public/` folder unless something real needs one.
-- [ ] **AC16 CI.** `.github/workflows/ci.yml` runs the steps listed in Contracts. After the push that the user approves, the run on `feature/m0-scaffold-landing` is green. This is checked at validation, because the developer never pushes.
+- [ ] **AC16 CI.** `.github/workflows/ci.yml` runs the steps listed in Contracts, every `uses:` is pinned by a 40-character commit SHA, and there is no e2e job. After the push that the user approves, the run on `feature/m0-scaffold-landing` is green. This is checked at validation, because the developer never pushes.
 - [ ] **AC17 README** exists as described. It never names the original and never mentions any tool that wrote code.
 - [ ] **AC18 Authorship.** Every commit is authored as `Juan José Acevedo Otálvaro <178350246+jjacevedo@users.noreply.github.com>`. Subjects are imperative ("Add …"). No attribution trailers.
 
 ### Verification (run from the repo root, paste the summarized results)
 
 ```bash
+corepack enable || npm i -g pnpm@10.34.6
+pnpm --version                                    # 10.34.6
 pnpm install
 pnpm lint
 pnpm typecheck
@@ -435,7 +441,7 @@ Milestone 0 is done when the page is live on `*.vercel.app` (`architecture.md`, 
 2. Vercel → Add New → Project → Import the renamed repository, on the Hobby plan.
 3. Project name `tunehold` (gives `tunehold.vercel.app` if it's free; `APP_ORIGIN` in 1a uses it).
 4. Framework preset **Next.js**. Root Directory **`apps/web`**. Keep "Include files outside the root directory in the Build Step" on, because the workspace packages live outside `apps/web`. Keep the default install and build commands.
-5. Environment variable `ENABLE_EXPERIMENTAL_COREPACK=1` (all environments), so that Vercel installs with the `packageManager` version (pnpm 12.9.1) instead of guessing from the lockfile.
+5. Environment variable `ENABLE_EXPERIMENTAL_COREPACK=1` (all environments), so that Vercel installs with the `packageManager` version (pnpm 10.34.6) through corepack instead of guessing from the lockfile.
 6. Node.js version **22.x** (Settings → Build and Deployment).
 7. Function region **`iad1`** (Washington, D.C.). `apps/web/vercel.json` already pins it, so check that the setting shows it.
 8. Production branch: the repository's default branch (today `cl/great-gauss-36g7dv`, the only one). Leave Vercel Authentication on for preview deployments (the Hobby default). Don't enable Web Analytics or Speed Insights, because the landing page has no analytics.
@@ -448,12 +454,12 @@ Milestone 0 is done when the page is live on `*.vercel.app` (`architecture.md`, 
 
 - **Risk: Playwright and browser mismatch.** `/opt/pw-browsers` holds only `chromium-1194`, `chromium_headless_shell-1194` and `ffmpeg-1011`, which is Playwright 1.56.1. → `@playwright/test` is pinned to 1.56.1 exactly, no `channel` is set, and nothing runs `playwright install` here. Upgrading Playwright later needs new browsers in this container.
 - **Risk: the newest TypeScript and ESLint don't fit the lint stack.** TypeScript 7.0.2 is the native compiler and `typescript-eslint` caps at `<6.1.0`, and ESLint 10's plugins aren't declared compatible. → TS 6.0.3 and ESLint 9.39.5 are pinned. TS 6 changed defaults (for example `types`), so the presets set every option explicitly. If `tsc` rejects `import './globals.css'` (side-effect import checks), add `declare module '*.css';` in `apps/web/src/types/assets.d.ts`. Don't turn off strictness.
-- **Risk: pnpm 12 behaviour** (inherited from pnpm 11):
-  - dependency build scripts fail the install unless they are listed in `allowBuilds`;
-  - `minimumReleaseAge` defaults to 1 day, so a version published less than a day before install is refused;
-  - unknown keys in `pnpm-workspace.yaml` are errors;
-  - `.npmrc` holds only auth and registry settings.
-  → `allowBuilds` is filled from the first install's report. If a pin is younger than a day, wait rather than lower the setting.
+- **Risk: pnpm 10 defaults are looser than pnpm 11+** (checked against the pnpm 10.x settings reference and the pnpm 10.34.6 changelog):
+  - dependency build scripts are skipped with a warning, not an error, unless `strictDepBuilds` is on (default `false`);
+  - `minimumReleaseAge` defaults to `0`, so a version published minutes before install is accepted;
+  - `allowBuilds` exists only from 10.26.0. Older 10.x releases would not know it, which is why `packageManager` pins 10.34.6 exactly;
+  - `publicHoistPattern` defaults to `[]`, so no `eslint` or `prettier` is hoisted to the root, and each workspace that runs a tool declares it (the package table already does).
+  → `strictDepBuilds: true` and `minimumReleaseAge: 1440` keep the behaviour this spec relied on. `allowBuilds` is filled from the first install's report: pnpm lists the ignored build scripts. Write the entries by hand rather than through the interactive `pnpm approve-builds`. If a pin is younger than a day, wait rather than lower the setting. Moving to pnpm 11+ later is a separate decision, because it changes these defaults and how `.npmrc` is read.
 - **Risk: `next/font/google` needs network at build time.** In this container, outbound HTTPS goes through a proxy. Node's `fetch` uses it only with `NODE_USE_ENV_PROXY=1` (Node 22.21+, and the container has 22.22.0), and turbo's strict env mode would otherwise strip the proxy variables. Fonts.googleapis.com was reachable on 2026-10-05. → Build with `NODE_USE_ENV_PROXY=1`, with the pass-through in `turbo.json`. If it still fails, switch to `next/font/local` with the OFL variable font file and `OFL.txt` from the `google/fonts` repository (`ofl/atkinsonhyperlegiblenext/`), committed under `apps/web/src/fonts/`. `landing.md` allows self-hosting. Report the switch. CI and Vercel have direct network access.
 - **Risk: the sweep scans everything under `apps/web` and `packages`.** That includes `test-results/` and Playwright reports, which it doesn't skip, and any test that spells the original's name. → Reporter `list` only, and binary trace and screenshot files are skipped by the sweep. Tests read the names from `brand.json`.
 - **Risk: Tailwind v4 details.**
@@ -461,13 +467,28 @@ Milestone 0 is done when the page is live on `*.vercel.app` (`architecture.md`, 
   - Themed bands need their own `text-text`.
   - `--color-*: initial` must stay, so no default palette colour (green included) is ever available.
 - **Risk: the turbo cache misses changes to `replica/` files the tests read.** → `globalDependencies` lists them.
-- **Risk: Vercel pnpm version.** → `ENABLE_EXPERIMENTAL_COREPACK=1` in the founder checklist.
+- **Risk: Vercel pnpm version.** Without corepack, Vercel picks a pnpm major from the lockfile version, and pnpm 10 writes `lockfileVersion: '9.0'`, which more than one pnpm major reads. → `ENABLE_EXPERIMENTAL_COREPACK=1` in the founder checklist, so the build uses 10.34.6.
 - **Risk: copy debt.** Card 1 ("If an upload is interrupted, it picks up where it stopped") and card 2 ("a separate, lighter copy for streaming") describe things v1 may not build (`architecture.md` OPEN 14). → They ship verbatim under "In progress", which is what the architecture asks for until the founder decides.
 - **Note for 1a.** Next.js 16 renamed `middleware.ts` to `proxy.ts`, and removed `next lint` (this spec already uses the ESLint CLI). The 1a spec should use `proxy.ts` for the CSP and the security headers.
 - **Note.** The repository is public. Nothing in M0 is secret, and `.gitignore` excludes `.env*`. GitHub disables scheduled workflows in public repositories after 60 days without activity, which matters from 1a (`sweep.yml`, `backup.yml`).
-- **OPEN 1: dependency approval.** Approve the packages in "Not in the approved table" (`@tailwindcss/postcss`, `postcss`, `vite`, `eslint-config-next`, `typescript-eslint`, `@eslint/js`, `@types/node`, `@types/react`, `@types/react-dom`, pnpm 12.9.1, and the three GitHub Actions). Also approve the deliberate non-`latest` pins: `@playwright/test` 1.56.1, `typescript` 6.0.3, `eslint` 9.39.5. Without approval the developer reports BLOCKED (process constraint 4).
-- **OPEN 2: health response shape.** This spec follows `architecture.md`: `{ ok: true, version }`. The task brief said `{ status: 'ok' }`. Confirm the architecture shape, or ask for the other one (then both this spec and `architecture.md` change).
-- **OPEN 3: e2e in CI now or in 1a.** The proposed default is 1a, matching the M0 CI list in `architecture.md`. Adding it now costs one job (`playwright install --with-deps chromium` on the runner, about 1–2 minutes, free on a public repository).
-- **OPEN 4: Open Graph image.** The proposed default is none until the logo brief's lockup exists. The alternative is a text-only 1200×630 image now, through `next/og` (built into Next.js, no new package): the "Tunehold" wordmark and the line on `#100E17`, which needs `metadataBase` set to the Vercel URL.
-- **OPEN 5: `noindex`** (`landing.md` and `architecture.md` OPEN 14 leave it to the founder). The proposed default is on. It's reversible in one line.
-- **OPEN 6: licence for the public repository.** There is no `LICENSE` file, so all rights are reserved by default. Choosing a licence belongs to the deferred legal work (`deferred.md`). The proposed default is to add none in M0.
+
+### Founder decisions (2026-10-05)
+
+No open decision is left in this spec.
+
+- **OPEN 1: dependency approval. Approved as written.** The packages in "Not in `architecture.md`'s approved table" (`@tailwindcss/postcss`, `postcss`, `vite`, `eslint-config-next`, `typescript-eslint`, `@eslint/js` 9.x, `@types/node`, `@types/react`, `@types/react-dom`) and the three GitHub Actions, pinned by commit SHA. The deliberate non-`latest` pins are approved too: `@playwright/test` 1.56.1, `typescript` 6.0.3, `eslint` 9.39.5 with `@eslint/js` 9.39.5. **pnpm changed:** the founder chose pnpm 10 instead of 12.9.1, so `packageManager` is `pnpm@10.34.6` (the newest 10.x, `latest-10` tag). The pnpm 12 settings were replaced or confirmed against the pnpm 10.x reference: `allowBuilds` stays, because it exists in pnpm 10 from 10.26.0 and is the form the 10.x docs recommend (`onlyBuiltDependencies` / `ignoredBuiltDependencies` are deprecated there). `strictDepBuilds: true` and `minimumReleaseAge: 1440` are now set explicitly, because they were pnpm 11+ defaults and are off in pnpm 10. `.npmrc` handling and the unknown-key rule no longer apply. Corepack stays in the README and the Vercel steps, because pnpm 10 works with corepack.
+- **OPEN 2: health response shape. `{ ok: true, version }`**, as in `architecture.md`. Neither this spec nor `architecture.md` changes.
+- **OPEN 3: e2e in CI. Not until 1a.** This matches the M0 CI list in `architecture.md`. In M0, e2e runs locally and in QA. In 1a it costs one job (`playwright install --with-deps chromium` on the runner, about 1–2 minutes, free on a public repository).
+- **OPEN 4: Open Graph image. None** until the logo brief's lockup exists. `next/og` with a text-only 1200×630 image stays the option for later, and it would need `metadataBase`.
+- **OPEN 5: `noindex`. On** (`robots: { index: false }`). It's reversible in one line.
+- **OPEN 6: licence. No `LICENSE` file in M0.** All rights stay reserved by default, and choosing a licence stays with the deferred legal work (`deferred.md`).
+
+## Decisions after QA cycle 1 (orchestrator, 2026-10-05)
+
+- FAQ: `landing.md` has 9 questions; the copy stays verbatim with all 9 (`Nine<QA>`, AC7 "9 FAQ h3s", lengths 3/3/8/9/9).
+- "See how it works": the link focuses the heading immediately and again two animation frames later (Chromium clears focus after following a link to a non-focusable section); no `preventDefault`. Accepted.
+- `turbo.json` keeps `"agentGuidance": false` (stops turbo from writing an AGENTS.md into the repo root).
+- Text-only `twitter:card` derived by Next 16 from `openGraph` is accepted.
+- 405 without an `Allow` header is accepted.
+- `.claude/worktrees/` goes in the root `.gitignore` (agent worktrees must never be committed).
+- `pnpm/action-setup`: pin by SHA to the latest full release tag on the v6 line (verify with `git ls-remote --tags`).
