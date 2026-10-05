@@ -16,17 +16,25 @@
 -- Then, once per environment and outside the repo, give the API role a login:
 --   alter role tunehold_app with login password '<from the secret store>';
 --
--- Validation status (2026-10-05):
---   - The previous revision was executed on 2026-10-04 by the design review on
---     PostgreSQL 16.14 (ON_ERROR_STOP, --single-transaction): 16 tables, the
---     Supabase role branch against stand-in anon/authenticated roles and an
---     auth.users table, and a pg_dump -Fc / pg_restore round trip all passed.
---   - THIS revision (review fixes: counter triggers, the API role and its
---     policies, sort columns, rate_limits, constraint changes) has NOT been
---     executed: the session that wrote it had no shell and no Postgres. The first
---     task that adds packages/db runs the command above on postgres:17 (CI
---     service container or `supabase start`), plus the "Schema checks before 1a"
---     in architecture.md, and fixes any error before milestone 1a starts.
+-- Validation status (2026-10-05, this revision, after the Codex review fixes):
+--   - Executed on a FRESH database with the command above (ON_ERROR_STOP,
+--     --single-transaction) on PostgreSQL 16.14 and on PostgreSQL 17.10 (the
+--     @embedded-postgres/linux-x64 binaries from npm; Supabase runs 17, and only
+--     17 takes the transaction_timeout branch): 17 tables, exit 0 on both.
+--   - Also run on both: the key queries in architecture.md (reserve gate with
+--     the same file twice in one batch, settle and a late second release, the
+--     job claim with two concurrent workers, a play-events batch with a foreign
+--     device and a purged track, cross-user device and playlist-item ids
+--     rejected by the composite keys, the part-count and planned-track checks,
+--     a playlist rebalance under the deferred constraint, and RLS as
+--     tunehold_app with and without app.uid), and the Supabase branch against
+--     stand-in anon/authenticated roles and an auth.users table. On 16.14 only:
+--     a pg_dump -Fc -n public / pg_restore round trip into a fresh
+--     database, which restores only after the extensions block below has run
+--     there (the dump carries no extensions; see the restore drill).
+--   - Not run yet: Supabase itself (`supabase start`), and the "Schema checks
+--     before 1a" as a Vitest suite. The first task that adds packages/db wires
+--     them into CI on postgres:17 before milestone 1a starts.
 --
 -- ACCESS RULES: row level security with real policies, plus owner-scoped
 -- repositories in apps/web/src/server.
@@ -43,9 +51,9 @@
 --      grants, and the Data API is switched off.
 --   4. Composite foreign keys (child.owner_id must equal the parent's owner_id)
 --      on every link a user can name by id: playlist items, favorites,
---      downloads, play events, playback state (track and device), track
---      groupings. A cross-user id fails at the database even on the owner
---      connection.
+--      downloads, play events, playback state (track, device and current
+--      playlist item), track groupings. A cross-user id fails at the database
+--      even on the owner connection.
 --
 -- Storage counters (profiles.used_bytes, profiles.reserved_bytes) are kept by
 -- triggers on tracks and upload_sessions. Application code never writes them;
@@ -471,13 +479,27 @@ create index tracks_search_trgm_idx on public.tracks using gin (search_text exte
 --   Content-Length, so the stored bytes equal the reserved bytes.
 -- mode 'single': one presigned PUT (web under 32 MB; mobile always; covers).
 --   mode 'multipart': S3 multipart, 16 MB parts (web, 32 MB and up).
---   s3_upload_id is created lazily by the first POST /uploads/:id/parts (row
---   locked), so a 500-file batch call makes no storage round trips.
--- part_md5s: hex MD5 of each part, sent by the client when it asks for part URLs;
---   compared at /complete with the ETags from a server-side ListParts.
+--   s3_upload_id is created lazily by the first POST /uploads/:id/parts, so a
+--   500-file batch call makes no storage round trips. CreateMultipartUpload
+--   runs outside any transaction; the id is then stored with
+--   "update ... set s3_upload_id = $id where id = $sid and s3_upload_id is null",
+--   and a caller that gets no row back aborts its own extra upload and uses the
+--   stored one.
+--   part_count is derived from the declared size at reservation (CHECK below);
+--   parts are numbered 1..part_count, and /parts refuses any other number.
+-- part_md5s: the EXPECTED hex MD5 of each part (index = part number), sent by the
+--   client when it first asks for that part's URL and write-once after that (a
+--   request for the same part with another MD5 gets 409). ETags are never stored:
+--   /complete reads them from a server-side ListParts and compares them with
+--   part_md5s only if the B2 gate showed that a part's ETag is its MD5. The
+--   authoritative check is the full-file MD5 that extract computes.
 -- status: pending (reserved, bytes may be moving) -> completing (a /complete call
 --   is running) -> completed (audio: terminal; cover: waiting in the inbox)
 --   -> consumed (cover only) | failed | aborted | expired.
+--   A crash between CompleteMultipartUpload and the settle commit leaves the row
+--   'completing' with a finished object: a retry, or the sweep after 10 min,
+--   finds the object with HeadObject and settles it instead of calling
+--   CompleteMultipartUpload again (architecture.md, POST /uploads/:id/complete).
 -- The upload_sessions_count_bytes trigger adds reserved_bytes to
 -- profiles.reserved_bytes while upload_session_holds_bytes(kind, status), and
 -- takes it away on the transition out, exactly once.
@@ -525,7 +547,23 @@ create table public.upload_sessions (
   constraint upload_sessions_multipart_fields check (
     (mode = 'multipart') = (part_size_bytes is not null and part_count is not null)
   ),
+  constraint upload_sessions_part_count_derived check (
+    mode <> 'multipart'
+    or part_count = (declared_size_bytes + part_size_bytes - 1) / part_size_bytes
+  ),
+  -- Bounds the subscripts (= part numbers), not just the element count: an
+  -- array holding only part 65 has cardinality 1 and would pass a count check.
+  constraint upload_sessions_part_md5s_bounded check (
+    part_md5s is null or (
+      mode = 'multipart'
+      and array_ndims(part_md5s) = 1
+      and array_lower(part_md5s, 1) >= 1
+      and array_upper(part_md5s, 1) <= part_count
+    )
+  ),
   constraint upload_sessions_upload_id_only_multipart check (s3_upload_id is null or mode = 'multipart'),
+  -- One session per planned track, so a settle retry can only ever name one track.
+  constraint upload_sessions_planned_track_key unique (planned_track_id),
   constraint upload_sessions_track_fkey foreign key (track_id, owner_id)
     references public.tracks (id, owner_id) on delete set null (track_id)
 );
@@ -543,10 +581,12 @@ create index upload_sessions_finished_idx
   where status in ('completed', 'consumed', 'failed', 'aborted', 'expired');
 create index upload_sessions_track_id_idx on public.upload_sessions (track_id);
 
--- Postgres job queue, claimed with FOR UPDATE SKIP LOCKED. Run inline by
--- next/server after() and by the sweep route (GitHub Actions schedule + daily
--- Vercel cron), always on the owner connection. owner_id is NULL for system jobs
--- and for purge_user, which must outlive the profile it deletes.
+-- Postgres job queue, claimed with FOR UPDATE SKIP LOCKED (the claim query in
+-- architecture.md, "Key queries", was run on 16.14 and 17.10 with two
+-- concurrent workers: one subquery scan under LockRows, disjoint claims). Run
+-- inline by next/server after() and by the sweep route (GitHub Actions schedule
+-- + daily Vercel cron), always on the owner connection. owner_id is NULL for
+-- system jobs and for purge_user, which must outlive the profile it deletes.
 -- dedupe_key makes enqueueing idempotent ('extract:{trackId}', 'purge_track:{trackId}', ...).
 -- When an extract job fails its last attempt, the same transaction marks the
 -- track 'failed' with status_reason 'extract_gave_up: ...'.
@@ -614,11 +654,12 @@ create index playlists_search_trgm_idx on public.playlists using gin (search_tex
 -- package), compared bytewise (COLLATE "C"). A move or an insert between two
 -- items is ONE row update: the server picks a key between the neighbours' keys.
 -- Every item mutation first locks the playlist row (select ... for update), so
--- two writers never pick the same key. When a new key would be longer than 64
--- characters, the same transaction rebalances the playlist: SET CONSTRAINTS
--- playlist_items_order_key DEFERRED, then rewrite every sort_key with evenly
--- spaced keys in the current order. The constraint is deferrable for that
--- rewrite; it is never an ON CONFLICT arbiter.
+-- two writers never pick the same key, and checks that each generated key sorts
+-- strictly between its neighbours (bytewise) before writing it. When a new key
+-- would be longer than 64 characters, the same transaction rebalances the
+-- playlist: SET CONSTRAINTS playlist_items_order_key DEFERRED, then rewrite
+-- every sort_key with evenly spaced keys in the current order. The constraint
+-- is deferrable for that rewrite; it is never an ON CONFLICT arbiter.
 -- The same track may appear twice (each row has its own id); the API warns first.
 create table public.playlist_items (
   id uuid primary key default gen_random_uuid(),
@@ -634,7 +675,8 @@ create table public.playlist_items (
     references public.playlists (id, owner_id) on delete cascade,
   constraint playlist_items_track_fkey foreign key (track_id, owner_id)
     references public.tracks (id, owner_id) on delete cascade,
-  constraint playlist_items_order_key unique (playlist_id, sort_key) deferrable initially immediate
+  constraint playlist_items_order_key unique (playlist_id, sort_key) deferrable initially immediate,
+  constraint playlist_items_id_owner_key unique (id, owner_id)
 );
 create index playlist_items_track_id_idx on public.playlist_items (track_id);
 create index playlist_items_owner_updated_idx on public.playlist_items (owner_id, updated_at, id);
@@ -710,7 +752,11 @@ create index play_events_device_id_idx on public.play_events (device_id);
 --                    the current member; the next one is the first member whose
 --                    (sort values, id) row is greater (see architecture.md,
 --                    "Members").
---   current_item_id  playlist item id, so a track listed twice resolves.
+--   current_item_id  playlist item id, so a track listed twice resolves. Composite
+--                    key to the caller's playlist_items; PUT also checks that the
+--                    item belongs to the context playlist and points at
+--                    current_track_id (context_id is polymorphic, so it is checked
+--                    by the repository, never by a foreign key).
 --   position_ms/at   position and the server time it was reported.
 --   user_queue       [{ "entryId": uuid, "trackId": uuid }, ...] played before the
 --                    context continues ("play next", "add to queue"); max 1000.
@@ -758,10 +804,13 @@ create table public.playback_state (
   constraint playback_state_device_fkey foreign key (device_id, owner_id)
     references public.devices (id, owner_id) on delete set null (device_id),
   constraint playback_state_current_track_fkey foreign key (current_track_id, owner_id)
-    references public.tracks (id, owner_id) on delete set null (current_track_id)
+    references public.tracks (id, owner_id) on delete set null (current_track_id),
+  constraint playback_state_current_item_fkey foreign key (current_item_id, owner_id)
+    references public.playlist_items (id, owner_id) on delete set null (current_item_id)
 );
 create index playback_state_device_id_idx on public.playback_state (device_id);
 create index playback_state_current_track_idx on public.playback_state (current_track_id);
+create index playback_state_current_item_idx on public.playback_state (current_item_id);
 
 -- ---------------------------------------------------------------------------
 -- Offline: downloads registry and tombstones
