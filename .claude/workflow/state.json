@@ -10,12 +10,25 @@
   ],
   "features": {
     "m0-scaffold-landing": {
-      "status": "in_progress",
-      "current_stage": "planning",
+      "status": "changes_requested",
+      "current_stage": "qa_review",
       "spec": ".claude/workflow/specs/m0-scaffold-landing.md",
       "branch": "feature/m0-scaffold-landing",
-      "commits": [],
-      "qa_result": null,
+      "commits": [
+        "c61c60d",
+        "2c03a89",
+        "93eeeac",
+        "6798b32"
+      ],
+      "qa_result": {
+        "decision": "REQUEST_CHANGES",
+        "cycle": 1,
+        "findings": [
+          "Important: ci.yml checkout/setup-node not SHA-pinned",
+          "Important: pnpm-workspace.yaml missing strictDepBuilds and minimumReleaseAge",
+          "Minor x5: resolved in spec (FAQ 9, focus refocus, agentGuidance, twitter card, Allow header)"
+        ]
+      },
       "history": [
         {
           "stage": "planning",
@@ -34,6 +47,18 @@
           "agent": "founder",
           "at": "2026-10-05T08:30:00Z",
           "note": "Founder approved spec OPEN 1 dependencies and pins; chose pnpm 10 (not 12.9.1). Other OPEN items take the spec defaults."
+        },
+        {
+          "stage": "development",
+          "agent": "frontend-developer",
+          "at": "2026-10-05T09:20:00Z",
+          "note": "Built on feature/m0-scaffold-landing (4 commits); all local checks pass; built against the draft spec (approved spec was not committed yet \u2014 orchestrator error)."
+        },
+        {
+          "stage": "qa_review",
+          "agent": "qa-reviewer",
+          "at": "2026-10-05T09:45:00Z",
+          "note": "Cycle 1: REQUEST_CHANGES (2 important, 5 minor). Minor items resolved in the spec. Codex review running."
         }
       ]
     }
