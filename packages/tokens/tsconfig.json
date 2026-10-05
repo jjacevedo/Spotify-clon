@@ -1,0 +1,4 @@
+{
+  "extends": "@tunehold/config/tsconfig/library.json",
+  "include": ["src"]
+}

@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@import '@tunehold/tokens/theme.css';
+
+/* Layout constants of the landing page (replica/launch/landing.md, Build notes). */
+@theme {
+  /* Content is at most 1120px wide. */
+  --container-content: 70rem;
+  /* Feature cards go to 3 columns above about 1100px. */
+  --breakpoint-wide: 68.75rem;
+}
+
+/* Focus ring: 2px accent outline, 2px offset, on every focusable element. Never removed. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

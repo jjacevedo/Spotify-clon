@@ -1,0 +1,7 @@
+replica/
+.claude/
+CLAUDE.md
+pnpm-lock.yaml
+packages/tokens/src/generated/
+**/.next/
+**/.turbo/
