@@ -1,5 +1,29 @@
 {
   "base_branch": "cl/great-gauss-36g7dv",
-  "stages": ["planning", "development", "qa_review", "integration", "validation", "complete"],
-  "features": {}
+  "stages": [
+    "planning",
+    "development",
+    "qa_review",
+    "integration",
+    "validation",
+    "complete"
+  ],
+  "features": {
+    "m0-scaffold-landing": {
+      "status": "in_progress",
+      "current_stage": "planning",
+      "spec": ".claude/workflow/specs/m0-scaffold-landing.md",
+      "branch": "feature/m0-scaffold-landing",
+      "commits": [],
+      "qa_result": null,
+      "history": [
+        {
+          "stage": "planning",
+          "agent": "orchestrator",
+          "at": "2026-10-05T04:30:00Z",
+          "note": "Milestone 0 classified medium (architecture.md build order). Spec by architect, then frontend-developer in a worktree."
+        }
+      ]
+    }
+  }
 }
